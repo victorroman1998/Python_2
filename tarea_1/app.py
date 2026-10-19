@@ -80,8 +80,8 @@ conteo.columns = ["categoria", "noticias"]
 conteo["categoria"] = conteo["categoria"].map(NOMBRES)
 fig = px.bar(conteo, x="categoria", y="noticias", color="categoria",
              title="Cantidad de noticias por categoría con los filtros actuales")
-st.plotly_chart(fig, use_container_width=True)
-st.dataframe(filtrado, use_container_width=True, hide_index=True)
+st.plotly_chart(fig, width="stretch")
+st.dataframe(filtrado, width="stretch", hide_index=True)
 st.download_button("Descargar selección CSV", filtrado.to_csv(index=False).encode("utf-8-sig"),
                    "noticias_filtradas.csv", "text/csv")
 

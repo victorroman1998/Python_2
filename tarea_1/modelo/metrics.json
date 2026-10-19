@@ -1,0 +1,26 @@
+{
+  "test": {
+    "n": 60,
+    "accuracy": 0.8833333333333333,
+    "f1_macro": 0.8833102333102334
+  },
+  "zero_shot_test_40": {
+    "accuracy": 0.85,
+    "f1_macro": 0.8258359456635318
+  },
+  "llm_test": {
+    "n": 60,
+    "f1_macro": 0.9350635208711434
+  },
+  "auditoria": {
+    "aciertos": null,
+    "total": 20,
+    "acuerdo": null
+  },
+  "por_clase": {
+    "politica": 0.8648648648648649,
+    "economia": 0.8461538461538461,
+    "deportes": 0.8888888888888888,
+    "ciencia_tecnologia": 0.9333333333333333
+  }
+}

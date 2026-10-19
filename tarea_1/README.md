@@ -56,6 +56,12 @@ Si publicas tu modelo entrenado en un repositorio de Hugging Face, define `NEWS_
 
 `01_recoleccion.ipynb` registra procedencia, limpieza, descartes, tabla de mapeo, tres gráficos Plotly y extremos de longitud. La verificación de enlaces reutiliza respuestas HTTP 200 de los HTML descargados y consulta por red las URLs sin copia. `02_clasificacion.ipynb` separa 70/15/15 de forma estratificada con semilla 42. El test queda reservado hasta la evaluación final. La línea base zero-shot se mide primero en 40 titulares de validación y, para la comparación final, en 40 titulares del test reservado. El LLM etiqueta el conjunto completo, pero el Transformer se ajusta exclusivamente con las etiquetas débiles del tramo de entrenamiento. Se elige el mejor checkpoint por F1 macro en validación y se calculan accuracy, F1 macro y matriz de confusión en test. La comparación especifica el número de observaciones de cada método.
 
+## Resultados de la ejecución
+
+El ajuste de DistilBERT completó tres épocas con lote de 8. Sobre las 60 noticias reservadas para test obtuvo accuracy **0,883** y F1 macro **0,883**. El LLM obtuvo F1 macro **0,935** en esas 60. En la comparación común de 40 noticias del mismo test, el zero-shot obtuvo F1 macro **0,826**, el LLM **0,946** y el Transformer **0,926**. La línea base zero-shot en 40 noticias de validación dio F1 macro **0,698**; se informa por separado porque es otro subconjunto. Los valores exactos están en `modelo/metrics.json` y en el notebook ejecutado. La auditoría humana de 20 titulares queda pendiente hasta recibir etiquetas independientes del estudiante.
+
+La app se probó localmente con el modelo entrenado: cargó 399 noticias y clasificó un titular nuevo de fútbol como Deportes. Los pesos locales se excluyen de GitHub por tamaño; esta prueba no demuestra un despliegue público.
+
 ## Hallazgos
 
 1. La muestra quedó cercana al equilibrio buscado: política tiene 110 titulares (27,6 %) y economía 93 (23,3 %), con 100 de deportes y 96 de ciencia/tecnología. Octubre aporta 363 de las 399 noticias (91 %); el resto procede de septiembre.
