@@ -1,5 +1,5 @@
 {
-  "descarga_utc": "2026-10-19T03:20:14.890062+00:00",
+  "descarga_utc": "2026-10-19T03:35:28.961941+00:00",
   "opcion": "A: La Republica",
   "fuentes": {
     "politica": {
@@ -44,14 +44,15 @@
     }
   },
   "filas_crudas": 400,
-  "filas_finales": 400,
+  "filas_finales": 399,
   "por_categoria": {
     "politica": 110,
     "economia": 93,
-    "deportes": 101,
+    "deportes": 100,
     "ciencia_tecnologia": 96
   },
   "descartes": {
+    "enlace_no_funcional_404_410": 1,
     "indice_fuera_de_categorias": 1879,
     "indice_url_duplicada": 42
   },

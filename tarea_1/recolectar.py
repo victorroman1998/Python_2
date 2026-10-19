@@ -348,6 +348,15 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
 
 def limpiar(registros: list[dict], tope_por_categoria: int) -> tuple[list[dict], Counter]:
     motivos = Counter()
+    enlaces_rotos = set()
+    validacion = ROOT / "datos" / "validacion_urls.csv"
+    if validacion.exists():
+        with validacion.open(encoding="utf-8-sig", newline="") as f:
+            enlaces_rotos = {
+                r["url"].split("?", 1)[0].rstrip("/")
+                for r in csv.DictReader(f)
+                if r["resultado"] == "error_http" and r["codigo_http"] in {"404", "410"}
+            }
     vistos_url: set[str] = set()
     vistos_titulos: set[str] = set()
     por_categoria = Counter()
@@ -365,6 +374,8 @@ def limpiar(registros: list[dict], tope_por_categoria: int) -> tuple[list[dict],
             motivos["fuera_de_categorias"] += 1
         elif not fila["fecha"]:
             motivos["fecha_ausente"] += 1
+        elif url in enlaces_rotos:
+            motivos["enlace_no_funcional_404_410"] += 1
         elif url in vistos_url:
             motivos["url_duplicada"] += 1
         elif clave_titulo in vistos_titulos:
