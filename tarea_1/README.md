@@ -43,6 +43,8 @@ En el segundo notebook, revisa manualmente los 20 titulares seleccionados en `da
 streamlit run app.py
 ```
 
+Antes de entregar, ejecuta `python verificar_entrega.py`. El programa revisa el número y la estructura de las noticias, las etiquetas LLM, ambos notebooks guardados con salidas, las métricas y el modelo local. La verificación de enlaces HTTP se registra por separado en `datos/validacion_urls.csv`.
+
 La primera vez, los modelos zero-shot y DistilBERT se descargan de Hugging Face. En CPU el entrenamiento puede tardar; con GPU de Colab, descarga los artefactos a `modelo/`. Los pesos se excluyen de Git por su tamaño. Por ello, quien clone el repositorio debe ejecutar el notebook de entrenamiento antes de usar el probador de la app. Los gráficos y tabla sí pueden abrirse con el CSV.
 
 Si publicas tu modelo entrenado en un repositorio de Hugging Face, define `NEWS_MODEL_REPO=usuario/repositorio` en el entorno de Streamlit para que la aplicación pueda cargarlo sin guardar pesos en GitHub. Esto requiere una publicación real bajo tu cuenta; no hay repositorio preconfigurado.
