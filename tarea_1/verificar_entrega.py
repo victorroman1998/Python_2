@@ -50,6 +50,20 @@ def main() -> None:
     else:
         resultados["noticias"] = {"ok": False, "detalle": "falta datos/noticias.csv"}
 
+    comprobacion_path = RAIZ / "datos" / "validacion_urls.csv"
+    if comprobacion_path.exists() and noticias:
+        _, comprobacion = leer_csv(comprobacion_path)
+        comprobadas = {r["url"] for r in comprobacion
+                       if r["resultado"] == "ok" and r["codigo_http"] == "200"}
+        urls_finales = {r["url"] for r in noticias}
+        resultados["urls_http_200"] = {
+            "ok": urls_finales <= comprobadas,
+            "comprobadas": len(urls_finales & comprobadas),
+            "total": len(urls_finales),
+        }
+    else:
+        resultados["urls_http_200"] = {"ok": False, "detalle": "falta comprobación HTTP"}
+
     etiquetas_path = RAIZ / "datos" / "etiquetas_llm.csv"
     if etiquetas_path.exists() and noticias:
         columnas, etiquetas = leer_csv(etiquetas_path)

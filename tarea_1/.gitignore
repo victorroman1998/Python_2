@@ -10,6 +10,5 @@ modelo/*.zip
 modelo/checkpoint-*/
 modelo/checkpoints/
 datos/raw/
-datos/validacion_urls.csv
 datos/auditoria_humana_plantilla.csv
 datos/auditoria_humana_respuesta.csv
