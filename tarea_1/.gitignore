@@ -11,4 +11,3 @@ modelo/checkpoint-*/
 modelo/checkpoints/
 datos/raw/
 datos/auditoria_humana_plantilla.csv
-datos/auditoria_humana_respuesta.csv

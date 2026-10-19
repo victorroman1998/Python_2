@@ -20,7 +20,7 @@ Estos textos corresponden a la ejecución real del 18 de octubre de 2026. Despu�
 - [x] Medí zero-shot en 40 titulares, ajusté DistilBERT durante tres épocas con lote de 8 y evalué el test reservado.
 - [x] Guardé matriz de confusión, comparación y notebook ejecutado.
 
-**Bitácora.** La primera ejecución del LLM se detuvo por etiquetas fuera de las cuatro clases. Se corrigió el formato de salida a un esquema JSON con enumeración y se completaron 399 etiquetas. El Transformer obtuvo F1 macro 0,883 en 60 noticias de test; el LLM, 0,935 en las 60; el zero-shot, 0,826 en 40 del test. Sobre las mismas 40, el Transformer obtuvo 0,926 y el LLM 0,946. La auditoría humana aún requiere las etiquetas del estudiante. Código y notebook: [`37045fb`](https://github.com/victorroman1998/Python_2/commit/37045fb).
+**Bitácora.** La primera ejecución del LLM se detuvo por etiquetas fuera de las cuatro clases. Se corrigió el formato de salida a un esquema JSON con enumeración y se completaron 399 etiquetas. La línea base zero-shot dio F1 macro 0,698 en 40 noticias de validación. El Transformer obtuvo F1 macro 0,883 en 60 noticias de test; el LLM, 0,935 en las 60. En una comparación adicional sobre las mismas 40 noticias del test, el zero-shot obtuvo 0,826, el Transformer 0,926 y el LLM 0,946. La auditoría humana aún requiere las etiquetas del estudiante. Código y notebook: [`37045fb`](https://github.com/victorroman1998/Python_2/commit/37045fb).
 
 ## Issue #3 — T1 – Parte 3: Dashboard y Despliegue
 
