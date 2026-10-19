@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+.env
+modelo/*.safetensors
+modelo/*.bin
+modelo/*.pt
+modelo/checkpoint-*/
+modelo/checkpoints/
+datos/raw/
+datos/validacion_urls.csv
+datos/auditoria_humana_plantilla.csv
+datos/auditoria_humana_respuesta.csv
