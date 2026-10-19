@@ -61,12 +61,15 @@ def descargar(url: str, destino: Path, usar_cache: bool = True) -> bytes:
 
 def obtener_robots() -> urllib.robotparser.RobotFileParser:
     respaldo = RAW / "robots.txt"
-    try:
-        crudo = descargar(ROBOTS, respaldo, usar_cache=False)
-    except RuntimeError:
-        if not respaldo.exists():
-            raise
+    if respaldo.exists() and respaldo.stat().st_size and time.time() - respaldo.stat().st_mtime < 86400:
         crudo = respaldo.read_bytes()
+    else:
+        try:
+            crudo = descargar(ROBOTS, respaldo, usar_cache=False)
+        except RuntimeError:
+            if not respaldo.exists():
+                raise
+            crudo = respaldo.read_bytes()
     parser = urllib.robotparser.RobotFileParser()
     parser.parse(crudo.decode("utf-8", errors="replace").splitlines())
     return parser
