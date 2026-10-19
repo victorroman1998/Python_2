@@ -25,6 +25,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python recolectar.py --objetivo 400
+python validar_urls.py
 python -m ipykernel install --user --name tarea1-noticias --display-name "Tarea 1 noticias"
 jupyter lab 01_recoleccion.ipynb
 ```
@@ -36,6 +37,8 @@ ollama pull qwen2.5:3b
 python etiquetar_llm.py --modelo qwen2.5:3b
 jupyter lab 02_clasificacion.ipynb
 ```
+
+La primera pasada del recolector descubre hasta 400 candidatos; la validación registra sus respuestas HTTP. Al ejecutar el primer notebook, el recolector conserva únicamente los enlaces con HTTP 200 ya comprobado y el conjunto final queda en 399. Si cambias las fuentes o deseas incluir enlaces nuevos, repite la validación antes de congelar el corpus.
 
 En el segundo notebook, revisa manualmente los 20 titulares seleccionados en `datos/auditoria_humana_plantilla.csv`. Escribe la categoría correcta en `datos/auditoria_humana_respuesta.csv` y vuelve a ejecutar la celda de auditoría. El acuerdo es una medición humana real. Entrena el modelo y guarda los pesos en `modelo/` localmente. Luego:
 

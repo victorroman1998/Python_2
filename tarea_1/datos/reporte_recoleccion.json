@@ -1,5 +1,5 @@
 {
-  "descarga_utc": "2026-10-19T03:35:28.961941+00:00",
+  "descarga_utc": "2026-10-19T03:50:01.289946+00:00",
   "opcion": "A: La Republica",
   "fuentes": {
     "politica": {
@@ -52,11 +52,10 @@
     "ciencia_tecnologia": 96
   },
   "descartes": {
-    "enlace_no_funcional_404_410": 1,
+    "enlace_sin_http_200_comprobado": 1,
     "indice_fuera_de_categorias": 1879,
     "indice_url_duplicada": 42
   },
   "cumple_minimo_350": true,
-  "nota": "346 artículos con HTML oficial; 1 con solo metadatos del índice. Los enlaces RSS y los restantes se comprueban con validar_urls.py.",
-  "reprocesado_desde_cache": true
+  "nota": "346 artículos con HTML oficial; 1 con solo metadatos del índice. Los enlaces RSS y los restantes se comprueban con validar_urls.py."
 }
