@@ -9,6 +9,7 @@ import argparse
 import csv
 import json
 import time
+import unicodedata
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -19,6 +20,21 @@ ORIGEN = ROOT / "datos" / "noticias.csv"
 DESTINO = ROOT / "datos" / "etiquetas_llm.csv"
 CATEGORIAS = {"politica", "economia", "deportes", "ciencia_tecnologia"}
 CAMPOS = ["titular", "etiqueta_llm", "confianza", "modelo_llm", "fecha"]
+
+
+def normalizar_etiqueta(valor: object) -> str:
+    """Acepta variantes ortográficas sin cambiar la clase propuesta por el LLM."""
+    texto = str(valor).strip().lower()
+    texto = "".join(c for c in unicodedata.normalize("NFKD", texto)
+                    if not unicodedata.combining(c))
+    texto = "_".join(texto.replace("-", " ").split())
+    equivalencias = {
+        "deporte": "deportes",
+        "ciencia": "ciencia_tecnologia",
+        "tecnologia": "ciencia_tecnologia",
+        "ciencia_y_tecnologia": "ciencia_tecnologia",
+    }
+    return equivalencias.get(texto, texto)
 
 
 def clasificar_lote(titulares: list[str], modelo: str, servidor: str) -> list[tuple[str, float]]:
@@ -53,7 +69,7 @@ def clasificar_lote(titulares: list[str], modelo: str, servidor: str) -> list[tu
     for i, item in enumerate(resultados):
         if item.get("id") != i:
             raise ValueError(f"Orden de respuestas incorrecto: {dato}")
-        etiqueta = str(item["etiqueta"]).strip().lower()
+        etiqueta = normalizar_etiqueta(item["etiqueta"])
         confianza = float(item["confianza"])
         if etiqueta not in CATEGORIAS or not 0 <= confianza <= 1:
             raise ValueError(f"Respuesta fuera de esquema: {item}")
