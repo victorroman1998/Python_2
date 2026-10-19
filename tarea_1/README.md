@@ -51,7 +51,7 @@ Si publicas tu modelo entrenado en un repositorio de Hugging Face, define `NEWS_
 
 ## Método y evaluación
 
-`01_recoleccion.ipynb` registra procedencia, limpieza, descartes, tabla de mapeo, tres gráficos Plotly y extremos de longitud. `02_clasificacion.ipynb` separa 70/15/15 de forma estratificada con semilla 42. El test queda reservado hasta la evaluación final. La línea base zero-shot usa 40 titulares del test. El LLM etiqueta el conjunto completo, pero el Transformer se ajusta exclusivamente con las etiquetas débiles del tramo de entrenamiento. Se elige el mejor checkpoint por F1 macro en validación y se calculan accuracy, F1 macro y matriz de confusión en test. La comparación especifica el número de observaciones de cada método.
+`01_recoleccion.ipynb` registra procedencia, limpieza, descartes, tabla de mapeo, tres gráficos Plotly y extremos de longitud. La verificación de enlaces reutiliza respuestas HTTP 200 de los HTML descargados y consulta por red las URLs sin copia. `02_clasificacion.ipynb` separa 70/15/15 de forma estratificada con semilla 42. El test queda reservado hasta la evaluación final. La línea base zero-shot se mide primero en 40 titulares de validación y, para la comparación final, en 40 titulares del test reservado. El LLM etiqueta el conjunto completo, pero el Transformer se ajusta exclusivamente con las etiquetas débiles del tramo de entrenamiento. Se elige el mejor checkpoint por F1 macro en validación y se calculan accuracy, F1 macro y matriz de confusión en test. La comparación especifica el número de observaciones de cada método.
 
 ## Hallazgos
 
