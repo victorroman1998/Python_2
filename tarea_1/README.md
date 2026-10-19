@@ -74,6 +74,6 @@ La app se probó localmente con el modelo entrenado: cargó 399 noticias y clasi
 
 ## Entrega en GitHub
 
-Coloca esta carpeta `tarea_1/` dentro de [tu repositorio del curso](https://github.com/victorroman1998/Python_2). Ejecuta ambos notebooks y guarda sus salidas visibles. El Issue #1, titulado `A_1`, puede renombrarse y completarse como `T1 – Parte 1: Recolección y Limpieza`; crea además `T1 – Parte 2: Modelado y Clasificación` y `T1 – Parte 3: Dashboard y Despliegue`. Documenta y cierra cada uno al completar su etapa. Registra commits descriptivos conforme avances; no modifiques fechas de commits. No subas secretos ni pesos pesados.
+Esta carpeta está publicada en [tu repositorio del curso](https://github.com/victorroman1998/Python_2/tree/main/tarea_1), con ambos notebooks ejecutados y sus salidas visibles. El Issue #1, titulado `A_1`, puede renombrarse y completarse como `T1 – Parte 1: Recolección y Limpieza`; crea además `T1 – Parte 2: Modelado y Clasificación` y `T1 – Parte 3: Dashboard y Despliegue`. Documenta y cierra cada uno al completar su etapa. Conserva los commits descriptivos y sus fechas reales. No subas secretos ni pesos pesados.
 
 El comentario final en el [Issue de entrega](https://github.com/d2cml-ai/Data-Science-Python/issues/188) requiere tu nombre, usuario, URL de tu carpeta GitHub, enlace del dashboard o ejecución local verificada, F1 macro de test, F1 zero-shot y acuerdo humano/LLM. Estos valores se copian de resultados reales, nunca de ejemplos.

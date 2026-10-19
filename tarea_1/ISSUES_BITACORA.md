@@ -28,6 +28,6 @@ Estos textos corresponden a la ejecución real del 18 de octubre de 2026. Despu�
 - [x] Documenté dos hallazgos y dos limitaciones con evidencia.
 - [x] Comprobé la app con `streamlit.testing.v1.AppTest`: 399 noticias y clasificación de un titular de fútbol como Deportes.
 - [x] Excluí del repositorio los pesos de 541 MB y los secretos.
-- [ ] Publicar los commits en GitHub y comprobar la URL del repositorio.
+- [x] Publiqué los commits en GitHub y comprobé la URL del repositorio.
 
 **Bitácora.** La app muestra el corpus y las métricas observadas, permite filtrar por categoría, descargar la selección y probar un titular con el modelo entrenado. La prueba automatizada local no equivale a un despliegue público. Los pesos están disponibles en la carpeta local del proyecto y se regeneran con el notebook; GitHub contiene código, configuración y métricas. Código: [`37045fb`](https://github.com/victorroman1998/Python_2/commit/37045fb).
