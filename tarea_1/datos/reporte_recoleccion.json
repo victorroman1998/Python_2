@@ -1,0 +1,61 @@
+{
+  "descarga_utc": "2026-10-19T03:18:08.964210+00:00",
+  "opcion": "A: La Republica",
+  "fuentes": {
+    "politica": {
+      "url": "https://larepublica.pe/rss/politica.xml",
+      "items": 23,
+      "sitemap_anadidas": 0
+    },
+    "economia": {
+      "url": "https://larepublica.pe/rss/economia.xml",
+      "items": 6,
+      "sitemap_anadidas": 0
+    },
+    "deportes": {
+      "url": "https://larepublica.pe/rss/deportes.xml",
+      "items": 14,
+      "sitemap_anadidas": 0
+    },
+    "ciencia": {
+      "url": "https://larepublica.pe/rss/ciencia.xml",
+      "items": 10,
+      "sitemap_anadidas": 0
+    },
+    "indice_externo": {
+      "url": "https://freenewsapi.ai/v1/search",
+      "paginas": 27,
+      "candidatos": 779,
+      "html_oficial": 346,
+      "solo_metadatos_indice": 1,
+      "errores_html": 1,
+      "descripcion": "El índice descubre URLs; la clase sale de la ruta editorial del medio.",
+      "filas_anadidas": 347,
+      "por_categoria_anadidas": {
+        "politica": 87,
+        "economia": 87,
+        "deportes": 87,
+        "ciencia_tecnologia": 86
+      },
+      "descartes": {
+        "fuera_de_categorias": 1879,
+        "url_duplicada": 42
+      }
+    }
+  },
+  "filas_crudas": 400,
+  "filas_finales": 400,
+  "por_categoria": {
+    "politica": 110,
+    "economia": 93,
+    "deportes": 101,
+    "ciencia_tecnologia": 96
+  },
+  "descartes": {
+    "indice_fuera_de_categorias": 1879,
+    "indice_url_duplicada": 42
+  },
+  "cumple_minimo_350": true,
+  "nota": "346 artículos con HTML oficial; 1 con solo metadatos del índice. Los enlaces RSS y los restantes se comprueban con validar_urls.py.",
+  "reprocesado_desde_cache": true
+}

@@ -407,7 +407,9 @@ def recolectar(objetivo: int = 400) -> dict:
         "por_categoria": dict(Counter(x["etiqueta"] for x in limpios)),
         "descartes": dict(motivos),
         "cumple_minimo_350": len(limpios) >= 350,
-        "nota": "Algunos HTML se pudieron comprobar; las demás URLs requieren validar_urls.py.",
+        "nota": (f"{fuentes.get('indice_externo', {}).get('html_oficial', 0)} artículos con HTML oficial; "
+                 f"{fuentes.get('indice_externo', {}).get('solo_metadatos_indice', 0)} con solo metadatos "
+                 "del índice. Los enlaces RSS y los restantes se comprueban con validar_urls.py."),
     }
     (ROOT / "datos" / "reporte_recoleccion.json").write_text(
         json.dumps(reporte, indent=2, ensure_ascii=False), encoding="utf-8"
