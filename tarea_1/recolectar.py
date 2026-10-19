@@ -263,8 +263,9 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
         disponibles = sum(map(len, candidatos.values()))
         if pagina % 10 == 0:
             print(f"Índice: {estado['paginas']} páginas; {disponibles} candidatos de las cuatro secciones.", flush=True)
-        # Un margen amplio permite rechazar duplicados o artículos inaccesibles.
-        if disponibles >= faltan * 2 and min(map(len, candidatos.values())) >= 35:
+        # Buscar ~90 candidatos por clase antes de detenerse, más margen para descartes.
+        minimo_clase = max(35, objetivo // 4 - 10)
+        if disponibles >= int(faltan * 1.3) and min(map(len, candidatos.values())) >= minimo_clase:
             break
         if len(resultados) < 100 or (pagina + 1) * 100 >= int(datos.get("total", 0)):
             break
