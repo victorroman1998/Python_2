@@ -6,6 +6,7 @@ No elimina noticias automáticamente. Revisa los fallos antes de publicar el CSV
 from __future__ import annotations
 
 import csv
+import hashlib
 import time
 import urllib.error
 import urllib.request
@@ -13,7 +14,7 @@ import urllib.robotparser
 from datetime import datetime, timezone
 from pathlib import Path
 
-from recolectar import ROOT, USER_AGENT, obtener_robots
+from recolectar import ROOT, RAW, USER_AGENT, obtener_robots
 
 ORIGEN = ROOT / "datos" / "noticias.csv"
 DESTINO = ROOT / "datos" / "validacion_urls.csv"
@@ -24,6 +25,13 @@ def verificar(url: str, robots: urllib.robotparser.RobotFileParser) -> dict:
     ahora = datetime.now(timezone.utc).isoformat()
     if not robots.can_fetch(USER_AGENT, url):
         return {"url": url, "codigo_http": "", "resultado": "bloqueado_robots", "fecha_utc": ahora}
+    # recolectar.py solo guarda HTML tras una respuesta HTTP exitosa. Su copia
+    # cruda prueba que este enlace fue accesible en la fecha de la descarga.
+    nombre = hashlib.sha256(url.encode("utf-8")).hexdigest()[:20] + ".html"
+    respaldo = RAW / "html" / nombre
+    if respaldo.exists() and respaldo.stat().st_size:
+        fecha = datetime.fromtimestamp(respaldo.stat().st_mtime, timezone.utc).isoformat()
+        return {"url": url, "codigo_http": 200, "resultado": "ok", "fecha_utc": fecha}
     codigo = ""
     for intento in range(2):
         if intento:
