@@ -271,6 +271,7 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
                 orden.append((seccion_de_url(item["url"]), item))
     titulos = {re.sub(r"\s+", " ", r["titular"].casefold()).strip() for r in limpios}
     usadas = Counter(r["etiqueta"] for r in limpios)
+    iniciales = usadas.copy()
     errores_iniciales = 0
     html_bloqueado = False
     for seccion, item in orden:
@@ -311,7 +312,7 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
         if len(limpios) % 25 == 0:
             print(f"Noticias únicas acumuladas: {len(limpios)}/{objetivo}", flush=True)
     estado["filas_anadidas"] = len(limpios) - (objetivo - faltan)
-    estado["por_categoria_anadidas"] = dict(usadas)
+    estado["por_categoria_anadidas"] = {c: usadas[c] - iniciales[c] for c in SECCIONES.values()}
 
 
 def limpiar(registros: list[dict], tope_por_categoria: int) -> tuple[list[dict], Counter]:
