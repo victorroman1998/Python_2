@@ -6,7 +6,7 @@ Proyecto individual de la [Tarea 1 del diplomado](https://github.com/d2cml-ai/Da
 
 ## Estado y procedencia
 
-La fecha de extracción, las fuentes, el número de filas y los descartes se generan en `datos/reporte_recoleccion.json`. Este archivo no debe completarse a mano. El CSV contiene noticias reales solo después de ejecutar `python recolectar.py`. En `datos/raw/` se conservan los XML, JSON del índice y HTML obtenido. Si el medio bloquea los HTML, el informe distingue cuántas filas se basaron solo en los metadatos del índice; esas URLs requieren revisión adicional con `validar_urls.py`. La columna `etiqueta` es la etiqueta de sección editorial normalizada; es una referencia imperfecta, no una validación humana.
+La descarga se efectuó el 18 de octubre de 2026 (hora de Perú) y abarca publicaciones del 26 de septiembre al 18 de octubre, con las fechas convertidas a hora peruana cuando la fuente incluye zona horaria. La fecha de extracción, las fuentes, el número de filas y los descartes se generan en `datos/reporte_recoleccion.json`. Este archivo no debe completarse a mano. El CSV contiene 400 noticias reales: 53 de RSS, 346 con HTML oficial y 1 con solo metadatos del índice. En `datos/raw/` se conservan los XML, JSON del índice y HTML obtenido. La fila sin HTML y los enlaces RSS requieren revisión adicional con `validar_urls.py`. La columna `etiqueta` es la etiqueta de sección editorial normalizada; es una referencia imperfecta, no una validación humana.
 
 | Sección original | Categoría |
 |---|---|
@@ -55,10 +55,8 @@ Si publicas tu modelo entrenado en un repositorio de Hugging Face, define `NEWS_
 
 ## Hallazgos
 
-Completar **solo a partir de los resultados ejecutados** de los notebooks:
-
-1. Hallazgo sobre distribución de categorías y fechas: pendiente de recolección.
-2. Hallazgo sobre longitud de titulares o errores por categoría: pendiente de EDA y evaluación.
+1. La muestra quedó cercana al equilibrio buscado: política tiene 110 titulares (27,5 %) y economía 93 (23,2 %), con 101 de deportes y 96 de ciencia/tecnología. Octubre aporta 364 de las 400 noticias (91 %); el resto procede de septiembre.
+2. La longitud mediana de los titulares es 103 caracteres, con extremos de 54 y 164. Esta variación hace útil mostrar los casos más cortos y más largos junto al histograma del notebook; un límite fijo muy bajo truncaría ejemplos reales.
 
 ## Limitaciones
 

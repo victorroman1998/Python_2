@@ -19,7 +19,7 @@ import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -84,13 +84,17 @@ def fecha_iso(valor: str | None) -> str:
     if not valor:
         return ""
     from email.utils import parsedate_to_datetime
+    zona_peru = timezone(timedelta(hours=-5))
     try:
-        return parsedate_to_datetime(valor).date().isoformat()
+        fecha = parsedate_to_datetime(valor)
     except (TypeError, ValueError):
         try:
-            return datetime.fromisoformat(valor.replace("Z", "+00:00")).date().isoformat()
+            fecha = datetime.fromisoformat(valor.replace("Z", "+00:00"))
         except ValueError:
             return ""
+    if fecha.tzinfo is not None:
+        fecha = fecha.astimezone(zona_peru)
+    return fecha.date().isoformat()
 
 
 def etiqueta_seccion(seccion: str) -> str | None:
