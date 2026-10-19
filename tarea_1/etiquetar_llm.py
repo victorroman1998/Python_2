@@ -38,6 +38,24 @@ def normalizar_etiqueta(valor: object) -> str:
 
 
 def clasificar_lote(titulares: list[str], modelo: str, servidor: str) -> list[tuple[str, float]]:
+    esquema = {
+        "type": "object",
+        "properties": {
+            "resultados": {
+                "type": "array", "minItems": len(titulares), "maxItems": len(titulares),
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "integer"},
+                        "etiqueta": {"type": "string", "enum": sorted(CATEGORIAS)},
+                        "confianza": {"type": "number", "minimum": 0, "maximum": 1},
+                    },
+                    "required": ["id", "etiqueta", "confianza"],
+                },
+            },
+        },
+        "required": ["resultados"],
+    }
     prompt = (
         "Clasifica cada titular peruano en EXACTAMENTE una categoría: politica, economia, "
         "deportes, ciencia_tecnologia. Considera el tema principal, no palabras aisladas. "
@@ -51,7 +69,7 @@ def clasificar_lote(titulares: list[str], modelo: str, servidor: str) -> list[tu
     cuerpo = json.dumps({
         "model": modelo,
         "stream": False,
-        "format": "json",
+        "format": esquema,
         "messages": [{"role": "user", "content": prompt}],
         "options": {"temperature": 0},
     }).encode("utf-8")
