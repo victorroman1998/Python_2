@@ -225,6 +225,7 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
     estado = {"url": INDICE, "paginas": 0, "candidatos": 0,
               "html_oficial": 0, "solo_metadatos_indice": 0, "errores_html": 0,
               "descripcion": "El índice descubre URLs; la clase sale de la ruta editorial del medio."}
+    descartes_indice = Counter()
     fuentes["indice_externo"] = estado
     # API pública: páginas de 100, offset 0..9900; se conserva cada JSON original.
     for pagina in range(100):
@@ -242,9 +243,17 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
         for item in resultados:
             url = str(item.get("url") or "").split("?", 1)[0].rstrip("/")
             seccion = seccion_de_url(url)
-            if not seccion or url in vistas or not robots.can_fetch(USER_AGENT, url):
+            if not seccion:
+                descartes_indice["fuera_de_categorias"] += 1
+                continue
+            if url in vistas:
+                descartes_indice["url_duplicada"] += 1
+                continue
+            if not robots.can_fetch(USER_AGENT, url):
+                descartes_indice["bloqueado_robots"] += 1
                 continue
             if not texto(item.get("title")) or not fecha_iso(item.get("published_at")):
+                descartes_indice["titulo_o_fecha_ausente"] += 1
                 continue
             vistos_candidato = item.copy()
             vistos_candidato["url"] = url
@@ -261,6 +270,7 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
             break
     estado["candidatos"] = sum(map(len, candidatos.values()))
     if not estado["candidatos"]:
+        estado["descartes"] = dict(descartes_indice)
         return
     # Alternar secciones evita que la cronología sesgue el cupo de una clase.
     orden = []
@@ -303,6 +313,7 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
                     "etiqueta": etiqueta}
         clave = re.sub(r"\s+", " ", fila["titular"].casefold()).strip()
         if not fila["titular"] or not fila["fecha"] or clave in titulos:
+            descartes_indice["titular_o_fecha_duplicada"] += 1
             continue
         registros.append(fila)
         limpios.append(fila)
@@ -313,6 +324,7 @@ def completar_con_indice(registros: list[dict], objetivo: int, fuentes: dict,
             print(f"Noticias únicas acumuladas: {len(limpios)}/{objetivo}", flush=True)
     estado["filas_anadidas"] = len(limpios) - (objetivo - faltan)
     estado["por_categoria_anadidas"] = {c: usadas[c] - iniciales[c] for c in SECCIONES.values()}
+    estado["descartes"] = dict(descartes_indice)
 
 
 def limpiar(registros: list[dict], tope_por_categoria: int) -> tuple[list[dict], Counter]:
@@ -364,6 +376,7 @@ def recolectar(objetivo: int = 400) -> dict:
     completar_con_sitemap(registros, (objetivo + 3) // 4, fuentes, robots)
     completar_con_indice(registros, objetivo, fuentes, robots)
     limpios, motivos = limpiar(registros, objetivo)
+    motivos.update({"indice_" + k: v for k, v in fuentes.get("indice_externo", {}).get("descartes", {}).items()})
     salida = ROOT / "datos" / "noticias.csv"
     salida.parent.mkdir(exist_ok=True)
     with salida.open("w", encoding="utf-8-sig", newline="") as f:
@@ -379,7 +392,7 @@ def recolectar(objetivo: int = 400) -> dict:
         "por_categoria": dict(Counter(x["etiqueta"] for x in limpios)),
         "descartes": dict(motivos),
         "cumple_minimo_350": len(limpios) >= 350,
-        "nota": "Se comprobó sintaxis y dominio de URLs; no disponibilidad HTTP individual.",
+        "nota": "Algunos HTML se pudieron comprobar; las demás URLs requieren validar_urls.py.",
     }
     (ROOT / "datos" / "reporte_recoleccion.json").write_text(
         json.dumps(reporte, indent=2, ensure_ascii=False), encoding="utf-8"
