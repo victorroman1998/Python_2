@@ -6,6 +6,7 @@ __pycache__/
 modelo/*.safetensors
 modelo/*.bin
 modelo/*.pt
+modelo/*.zip
 modelo/checkpoint-*/
 modelo/checkpoints/
 datos/raw/
