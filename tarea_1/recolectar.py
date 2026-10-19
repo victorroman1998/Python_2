@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import html
 import json
@@ -135,6 +136,10 @@ def urls_sitemap(crudo: bytes) -> list[str]:
 
 
 def entrada_html(crudo: bytes, seccion: str, url: str, ultima_modificacion: str) -> dict:
+    # Algunos servidores envían gzip incluso sin pedir compresión. Se conserva
+    # el respaldo original y se descomprime solo para analizar los metadatos.
+    if crudo.startswith(b"\x1f\x8b"):
+        crudo = gzip.decompress(crudo)
     parser = Metadatos()
     parser.feed(crudo.decode("utf-8", errors="replace"))
     m = parser.meta
