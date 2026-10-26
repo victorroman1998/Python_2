@@ -1,6 +1,11 @@
 {
   "archivos": [
     {
+      "archivo": ".gitattributes",
+      "bytes": 94,
+      "sha256": "979421707a1210a629fecb52687bdb0034d576500fbf67bc7a027ee337a8ee7f"
+    },
+    {
       "archivo": ".gitignore",
       "bytes": 455,
       "sha256": "e94fb3a1064f0dd71734ab987f87745c613c1ab29bf968e8cd3ef525a7ac7719"
@@ -202,8 +207,8 @@
     },
     {
       "archivo": "preparar_publicacion.py",
-      "bytes": 4113,
-      "sha256": "7e049a7e3b328b2bfc7d0d484c21652c5fbb135445a7ced95f2fc37c6117210c"
+      "bytes": 4130,
+      "sha256": "1281cc342e2131ea94bf5d7d4441ffa53906be8622b5581341c5457c2152091b"
     },
     {
       "archivo": "README.md",
@@ -237,8 +242,8 @@
     },
     {
       "archivo": "validar_publicacion.py",
-      "bytes": 4318,
-      "sha256": "1a97a629be3d7c164f96028764a6ca5c8dfccbec004ca910c889cf77f85994dd"
+      "bytes": 4659,
+      "sha256": "ee82d137499e21f7911ae24ea69ebf91880299e0c08e900d31e7941e3dad2a72"
     },
     {
       "archivo": "verificar_entrega.py",

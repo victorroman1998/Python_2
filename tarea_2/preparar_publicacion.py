@@ -30,7 +30,7 @@ def preparar(destino=None):
     def copy(src,rel):
         dest=out/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dest)
     for f in BASE.glob('*.py'):copy(f,f.name)
-    for name in ['README.md','requirements.txt','requirements-inferencia.txt','.gitignore','01_extraccion.ipynb','02_evaluacion.ipynb']:
+    for name in ['README.md','requirements.txt','requirements-inferencia.txt','.gitignore','.gitattributes','01_extraccion.ipynb','02_evaluacion.ipynb']:
         copy(BASE/name,name)
     for f in (BASE/'modelos').glob('*.json'):copy(f,'modelos/'+f.name)
     for name in CSV:copy(DATOS/name,'datos/'+name)

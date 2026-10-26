@@ -23,7 +23,13 @@ def contenido_revision(modalidad, registro):
                 from seudonimizar import aplicar_texto
                 t['texto_predicho']=t.texto_predicho.map(aplicar_texto)
             payload[nombre]=sorted(t.reindex(columns=campos,fill_value='').to_dict('records'),key=lambda x:json.dumps(x,sort_keys=True))
-    return json.dumps(payload,ensure_ascii=False,sort_keys=True)
+    # Git puede cambiar LF por CRLF en Windows sin modificar el texto.
+    def lineas(obj):
+        if isinstance(obj,str):return obj.replace('\r\n','\n').replace('\r','\n')
+        if isinstance(obj,list):return [lineas(v) for v in obj]
+        if isinstance(obj,dict):return {k:lineas(v) for k,v in obj.items()}
+        return obj
+    return json.dumps(lineas(payload),ensure_ascii=False,sort_keys=True)
 
 def estado(guardar=True):
     actual=leer_csv(RUTA,COLS);objetivo=[]
