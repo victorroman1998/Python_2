@@ -1,0 +1,14 @@
+[
+  {
+    "title": "T2 – Parte 1: Corpus y extracción (OCR + ASR)",
+    "body": "Bitácora de la Tarea 2. Estado: en revisión; no cerrar hasta completar los requisitos.\n\n- [ ] 25 documentos, 8/8/9 con licencia\n- [ ] 22 clips y 38,57 minutos\n- [ ] OCR, ASR con VAD, diarización y exportaciones\n- [ ] Revisión humana y seudonimización\n- [ ] Notebook ejecutado y EDA"
+  },
+  {
+    "title": "T2 – Parte 2: Evaluación y extracción estructurada",
+    "body": "Bitácora de la Tarea 2. Estado: en revisión; no cerrar hasta completar los requisitos.\n\n- [ ] Referencias humanas para 10 documentos y 10 audios\n- [ ] Dos modelos por modalidad sobre los mismos IDs\n- [ ] CER, WER, latencia y RTF\n- [ ] LLM real y auditoría humana de 20 casos\n- [ ] Análisis de casos difíciles y decisión"
+  },
+  {
+    "title": "T2 – Parte 3: Dashboard y despliegue",
+    "body": "Bitácora de la Tarea 2. Estado: en revisión; no cerrar hasta completar los requisitos.\n\n- [ ] Búsqueda y filtros, métricas y Plotly\n- [ ] Exploradores de documentos y audios\n- [ ] Ejemplos multimedia revisados y autorizados\n- [ ] README y dependencias exactas\n- [ ] Streamlit Community Cloud y enlace público verificado\n- [ ] Capturas auténticas de toda la conversación"
+  }
+]

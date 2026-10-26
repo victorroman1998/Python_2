@@ -1,0 +1,20 @@
+# Material original, privado o pesado; NUNCA publicar
+/datos/raw/
+/datos/_privado/
+/modelos/*.safetensors
+/modelos/*.bin
+/modelos/checkpoint-*/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+*.key
+*.pem
+*.log
+# Auditorías privadas o candidatos (opcional: las fuentes públicas permanecen en fuentes.csv)
+/datos/candidatos_documentos.html
+/datos/candidatos_documentos.csv
+# No subir documentos privados de consentimiento o datos sensibles
+
+/modelos/cache/
+

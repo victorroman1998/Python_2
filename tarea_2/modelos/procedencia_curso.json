@@ -1,0 +1,10 @@
+{
+  "datos.py": {
+    "url": "https://github.com/d2cml-ai/Data-Science-Python/blob/main/sessions/13-audio-a-texto/datos.py",
+    "sha256": "ace5b7b886fc64c2b50d0ccdd6ba2a1299248fecf96d1eb5d56fbbab19a8aeac"
+  },
+  "voz.py": {
+    "url": "https://github.com/d2cml-ai/Data-Science-Python/blob/main/sessions/13-audio-a-texto/voz.py",
+    "sha256": "5b7653109668df3f4f23cf399901c4b7806b085f4c34378729ec3112f488cd6e"
+  }
+}
