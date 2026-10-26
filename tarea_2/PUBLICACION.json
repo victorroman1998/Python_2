@@ -162,8 +162,8 @@
     },
     {
       "archivo": "ESTADO.md",
-      "bytes": 706,
-      "sha256": "b6c6c02fa9a854e4b73d0fed0e37a86e320517c418371e4ac07eead3dd6d3ab5"
+      "bytes": 827,
+      "sha256": "537a5b0cffe82ef5888c970204e853362ca9402e7bae760e4f993593b278f7e8"
     },
     {
       "archivo": "evaluacion.py",
@@ -172,8 +172,8 @@
     },
     {
       "archivo": "evidencias_ia/README.txt",
-      "bytes": 355,
-      "sha256": "8d45f393d492c133745fa9b4d489f77cfda44c7c30b5bf66d28b86d7777c38d9"
+      "bytes": 261,
+      "sha256": "7291a0191d263418d3864a8351e3150f888bedafd5da73723f6addee2a0a0235"
     },
     {
       "archivo": "generar_audio_openslr.py",
@@ -212,8 +212,8 @@
     },
     {
       "archivo": "README.md",
-      "bytes": 13124,
-      "sha256": "2de6a4baf9829e4173f52df483c00e5f7fb774e7460f6b5c38349bb17559fdda"
+      "bytes": 13537,
+      "sha256": "bd0baf7f785de31b055f425b16f7aaef07f191377a3ded3ffac3e13170232ce6"
     },
     {
       "archivo": "recuperar_documentos.py",

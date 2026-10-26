@@ -4,7 +4,7 @@
 
 **Estudiante: Victor Roman-Lazarte (@victorroman1998).**
 
-**Estado: resultados y aplicación pública verificados; cierre documental pendiente.** Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Los 47 registros tienen revisión humana de privacidad vigente y ambos notebooks están ejecutados. Faltan las capturas auténticas de la conversación y publicar el comentario de entrega.
+**Estado: resultados y aplicación pública verificados; entrega preparada sin capturas de conversación.** Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Los 47 registros tienen revisión humana de privacidad vigente y ambos notebooks están ejecutados. El estudiante decidió no adjuntar las capturas de la conversación. Ese requisito del enunciado queda incumplido. El comentario de entrega está preparado y pendiente de publicación.
 
 ## Pregunta y método
 
@@ -106,9 +106,9 @@ El LLM local puede producir borradores antes de revisar privacidad. El envío a 
 
 **Dashboard público: [abrir aplicación](https://python2-8gghwjxssgbplo5wveyz8q.streamlit.app/).** Desplegado en Streamlit Community Cloud desde `victorroman1998/Python_2`, rama `codex/tarea-2` y ruta `tarea_2/app.py`. El 25/10/2026 se comprobaron en el enlace público los indicadores finales, el filtro de nueve manuscritos y la reproducción del fragmento autorizado. Tras el último reinicio también se verificó que el explorador JSON no muestre documentación interna de Streamlit.
 
-Las bitácoras [Parte 1 #4](https://github.com/victorroman1998/Python_2/issues/4) y [Parte 2 #5](https://github.com/victorroman1998/Python_2/issues/5) están documentadas y cerradas. [Parte 3 #6](https://github.com/victorroman1998/Python_2/issues/6) permanece abierta hasta incorporar las capturas y completar la entrega. El historial registra commits reales del 25/10/2026; no demuestra trabajo distribuido en varios días, como solicita la rúbrica, ni se alteraron fechas para aparentarlo.
+Las bitácoras [Parte 1 #4](https://github.com/victorroman1998/Python_2/issues/4) y [Parte 2 #5](https://github.com/victorroman1998/Python_2/issues/5) están documentadas y cerradas. [Parte 3 #6](https://github.com/victorroman1998/Python_2/issues/6) documenta el despliegue verificado y permanece abierta porque no se cumplen todos sus criterios: se omiten las capturas y queda pendiente el comentario final. El historial registra commits reales del 25/10/2026; no demuestra trabajo distribuido en varios días, como solicita la rúbrica, ni se alteraron fechas para aparentarlo.
 
-Guardar capturas auténticas y completas de esta conversación en `evidencias_ia/`, numeradas cronológicamente, ocultando información sensible. La captura de la conversación debe realizarla el estudiante; no se han fabricado capturas.
+**Evidencias IA no adjuntadas:** el 25/10/2026 el estudiante indicó expresamente que se continuara sin entregar las capturas de la conversación. Se conserva esta omisión documentada en `evidencias_ia/README.txt`; no se presentan imágenes generadas ni resúmenes como sustitutos. `verificar_entrega.py` continúa señalando ese requisito como pendiente y no debe interpretarse como cumplido.
 
 Ejecutar antes de publicar:
 
@@ -124,6 +124,7 @@ Tarea 2 – Individual
 Fuentes: Wikimedia Commons / Biblioteca Nacional del Perú / OpenSLR 73
 Estudiante: Victor Roman-Lazarte (@victorroman1998)
 Dashboard público (obligatorio): https://python2-8gghwjxssgbplo5wveyz8q.streamlit.app/
-Carpeta del trabajo: https://github.com/victorroman1998/Python_2/tree/codex/tarea-2/tarea_2
+Carpeta del trabajo: https://github.com/victorroman1998/Python_2/tree/main/tarea_2
 Resultados Test: WER: 0.409494 | CER: 0.211788 | Acuerdo LLM-Humano: 14/20
+Nota: no se adjuntan las capturas de la conversación con IA.
 ```
