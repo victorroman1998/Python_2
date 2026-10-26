@@ -2,7 +2,9 @@
 
 **Tarea 2 individual · [Enunciado](https://github.com/d2cml-ai/Data-Science-Python/issues/190) · [Repositorio](https://github.com/victorroman1998/Python_2).**
 
-**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Los 47 registros tienen revisión humana de privacidad vigente. Faltan las evidencias de conversación y comprobar el contenido final de la aplicación pública.
+**Estudiante: Victor Roman-Lazarte (@victorroman1998).**
+
+**Estado: resultados y aplicación pública verificados; cierre documental pendiente.** Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Los 47 registros tienen revisión humana de privacidad vigente y ambos notebooks están ejecutados. Faltan las capturas auténticas de la conversación y publicar el comentario de entrega.
 
 ## Pregunta y método
 
@@ -47,7 +49,7 @@ Se elige la línea base de cada modalidad para el corpus principal: PaddleOCR re
 
 La muestra de diez casos por modalidad es pequeña y varias páginas impresas proceden de un mismo volumen. El agrupamiento de voces no acredita identidad ni exactitud del número de personas sin escucha humana. Los manuscritos históricos, la tinta del reverso y los reflejos de vitrina limitan la extracción. La auditoría humana de veinte JSON tuvo **14 correctos y 6 incorrectos (70 %)**. En `doc_010`, el LLM cambió el día 20 por 22. En cinco clips afirmó un número de hablantes sin marcas que lo sustentaran. Las decisiones correctoras de esos seis casos y la revisión de `clip_021` se registraron por confirmación explícita del estudiante en conversación, con fecha y procedencia; las otras decisiones provienen de la aplicación local. No se corrigieron las respuestas del modelo para mejorar este resultado.
 
-La app pública utilizará solo dos medios autorizados: `doc_002.jpg`, una página sin nombres, y un MP3 de 46,55 segundos de `clip_021` (89,55–136,10 s), que omite la presentación con nombres. La licencia CC BY-SA 4.0 del audio se conserva y el recorte está indicado. Los demás originales autorizados se mantienen locales.
+La app pública utiliza dos medios autorizados: `doc_002.jpg`, una página sin nombres, y un MP3 de 46,55 segundos de `clip_021` (89,55–136,10 s), que omite la presentación con nombres. La licencia CC BY-SA 4.0 del audio se conserva y el recorte está indicado. Los demás originales autorizados se mantienen locales.
 
 ## Ejecución
 
@@ -85,9 +87,9 @@ python agregar_entrevistas.py
 
 El generador OpenSLR se detiene si ya hay clips para evitar sobrescribir el corpus. Mantener los originales fuera de Git. Abrir `01_extraccion.ipynb` y ejecutar con las salidas existentes; cambiar `RECALCULAR` solo para repetir los motores. Para LLM, se utilizó Ollama local con `qwen2.5:3b`; no se necesita una clave API. Las configuraciones y versiones están en `modelos/`.
 
-## Evaluación y trabajo humano pendiente
+## Evaluación y revisión humana
 
-La muestra definitiva contiene 10 documentos, estratificados 3/3/4 y con diversidad de fuentes, y 10 clips, incluyendo ambas entrevistas naturales. Se usa la semilla 20261025, se verifican hashes y se conserva la misma muestra para ambos modelos de cada modalidad. La configuración se fijó antes de consultar CER/WER.
+Los pasos siguientes ya se completaron y se conservan como guía de reproducción. La muestra definitiva contiene 10 documentos, estratificados 3/3/4 y con diversidad de fuentes, y 10 clips, incluyendo ambas entrevistas naturales. Se usa la semilla 20261025, se verifican hashes y se conserva la misma muestra para ambos modelos de cada modalidad. La configuración se fijó antes de consultar CER/WER.
 
 1. En `anotar.py`, **transcribir personalmente** los veinte originales. No copiar las respuestas OCR/ASR ni las referencias OpenSLR. Si un original resulta ilegible, registrar el caso antes de reemplazarlo y volver a congelar la evaluación de manera documentada.
 2. Comparar PaddleOCR 3.7.0 con EasyOCR 1.7.2, y faster-whisper `small` CPU con Qwen3-ASR 0.6B GPU. La inferencia puede completarse antes de las referencias; sus borradores están en `datos/_privado/predicciones_modelos.csv`.
@@ -102,9 +104,9 @@ El LLM local puede producir borradores antes de revisar privacidad. El envío a 
 
 ## Publicación y entrega
 
-**Dashboard público: [abrir aplicación](https://python2-8gghwjxssgbplo5wveyz8q.streamlit.app/).** Desplegado; verificación del contenido final en curso. Debe desplegarse en [Streamlit Community Cloud](https://share.streamlit.io) desde `victorroman1998/Python_2`, rama elegida y ruta `tarea_2/app.py`, y comprobar el enlace público.
+**Dashboard público: [abrir aplicación](https://python2-8gghwjxssgbplo5wveyz8q.streamlit.app/).** Desplegado en Streamlit Community Cloud desde `victorroman1998/Python_2`, rama `codex/tarea-2` y ruta `tarea_2/app.py`. El 25/10/2026 se comprobaron en el enlace público los indicadores finales, el filtro de nueve manuscritos y la reproducción del fragmento autorizado. Tras el último reinicio también se verificó que el explorador JSON no muestre documentación interna de Streamlit.
 
-Crear y documentar las tres issues del enunciado y cerrarlas solo cuando cada etapa esté terminada. Las bitácoras están abiertas en [Parte 1 #4](https://github.com/victorroman1998/Python_2/issues/4), [Parte 2 #5](https://github.com/victorroman1998/Python_2/issues/5) y [Parte 3 #6](https://github.com/victorroman1998/Python_2/issues/6). Mantenerlas abiertas hasta completar cada etapa. No se inventan commits de días anteriores.
+Las bitácoras [Parte 1 #4](https://github.com/victorroman1998/Python_2/issues/4) y [Parte 2 #5](https://github.com/victorroman1998/Python_2/issues/5) están documentadas y cerradas. [Parte 3 #6](https://github.com/victorroman1998/Python_2/issues/6) permanece abierta hasta incorporar las capturas y completar la entrega. El historial registra commits reales del 25/10/2026; no demuestra trabajo distribuido en varios días, como solicita la rúbrica, ni se alteraron fechas para aparentarlo.
 
 Guardar capturas auténticas y completas de esta conversación en `evidencias_ia/`, numeradas cronológicamente, ocultando información sensible. La captura de la conversación debe realizarla el estudiante; no se han fabricado capturas.
 
@@ -115,13 +117,13 @@ python validar_publicacion.py --verificar
 python verificar_entrega.py
 ```
 
-El comentario de entrega solo se completa cuando existan valores reales:
+Comentario preparado con los valores observados (todavía no publicado en el Issue del curso):
 
 ```text
 Tarea 2 – Individual
 Fuentes: Wikimedia Commons / Biblioteca Nacional del Perú / OpenSLR 73
-Identificación indicada por el estudiante: Tarea2-Python-Intermedio (@victorroman1998)
-Dashboard público (obligatorio): [enlace público verificado]
-Carpeta del trabajo: https://github.com/victorroman1998/Python_2/tree/main/tarea_2
-Resultados Test: WER: [real] | CER: [real] | Acuerdo LLM-Humano: [real]/20
+Estudiante: Victor Roman-Lazarte (@victorroman1998)
+Dashboard público (obligatorio): https://python2-8gghwjxssgbplo5wveyz8q.streamlit.app/
+Carpeta del trabajo: https://github.com/victorroman1998/Python_2/tree/codex/tarea-2/tarea_2
+Resultados Test: WER: 0.409494 | CER: 0.211788 | Acuerdo LLM-Humano: 14/20
 ```
