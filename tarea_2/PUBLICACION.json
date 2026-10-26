@@ -162,8 +162,8 @@
     },
     {
       "archivo": "ESTADO.md",
-      "bytes": 827,
-      "sha256": "537a5b0cffe82ef5888c970204e853362ca9402e7bae760e4f993593b278f7e8"
+      "bytes": 1008,
+      "sha256": "c16f1df787f3bff908a533feb9a2ff80ce7b9c0ee1e1f1c0b7dc5f7708b69084"
     },
     {
       "archivo": "evaluacion.py",
@@ -212,8 +212,8 @@
     },
     {
       "archivo": "README.md",
-      "bytes": 13537,
-      "sha256": "bd0baf7f785de31b055f425b16f7aaef07f191377a3ded3ffac3e13170232ce6"
+      "bytes": 13621,
+      "sha256": "ce886deb6174de1704b58157675ecf4c3d0285628fa4d1ca2ff13ba4747b2f3e"
     },
     {
       "archivo": "recuperar_documentos.py",
