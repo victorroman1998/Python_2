@@ -1,1 +1,976 @@
 id,archivo,tipo,fuente,texto_ocr,modelo_ocr,texto_referencia
+doc_001,datos/raw/documentos/doc_001.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"EL LIBERTADOR PERSONA001,
+GRAN MARISCAL DELOSEJERCITOS,
+CONDECORADO-CON LAS MEDALLAS DE JUNIN,
+AYACUCHO Y ANCAHS, Y PRESIDENTE
+PROVISORIO DE LA REPUBLICA.
+Por cuanto : la Convencion Nacional ha san-
+cionado la siguieite Constitucion.—
+BAJO LA PROTECCION DE DIOS
+LA CONVENCION NACIONAL
+CONVOCADA POR LA VOLUNTAD DE LOS
+PUEBLOS PARA CONSTITUIR LA REPÚBLICA,
+DÁ LA SIGUIENTE
+TITULO
+De la Nacion.
+Art. 1. La Nacion peruana es la asociacion politi-
+ca de tcdos los peruanos.
+—2. La Nacion es libre é independiente, y no pue-
+de celebrar pacto que se cponga á su independenciaó
+integiidad, ó que afecte de algun modo su soberanía.
+—3. La scberanía reside cn la Nacien, y su ejerci-
+cio se cnc mienda á lcs funcicnarics que establece esta
+Censtitucion.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"El libertador PERSONA003,
+Gran mariscal de los ejércitos,
+condecorado con las medallas de junin, ayacucho y ancash y presidente provisorio de la república
+
+Por cuanto: La convención nacional ha sancionado la siguiente constancia
+Bajo la protección de dios
+La convención nacional
+Convocada por la voluntad de los pueblos para constituir la república 
+Da la siguiente constitución
+Título 1 
+De la nación
+Art 1. La nación peruana es la asociación política de todos os peruanos
+2. la nación es libre e independiente  o intenda que afecte de algún modo su soberanía.
+3.  la soberanía reside en la nación,  y un ejercicio se enmienda funcionarios que establece esta constitucion."
+doc_002,datos/raw/documentos/doc_002.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"4
+TITULO 2.
+De la Religion.
+Art4. La Nacion profesa la religion católica,
+apostólica, romana: el Estado la proteje por todos
+los medios conforme al espíritu del evangelio y no
+permite el ejercicio público de otra alguna.
+TITULO 3.
+Garantías Nacionales.
+Ar.t. 5. Nadie puede arrogarse el título de sobe-
+rano: el que lo hiciere, comete un atentado de lesa
+patria.
+-6. En la República no se reconoce privilegios
+hereditarios, ni fueros personales ni empleos en propie-
+dad. Tampoco se reconoce vinculaciones, y toda pro-
+piedad es enagenable en la forma que determinan las
+leyes.
+Por este artículo no se menoscaba la juris-
+diccion sobre materia eclesiástica, que corresponde á los
+tribunales designados por las leyes canónicas; ni se
+autoriza para proceder á la detencion niá la ejecucion
+de pena corporal contra personas eclesiásticas, sino con-
+forme á los cánones.
+—7. Los bienes depropiedad nacional solo podrán
+enagenarse para los objetos y en los casos y forma que
+esprese la ley.
+—8. No puede imponerse contribuciones sino en
+virtud de una ley, en servicio público y en proporcion
+á los medios del contribuyente.
+Las contribucicnes directas no podrán imponerse
+sino por un año.
+—9. La ley fija los ingresos y egresos dela Nacion,
+y cualquiera cantidad exijida ó invertida contra su te-
+nor espreso, seiáde la resp nsabilidad solidaria del que
+lo crdena, del cue lo ejecuta; y del que recibe si no
+prueba sn inculpabilidad.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_003,datos/raw/documentos/doc_003.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"-5-
+—10. Es nula y sin efecto cualquiera ley en cuanto
+se oponga a la Constitucion. Son nulos igualmente los
+actos de los que usurpen funciones públicas, y los em-
+pleos conferidos sin los requisitos prescritos por la
+Constitucion y las leyes.
+—11. Todo empleado público, al cesar en su cargo,
+será sometidoájuicio de residencia, y mientras no sea
+absuelto, no podrá ejercer el mismo empleo ni otro al-
+guno.
+Los fiscales son responsables por accion popular, si
+no solicitan el cumplimiento de esta disposicion.
+—12. Los funcionarios públicos son responsables, en
+todo tiempo, con arreglo á las leyes.
+—13. Nadie podrá ejercer funciones públicas, ni po-
+seer cargo ó beneficio, si no jura cumplir la Constitu-
+cion.
+—14. Todo peruano puede reclamar ante el Con-
+greso, ó ante el Poder Ejicu ivo, ó ante cualquiera au-
+toridad competente, por infraeciones de la Constitu-
+cion.
+TITULO4.
+Garantías Individuales.
+Art. 15. No se reconoce mas obligaciones que las
+impuestas por las leyes; y ninguna ley tiene efecto re-
+troactivo.
+-16. La vida humana es inviolable: la ley no po-
+drá imponer pena de muer e.
+—17. Nadie es esclavo en la Repáblicn.
+—18. Nadie podrá ser arrestado sin mandato eseri-
+to de juez competente, ó d, la autoridad encargada del
+Srden público, escepto por delito infraganti; debiendo
+en odo caso ser puesto á dispesicion del juzgado que
+corresponda dentro de veinticuatro horas.
+-19. Nadie será espatriado ni estrañad) sin sen-
+tencin ejecutoriada.
+—20. Todos pueden hacer uso de la imprenta sin
+censura previa, bijo la responsabilidid que determine
+la ley.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_004,datos/raw/documentos/doc_004.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"—6
+21. Eh secreto de las cartas es invielable: no pre-
+duden efecto legal las que fueren sustraidas.
+--22. Es libre todo trabajo que no se oponga á la
+moral; seguridad ó salubridad pública.
+23. La Nación garantiza la instruccion primaria
+gratuitay los establecimientos públicos de ciencias, ar-
+tes, piedad y beneficencia.
+24. Todos los que ofrezean las garantías de capa-
+cidad y moralidad prescritas por la ley, pueden ejer-
+cer libremente la enseñanza y dirijir establecimientos
+de educacion bajo la inspeccion de la autoridad.
+n 25. La propicdad csinviolable : à nadie se puede
+privar de lasuya, sino por causa de utilidad pública le-
+galmenteprobaday previa indomnizacionjustipreciada.
+26. Todo estranjero podiá adquirir cenfoime á las
+leyes propiedad territerial en la Republica, quedando,
+en todó lo concerniente á dicha propiedad, sujeto á las
+obligaciones y en el goce de los derechos de peruaño.
+27. La ley asegura á les autores ó introductores de
+invencicnes útiles, la propiedad esclusiva de ellas, ó la
+compensacicn desu valor si convinieren en que se publi-
+quen.
+-28. Tedcs los ciudadanos tienen el derecho de aso-
+ciarse pacificamente, sea en público ó en privado, sin
+comprometer el órden público.
+—29. Todos pueden ejercer el derecho de peticion, in-
+dividualó colectivamente.
+—30. Es inviolable cllomicilio: no se puede penetrar
+en él, sin que se manifieste previamente mandato eseri-
+to de juez ó de la autoridad encargada del órden pú-
+blico, cuya copia podrá exijirse.
+—31. Las leyes protejen y obligan igualmente á to-
+dos: podrán establecerse leyes especiales porque lo re-
+quiera la naturaleza de les objetos, pero no por solo la
+diferencia de-personas.
+TITULO5.
+De los Peruanos.
+Art. 32.
+Hay peruanos por nacimienfo y por natu-
+ralizacien.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"21. El secreto de las cartas es inviolable; no producen efecto legal las que fueron sustraídas.
+
+22. Es libre todo trabajo que no se oponga á la moral, seguridad ó salubridad pública.
+
+23. La Nación garantiza la instrucción primaria gratuita y los establecimientos públicos de ciencias, artes, piedad y beneficencia.
+
+24. Todos los que ofrecen las garantías de capacidad y moralidad prescritas por la ley, pueden ejercer libremente la enseñanza y dirigir establecimientos de educación ó inspección de la autoridad.
+
+25. La propiedad es inviolable: á nadie se puede privar de la suya, sino por causa de utilidad pública legalmente probada y previa indemnización justipreciada.
+
+26. Todo extranjero podrá adquirir conforme á las leyes propiedad territorial en la República, quedando sujeto á las obligaciones y goces de los derechos de peruano.
+
+27. La ley asegura á los autores ó inventores de obras, invenciones útiles, la propiedad exclusiva de ellas, ó la compensación de su valor si conviniere que se publiquen.
+
+28. Todos los ciudadanos tienen el derecho de asociarse pacíficamente, sea en público ó en privado, sin comprometer el orden público.
+
+29. Todos pueden ejercer el derecho de petición, individual ó colectivamente.
+
+30. Es inviolable el domicilio: no se puede penetrar en él, si no se manifieste previamente mandato escrito, juez ó de la autoridad encargada del orden público, cuya copia podrá exigirse.
+
+31. Las leyes protejen y obligan igualmente á todos; podrán establecerse leyes especiales porque lo requiera la naturaleza de los objetos, pero no por solo la diferencia de personas.
+
+TÍTULO 5.º
+
+De los Peruanos.
+
+Art. 32. Hay peruanos por nacimiento y por naturalización."
+doc_005,datos/raw/documentos/doc_005.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"--7--
+—33. Son peruanos por macimiento:
+1. Los que nacen ent el territorio de la Re-
+pública:
+2. Los hijos de padre ó madrelperuans
+que nacen en el estranjero, cuyos nombres se inseriben
+en el registro cívico por voluntad de sus:padres mien-
+tras se hallan en la menor edad, ó por la suya propia
+desde que lleguen á la edad de veintiun años.
+34. Son peruanos por naturalizacion los estranje-
+ros mayores de yeintiun años que ejerzan alguna profe-
+sion ó industria y se inscriban en el registro civico, en
+la forma que determine la ley.
+-35. Todo peruano está obligado á servir á la Re-
+pública con su persona y bienes del modo y en la pro-
+poreion que señalen las leyes.
+TITULO 6.
+De la Ciudadanía
+Art. 36. Son ciudadanos ó se hallan,en ejereicio de
+los derechos políticos, los peruanos varones mayóresde
+veintiun años, y los casados aunque no hayan llegadə
+a esta edad.
+---37. El sufragio popular es directo: lo ejercen los
+ciudadanos que saben leer y oseribir, ó son jefes de ta-
+ller, ó tienen una propiedadoaiz, ó se han retirado, con-
+forme á la ley, despues de haber servido en el ejército
+ó'ármada.
+38. Todos los ciudadanos.pueden optar empleos
+publicos, siempre qué reunan las calidades especiales
+que laley exija para cada cargo.m
+---39. El ejercicioide la ciudadanía se suspende:
+1.Por incapacidad:
+2.Portachadedeudor quebrado:
+3aPormhallarseeprocesado criminalmente
+y con mandamientotdelprision:
+4gpoPor ser notoriamente vago, jugator,
+ebrio ó estardivoreiado por culpa suya.
+---40. El derecho de ciudadanía se pierde.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"33. Son peruanos por nacimiento:
+1. Los que nacen en el territorio de la Republica:
+2. Los hijos de padre o madre peruanos que nacen en el extranjero, cuyos nombres se inscriben en el registro cívico por voluntad de sus padres mientras se hallan en la menor edad o por la suya propia desde que lleguen a la edad de veintiun años.
+34. Son peruanos por naturalización los extranjeros mayores de veinitun años que ejerzan alguna profesión o industria y se inscriban en el registro cívico, en la forma que determine la ley.
+Titulo 6
+De la ciudadanía
+Art. 36. Son ciudadanos o se hallan en ejercicio de los derechos políticos, los peruanos varones mayores de viuntiun años, y los casados aunque no hayan llegado a esta edad
+---34. El sufragio popular es directo: lo ejercen los ciudadanos que saben leer y escribir, o son jefes de taller, obtienen una propiedad raíz, o se han retirado, conforme a la ley, después de haber servido en el ejercito o armada.
+---38. Todos los ciudadanos pueden optar empleos públicos, siempre que reúnan las calidades especiales que la ley exija para cada cargo.
+---39. El ejercicio de la ciudadanía se suspende:
+1- Por incapacidad
+2- Por tacha de deudor quebrado
+3- Por hallarse procesado criminalmente y con mandamiento de prisión 
+4. Por ser notoriamente cago, jugador, ebrio o estar divorciado por culpa suya.
+40- --- el derecho ciudadano se pierde"
+doc_006,datos/raw/documentos/doc_006.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"—8
+1. Por sentencia en qué se imponga esa
+pena, conforme á la ley:
+2. Por quiebra fraudulenta julicialmente
+declarada:
+3. Por obteneróejercer la ciudadanía en
+otro Estado:
+4. Por recibir cualquier título de nobleza
+ó condecoracion monárquica:
+5. Por la profesion monástica, mientras
+no se obtenga la esclaustracion:
+6. Por el tráfico de esclavos aun en ol es-
+terior.
+TITULO 7.
+De la forma de Gobierno
+Art. 41. El Gobierno de la República es demoerát.-
+co, representativo, basado En la unidad.
+—42. Ejercen las funciones públicas los encargados
+de los poderes Lejislativo, Ejecutivo y Judicial, sin que
+ninguño pueda salir de los límites prescritos por esta
+Constitucion.
+TITULO 8.
+Del Poder LejisIativo
+Art. 43. Ejercen el Poder Lejislativo los represen-
+tantes de la Nacion reunidos en Congreso, compuesto
+de dos cámaras, uma de Senadoresy otra de Diputados.
+44. Los representantes del pueblo son elejidos di-
+rectamente á pluralidad respectiva por los ciudadanos
+en ejercieio, en la forma prescrita por la ley.
+—45. Por cada veinticinco mil habitantes, ó por una
+fracción que pase de quince mil, y por toda provincia,
+aunque tenga menos de quince mil habitantes, se eleji-
+rá un representante y un suplente.
+-46. Para ser Representante se requiere: ser perua-
+no de nacimiento, ciudadano en ejercicio, tener vein-",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_007,datos/raw/documentos/doc_007.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"—9
+tiocho años de edad, y cinco de domicidio en la Repú-
+blica, y una renta de quinientos pesos ó ser profesor de
+alguna ciencia.
+—.47 No pueden ser representantes:
+1.Los funcionarios del Poder Ejecutivo,
+si no se hallan fuera del cargo desde dos meses antes de
+la eleccion:
+2.0
+Los arzobispos y obispos:
+3.0
+Ios eclesiásticos que desempeñen la cu-
+ra de almas:
+4.°
+Los vocales de las cortes en los depar-
+tamentos donde ejercen jurisdiccion:
+5. Los jueces en sus distritos judiciales:
+6. Los comandantes militares y los jefes
+con mando de fuerza en las provincias donde estén
+acantonados.
+Art. 48. El Congreso se reunirá ordinariamente ca-
+da año el 28 de Julio; y estraordinariamente cuando
+sea convocado por el Poder Ejecutivo. La duracion del
+ordinario no escederá de cien dias perentorios: la del
+estraordinario podrá ser menor, terminado el objeto de
+su convocatoria.
+—49. No se puede hacer la apertura del Congreso
+con menos de los dos tercios del número total de repre-
+sentantes.
+—50. Los representantes son inviolables en el ejer-
+cicio de sus funciones.
+—51. Los representantes no pueden ser arrestados
+ni acusados durante las sesiones sin previa autoriza-
+cion del Congreso. Solo en el caso de delito infraganti,
+podrán ser arrestados y se les pondrá inmediatamente
+á disposicion del Congreso.
+—52. Vaca de hecho el cargo de representante por
+admitir durante su período, cualquier eimpleo, cargo ó
+beneficio cuyo nombramiento ó presentacion dependa
+esclusivamente del Jefe del Poder Ejecutivo.
+—53. El Congreso se renovará anualmente por ter-
+ceras partes. Los representantes podrán ser reelectos,
+y solo en este caso será renunciable el eargo.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_008,datos/raw/documentos/doc_008.jpg,impreso,https://commons.wikimedia.org/wiki/File:Constituci%C3%B3n_Pol%C3%ADtica_del_Per%C3%BA_(1856).pdf (Public domain | PDM),"—10—
+—54. El Congreso examinará de preferencia las
+infracciones de Constitucion, y dispondrá lo convenien-
+te para hacer efectiva la responsabilidad de los infrac-
+tores.
+—55. Son atribuciones del Congreso:
+I.≈ Dar, interpretar, modificar y derogar
+las leyes:
+2. ≈ Abrir y cerrar sus sesiones en el tiempo
+designado por la ley:
+3.≈ Designar el lugar de sus sesiones y de-
+terminar si ha de haber óno fuerza armada, en qué
+número y á qué distancia:
+4. Imponer contribuciones para satisfacer
+los gastos públicos, suprimir las establecidas, sancio-
+nar el presupuesto y tomar cuentas anualmente al Po-
+der Ejecutivo:
+5.≈ Abrir empréstitos empeñando el crédito
+nacional y designando fondo para cubrirlos:
+6.≈ Reconocer la deuda nacional y fijar los
+medios para consolidarla y amortizarla:
+7.≈ Crear ó suprimir empleos públicos y
+asignarles la correspondiente dotacion:
+8. Fijar el peso, ley, tipo y denominacion
+de la moneda y determinar las pesas y medidas:
+9.≈Proclamar la eleccion de Presidente he-
+cha por la Nacion, ó hacerla cuando no resulte elejido
+segun la ley:
+10.≈ Admitir ó no la renuncia del Encar-
+gado del Poder Ejecutivo:
+11.≈ Resolver las dudas que ocurran en los
+casos de incapacidad del Presidenie, designados en el
+inciso 2. del arículo 83, y declarar si debe ó no pro-
+cederse á nueva eleccion:
+12.≈ Aprobar ó desechar las propuestas que
+haga el Ejecutivo para jefes del ejército y armada, des-
+de mayor graduado y capitan de corbeta hasta gene-
+ral y contra-Almirante inclusive; sin traspasar en nin-
+gun caso el número designado por la ley:
+13.≈ Prestar ó negar su consentimiento pa-
+ra el ingreso de tropas estranjeras en el territorio de la",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_009,datos/raw/documentos/doc_009.jpg,foto,https://commons.wikimedia.org/wiki/File:Exposici%C3%B3n_100_a%C3%B1os_Armando_Robles_Godoy_-_Carta_de_Juan_Velasco_Alvarado.jpg (Public domain | CC BY 4.0),"PRESIDENCIA
+REPUBLICA
+Lima, 5 de diciembre de 1972.
+Señor Don
+PERSONA004
+DOMICILIO001
+Magdalena del Mar.
+De mi especial consideración :
+Me es particularmente grato referirme
+a su atenta de 20 de noviembre último, a través de la cual se sirve usted
+hacerme conocer las noticias del éxito alcanzado por su película ""Espe-
+jismo"", en el Festival Cinematográfico Internacional de Chicago.
+Felicito a usted muy sinceramente
+por este nuevo triunfo, que constituye motivo de satisfacción para los pe
+ruanos y un merecido premio a su reconocido esfuerzo y patriótico empe-
+ño por sacar adelante la industria cinematográfica nacional.
+Tan pronto disponga de un tiempo li-
+bre, dentro de nuestra recargada agenda de trabajo, me será grato ver la
+película cuyo éxito nos place comentar.
+Cordialmente,
+con
+GRAL. DIV. PERSONA005
+Presidente de la República",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"PRESIDENCIA DE LA REPUBLICA
+
+Lima, 5 de diciembre de 1972.
+
+Señor Don
+ PERSONA004
+ DOMICILIO001
+ Magdalena del Mar.
+
+De mi especial consideración:
+
+Me es particularmente grato referirme a su atenta de 20 de noviembre último, a través de la cual se sirve usted hacerme conocer las noticias del éxito alcanzado por su película ""Espejismo"", en el Festival Cinematográfico Internacional de Chicago.
+
+Felicito a usted muy sinceramente por este nuevo triunfo, que constituye motivo de satisfacción para los peruanos y un merecido premio a su reconocido esfuerzo y patriótico empeño por sacar adelante la industria cinematográfica nacional.
+
+Tan pronto disponga de un tiempo libre, dentro de nuestra recargada agenda de trabajo, me será grato ver la película cuyo éxito nos place comentar.
+
+Cordialmente,
+
+GRAL. DIV. PERSONA005
+ Presidente de la República"
+doc_010,datos/raw/documentos/doc_010.jpg,foto,https://commons.wikimedia.org/wiki/File:Canciller_inaugura_exposici%C3%B3n_del_centenario_del_retorno_de_Tarata_al_Per%C3%BA_-_54778280176.jpg (CC BY-SA 4.0),"B-335
+Protocolo de Arbitraje
+Reunidos en Wáshington, D. C., en conformidad a la invitación del Gobierno de los Estados
+Unidos de América, para procurar la solución de la larga controversia relacionada con las
+disposiciones no cumplidas del Tratado de Paz, de 20 de octubre de 1883, los infrascritos,
+en representación del Perú y de Chile, a saber:
+Don PERSONA006 y don PERSONA007, Enviados Extraordinarios y Ministros
+Plenipotenciarios del Perú en Misión Especial; y
+Don PERSONA008 y don PERSONA009, Enviados Extraordinarios y Ministros
+Plenipotenciarios de Chile en Misión Especial;
+después de canjear sus respectivos plenos poderes, han acordado lo siguiente:
+Artículo 1º.—Queda constancia de que las únicas dificultades derivadas del Tratado
+de Paz sobre las cuales los dos Países no se han puesto de acuerdo, son las cuestiones que
+emanan de las estipulaciones no cumplidas del artículo 3° de dicho Tratado.
+Artículo 2°.—Las dificultades a que se refiere el artículo anterior serán sometidas al
+arbitraje del Presidente de los Estados Unidos de América, quien las resolverá sin ulterior
+recurso, con audiencia de las Partes y en vista de las alegaciones y probanzas que éstas
+presenten. Las plazos y procedimientos serán determinados por el Arbitro.
+Artículo 3°.—El presente Protocolo será sometido a la aprobación de los respectivos
+Gobiernos y las ratificaciones serán canjeadas en Wáshington, D. C., por intermedio de
+los Representantes diplomáticos del Perá y de Chile, dentro del plazo máximo de tres meses.
+Firmado y sellado en doble ejemplar, en Wáshington, D. C., el veinte de julio de mil
+novecientos veintidés",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"Protocolo de Arbitraje
+
+Reunidos en Wáshington, D. C., en conformidad a la invitación del Gobierno de los Estados Unidos de América, para procurar la solución de la larga controversia relacionada con las disposiciones no cumplidas del Tratado de Paz, de 20 de octubre de 1883, los infrascritos, en representación del Perú y de Chile, a saber:
+
+Don PERSONA006 y don PERSONA007, Enviados Extraordinarios y Ministros Plenipotenciarios del Perú en Misión Especial; y
+
+Don PERSONA008 y don PERSONA009, Enviados Extraordinarios y Ministros Plenipotenciarios de Chile en Misión Especial;
+
+después de canjear sus respectivos plenos poderes, han acordado lo siguiente:
+
+Artículo 1°.- Queda constancia de que las únicas dificultades derivadas del Tratado de Paz sobre las cuales los dos Países no se han puesto de acuerdo, son las cuestiones que emanan de las estipulaciones no cumplidas del artículo 3° de dicho Tratado.
+
+Artículo 2°.- Las dificultades a que se refiere el artículo anterior serán sometidas al arbitraje del Presidente de los Estados Unidos de América, quien las resolverá sin ulterior recurso, con audiencia de las Partes y en vista de las alegaciones y probanzas que éstas presenten. Las plazas y procedimientos serán determinados por el Arbitro.
+
+Artículo 3°.- El presente Protocolo será sometido a la aprobación de los respectivos Gobiernos y las ratificaciones serán canjeadas en Wáshington, D. C., por intermedio de los Representantes diplomáticos del Perú y de Chile, dentro del plazo máximo de tres meses.
+
+Firmado y sellado en doble ejemplar, en Washington, D. C., el veinte de julio de mil novecientos veintidós."
+doc_011,datos/raw/documentos/doc_011.jpg,foto,https://commons.wikimedia.org/wiki/File:Canciller_inaugura_exposici%C3%B3n_del_centenario_del_retorno_de_Tarata_al_Per%C3%BA_-_54778280176.jpg (CC BY-SA 4.0),"sizstnamalumol
+/ ma, 23 de agosto de 1922.
+Pásese al Congreso Nacional para los efectos
+de la atribución 18º del articulo 83: de la Constitu
+cion de la Republica. Registrese.
+PERSONA011",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_012,datos/raw/documentos/doc_012.jpg,foto,https://commons.wikimedia.org/wiki/File:Canciller_inaugura_exposici%C3%B3n_del_centenario_del_retorno_de_Tarata_al_Per%C3%BA.jpg (CC BY-SA 4.0),"1
+Los euari s, PERSONA012, en repreeentastén de
+la Mopdblim de chile, debidamente faoultado al efeoto per el
+Presiaente de la Repdbliea, y PERSONA013, en
+represemtasión de la Repdblioa del Perd, debidamente autorisa-
+do por el Prosidente de la Republioa, reunidos en Tarata, de-
+jan constanoia en el presente dooumento que, en oumplimiento
+de lo resuelto en la Opinión y Fallo del Arbitro pn el Arbitra-
+Je entre la Repúblioca de Chile y la República del Perú relativo
+a las cláusulas no cumplidas del Tratado de Paz de 2o de Ootu-
+bre de lsss y del Protocolo y Acta Complementaria, susoritos
+en Washington el 20 de Julio de 1922, 1a República de Chile ha-
+ce entrega en este acto á la República del Perú, que recibe, el
+territorio de Tarata comprendido en la linea a que se hace re-
+ferenoia mks abajo.
+Estando pendiente del informe de la Comisión Especial
+de Lfmites y de la resolución del Arbitro la detemminación del
+lfmite definitivo entre la provinoia de Tarata y los territorios
+de Taona y Arioa en nfomidad al Laudo, se deje eonstanota de
+que e2 1fmite rijade pare 1a atual ten c territorte de la
+pro a de Tar es 2n ae e een ta earsin e mrn
+we desripd e e tsee ree  due ae ln hae hare",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_013,datos/raw/documentos/doc_013.jpg,foto,https://commons.wikimedia.org/wiki/File:Canciller_inaugura_exposici%C3%B3n_del_centenario_del_retorno_de_Tarata_al_Per%C3%BA.jpg (CC BY-SA 4.0),"ter    d    e,
+a alvo us coreooe ore e o pre e poeoo  s
+provinola de Tarate, segdn la Donronoicn Foltsion vlgente e
+2o de Ostubre de leos, quede pendiente hasta que le Comtstsn De-
+marondora fige la linea norte d le pxovinota so Taons, s son
+formidad con la Opinion y Leudo Arbitral.
+Por su parte Chile, también sin menoscabo de la reser-
+del Perd, manteniendo en toda su integridaa los derechos que le
+correspondan.
+Firmado en duplicado en la ciudad de Tarata el lo de
+Setiembre de 1925.
+Mo.de.Frupe.8
+him
+ariray",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"...territorio de la provincia de Tarata ocupado por Chile, la posesión se salve una discusión sobre la cual, para que permanezca en Tarata, según la inmemoriales prácticas vigente y la de Octubre de 1902, según proclama hecha que lo constituye la merecedora fija de la línea sobre la que prevale la reconocida conformidad con la opinión unánime nacional.
+
+Por su parte Chile, también ha manifestado de la reserva referida, se abstiene de hacer comentario sin abandonar la del Perú, manteniendo en toda su integridad los derechos que le correspondan.
+
+Firmado en duplicado en la ciudad de Tarata el 1° de Setiembre de 1925."
+doc_014,datos/raw/documentos/doc_014.jpg,foto,https://commons.wikimedia.org/wiki/File:Estado_General_de_Miguel_Grau.jpg (CC BY 2.0),"如专专手掌
+”
+Armada del
+Noniter
+OSeri.
+uasoate
+ESTADO
+GENERAL
+expresad at mande de su Gomandante Gapilan do aviDMegul
+Yrau
+En que se encuenha
+en el mes de la fecha.
+Oficiales de guerra.
+Guardias Marinas.
+Armamento.
+Municiones y artificios.
+Trasporte.
+Oficiales mayores y maquinistas.
+Oapiton
+Dcaimes te ul
+景
+Wada
+agan Ad gth
+9
+bazd
+1：话
+asgeros
+Feniente
+Oiles
+微星
+燕
+Tropa
+Jees
+Total
+Seginds gode
+茶
+A
+de  aa)
+Achlnes
+56
+Seflede
+i
+Rapite
+eashas
+sajeaties de
+beje
+ness de
+Dopraltates de prtia
+Gasicia
+Clises
+Car suterss
+And ence
+Artilians
+Mariueres.
+Tabe
+Tetal
+Hesmot
+Panes
+Mayordenses
+31arre.
+de peesser
+Saldaln
+Dotación actual
+A
+2
+12
+62
+12
+12
+1E2
+A租
+Faltan al reglamento
+Hospital,
+Dimensiones y calado.
+Casco, blindages y cubierta.
+Máquinas, principal y accesorias.
+Járcia y arboladura.
+Velámen.
+Lloa wb Bil pa
+Caes de fiure de he pulp! Gon deble gonde of
+200
+deye
+33
+2
+Yueamits mayer
+de
+Calade
+ind. thert in 18ps Bybuta de prin de ty9e
+Il Condeneader de pe remitide d'eann Jae
+LLar
+Ielathr
+driete.
+dela attad
+Aa
+t w
+200
+retaide
+Embarcaciones.
+Anclas y amarras.
+Vasijería.
+Viveres, agua y carbon.
+Instrumentos de navegacion.
+Drememet Bquaud
+2
+de I atalln de guary ra 2 Anola de
+リルん
+Felingtore
+Pd
+Piens pani
+Rempeses de Altaene
+bedias
+ふのん
+am
+12
+Kma
+pmcasini
+0604
+Pomparaaim
+fan song
+Chalapa
+Onela d250
+lbd
+aAgua pas
+2 dias
+btte
+1 Ras de respet
+龙
+grt
+lik 22
+12
+Relofed
+Cadema de 1yhprulys
+braga
+Dedlm toneladas
+105
+jelge deplane
+230 tomelade
+105
+Retandalle de fratt
+lepi de "" jeuly
+40
+1
+ND
+Wenithtueing.
+Dellar Mhil so d 17g.
+aliwtas
+专手手手手
+Imp. del Es ado-Lima.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_015,datos/raw/documentos/doc_015.jpg,foto,https://commons.wikimedia.org/wiki/File:AAMSM_carta_a_hermano_31072010.jpg (CC BY-SA 3.0),"Saiena mays e de 1860
+Resrido hermano!
+Un pots ya serens
+Sano , salio pere marchari a
+Aricer ion ene comjanije que de fe.
+Lommeds, agn in li moihe, mmeatio
+s chango del Viedmicg defing ringer
+j
+Mandame in fronefia ) posos 100
+Los pa peles gue won
+alojirmiento dicde airché
+a
+prtes entregales w algime ste t
+efes altr gue fueden llegar
+He enearga Gre thuesbert
+dese nive us tiasde suts al tamto
+Compaiin del lolccadis han seds moertis
+in il ahs de aliaga.su mann
+vende ntuco ds ltellim u En Tras
+el ultrase, y br gremensgue rtin
+haiondo ahsea in nta lindas
+n la gng. se tatrin
+tenem Jumilia aa n
+debims rigniamm por la munte
+del Follo!
+paile",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_016,datos/raw/documentos/doc_016.jpg,foto,https://commons.wikimedia.org/wiki/File:Carta_cevicheria_chiclayo.jpg (CC BY 2.0),"Cebicheria
+Don
+Beto
+Especialidad en Conchas Negras
+Personal
+Fuente
+S/
+S/.
+CEBICHES
+Cebiche de conchas negras
+20.00
+30.00 - 35.0 - 40.00
+Cebiche de tollo
+30.00 - 35.00 - 40.00
+20
+Cebiche clásico
+20.00
+30.00- 35.00-40.00
+conchas negras y tollo)
+2000
+30.00-35.00-40.00
+ebiche mixto
+inguirito
+20.00
+30.00-35.00-40.00
+JDADOS
+ado de conchas negras
+20.00
+30.00 - 35.0- 40.00
+35
+40.45
+do de pescado
+do Mixto
+35.40.45
+do, conchas negras y",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_017,datos/raw/documentos/doc_017.jpg,manuscrito,"https://commons.wikimedia.org/wiki/File:4000004161-0003_-_Carta_de_Carlos_J._Bachmann._1912_junio_10,_Riberalta;_para_Ricardo_Palma,_Lima.pdf (CC0)","49
+2
+alid  aatneyn meoddigy
+e
+lbwh ke
+Riberalta, jumio 10 de 1912.
+udralanatelma
+mahuath
+Liing.
+w
+ma
+obmataln
+a
+d m
+Desde estas apartades co-
+tairouto an wa
+marcas deseo manifestar a al. el profindo dolor que he
+ch
+we
+dis wrrhant
+ae
+han arrancado a' ll, por la fuerza, de la casa que l reedi-
+a
+Jicara,- para honra die Peri,- a coeta de tants esfuerzos
+g sacrificios.
+Jamas hubiera ereido gue mandatario
+algimo se atreviera a turbar ol posiego que aual ningmo
+Tieme l. merecido, despurs de tanty aios de labor patrio-
+hombre algimo osara faltar las canas de tan insigne lite-
+eemnon
+rato, canas resketadas siemmpre peer profoirs g extraños, por
+aoind
+Jovenes g mriegis, por ricos g pobres.
+e
+ed
+Desde 1888, que se firndi la Sociedad Geografia
+renacer con sus esfuerzos, repntacion  influencias, he si-
+do puedo tecir testigo de sn inmenen labor de su asidui
+dad, de sus fatigas.
+Todo su tiempo era absorbido for
+las atenciones  puidados de la fammilin
+a",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_018,datos/raw/documentos/doc_018.jpg,manuscrito,"https://commons.wikimedia.org/wiki/File:4000004161-0003_-_Carta_de_Carlos_J._Bachmann._1912_junio_10,_Riberalta;_para_Ricardo_Palma,_Lima.pdf (CC0)","de recibo, pareceme verlo, pentado en su xillon, dando sabirs
+coneejos I gruiando en sus preteneiones de periodieta a este
+Muchas, muchas, fueron las Neces que acudia U.,
+como otrs tants, - en demanda de datirs i informaciones; g
+so, patermal, me daba lecciones de hietoria patria, relatándo-
+me fom miniciosidad mil incidentes de aguellos gue no pn-
+asot
+blican Ins diarios g que M. recordaba cou notable precision.
+co
+Tenta anot de erda, penee eseribir algo sobre la hietoria del
+decano de miestm forenea perirdica: recurri'aU. g con
+su fondad ingenita me facilito' cuanta informacion nece-
+Ritaba para la redaccion de ese articulo, refiriéndome mil
+a dangn aho
+I n smgidentes de la vida de ese valiente é imparcial
+uate
+mro gue per ahn coneerro, kues no se pudo peor aguul enton
+mpa
+DO
+ces celebrar esa efemerides como correspondia, a canea de
+rag bavtttiove
+ndoandaa
+Is gravea sucess que surgieron eou las naciones limitrofes.
+4t
+Siempre lo recuerdo a l. con carino g respeto, Joues
+DUNND
+cual ringimo acaro he tenido la puerte di hablar con , con
+franuencin, en aguellas tardes agradables eri lis salones de la.
+Sociedad Seograficn, cuando la presidia eu habil  entu-
+Reasta fimdador, el noliidable Sr. PERSONA015. Alli
+all was abeun
+escuchaba las suteresantes conversaciones del nucleo de hom-
+u",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"de recibo, paréceme verlo, sentado en su sillón, dando sabios consejos y guiando en sus pretensiones de periodista a este humilde servidor suyo.
+
+Muchas, muchas, fueron las veces que acudí a él, como otros tantos, en demanda de datos e informaciones; y cuánta satisfacción experimentaba cuando en tono cariñoso, paternal, me daba lecciones de historia patria, relatándome con minuciosidad mil incidentes de aquellos que no publican los diarios y que él recordaba con notable precisión.
+
+Recuérdome que cuando en 1909 cumplió ""El Comercio"" setenta años de vida, pensé escribir algo sobre la historia del decano de nuestra prensa periódica; recurrí a él, y con su bondad ingénita me facilitó cuanta información necesitaba para la redacción de ese artículo, refiriéndome mil y un incidentes de la vida de ese valiente e imparcial adalid de las libertades en nuestra patria; datos curiosísimos que por ahí conservo, pues no se pudo por aquel entonces celebrar esa efemérides como correspondía, a causa de las graves sucesos que surgieron con las naciones limítrofes.
+
+Siempre lo recuerdo a él con cariño y respeto, pues cual ninguno acaso ha tenido la suerte de hablar con él con frecuencia, en aquellas tardes agradables en los salones de la Sociedad Geográfica, cuando la presidía su hábil y entusiasta fundador, el inolvidable Sr. PERSONA033 Carranza. Allí escuchaba las interesantes conversaciones del núcleo de hombres notables que solían reunirse en amena charla sobre ciencia, artes, viajes, política, etc., etc. Estas conversaciones..."
+doc_019,datos/raw/documentos/doc_019.jpg,manuscrito,"https://commons.wikimedia.org/wiki/File:4000004161-0003_-_Carta_de_Carlos_J._Bachmann._1912_junio_10,_Riberalta;_para_Ricardo_Palma,_Lima.pdf (CC0)","2.
+wonetide wainor a ab nlis astationg and absnnd conerdent
+me sirvieron de eeavela, g me enorgullecian suicho, por el
+favor gue me dsepeusalan al permitirme eocucharlas.
+En mis rats de aburrimiento, myer decho de deses.
+peracin,- en eetas anoutanas de severo alimga, de miltiples
+privaciones, lejos, miny leja de mai gueidas patria, de mi
+madre, de mis amigos, he pensado mas de ma vez en mi
+vida de la Soaedad Gergrafica, en pus inteligentes pocirs,
+que poco a poco van dyando eete meundo, aburridr pin
+duda de tranta ingratitud, de tanta indolencin. bon el
+pensamiento me trasponto a ssa m code des secretario de
+esa docta g ictil institucion cientifionng paréceme que al
+ascender las amplias gradas de marmol gue dan accees
+i sus oficinas, tengo el feliz enenentro,-como acntecia con
+frecueicia, - de hallarme en el voverable tradicionieta que
+bajaba a us faenas cuotidianas a la Ribliateca, aeea hija
+suya, exelusivamente siuya; g que me houraba deteniéndome
+algrms mimutr para pregrmtarme noticias s darme emejos.
+La no tendré por cirto esta puerte euando regrese a
+mi incomparable dima, si acaso rueloo a ocupar mi pues.
+to. eis la Sociedad Leografich; ga no lo voré aM. en eu es.
+critorio leyendo  contiatando cartes de les repentaciones literaries
+del mindo;fins veré a sus amantes hijas paceandose en les
+amplis corredores acts; ga no vere a sus preciosos nietecits
+Jugueteando aqui g all'a, sirviendo de chochera eneautadora
+iu abuelits.
+Nada de eeto volveré a ver: il vetusto
+edificis ha de resentire em u , y si pudra hablar,",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_020,datos/raw/documentos/doc_020.jpg,manuscrito,"https://commons.wikimedia.org/wiki/File:4000004161-0003_-_Carta_de_Carlos_J._Bachmann._1912_junio_10,_Riberalta;_para_Ricardo_Palma,_Lima.pdf (CC0)","S
+hubiera mido sus proteetas alas de la nacion entera
+inicno atentado de que ha sido . victima
+onreme , m Aoarde, com uatro letras que
+mrtrare orgulloso amis amigis de estas selvas, que mucho
+gtan de pus abras Fodo ellr eomocel. or en fa
+ma literaria, angue algrms no han tenido oportimidus
+iom me slos anesteerm abeamed it inpirats amm it orbee
+Recilde mi artede lae mi renora
+reapetuoles paludis ara g is dignas hijas; adema
+founto abrazo, muy estrucho, miry agradecido, may
+pincera, de grien fien pabke t to griiere, to respeta g lo
+do inp emesenperismat ad
+nietives ae-ontmewere  one ife ane i
+wimp staiaiubont aldo neros le mas emyaltat ib  seneisent
+yot ase in poutaiddist at is aamoubt as ansess ans'is cntapod
+eralnaneted odsniat ens enp f aus stmorlse opu
+iears emad a siaiten emotingong s ontiunane ameal
+s svener obnors athernes watae atiro oo inbnet an wot
+ceang inm nogpws is oulusd aaers nt amn eltmno gmaaians im
+weweow a anap
+ainonetd aniatinaon sel it tsos absaatin à abreed anin
+an me eaosd anit atrans ante s erer a atieins lits
+atistin crin w s enen an op intes cratera lpuns
+atatroane wrehoata it absaruris willo f inge abnastespin
+tanton h:nen is snowlon atae et sholl
+tilwthowts
+wrelded wneeuey as gs wat carstirecen et at ariite
+Jo",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_021,datos/raw/documentos/doc_021.jpg,manuscrito,https://commons.wikimedia.org/wiki/File:AR-ANH-EF-Secc.II-53-2.jpg (Public domain | PDM),"PERSONA042
+Vrallyua Cuarze 2e1822
+Mi mefon Amiga inlayra Ud van
+oiginhBelohn adl
+.qe entenase ed conivert las ventalar qvamor
+à perer  paxalicamor msta movimiento
+venxa martro trotecton con nurtar delibexa
+ciomes aon la rincuntancia g i pendemor un mago
+ds tan cocelente g? poca vee re reienta tal
+ves lo penderomo empre.
+Ario mi aniga, Digamev. rha
+alviace dla teniana y mare O. aru vedaveno
+anrigo
+Mnchar cosas ami Vicaris y Echenigna",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"Cor. D. Domingo Tristán
+
+Chuquibamba Enero 2 de 1822
+
+Mi mejor Amigo: incluyo á V. el original de Yrade, q.e lo han traido de la Plata, y el oficio del Comand.te Sorralde el q.e entiendo de él comienzan las ventajas q.e vamos á perder si paralizamos nuestros movimientos. Yo no dudo un momento q.e vista tanta insolente conveniencia nuestro Protector con nuestras deliberaciones con la inconstancia q.e si perdemos un negocio tan excelente q.e pocas veces se presenta tal vez lo perderemos p.a siempre.
+
+Adios mi Amigo. Digame V. si se ha aliviado de la terciana y mande V. á su verdadero Amigo
+
+Gamarra
+
+Muchas cosas amo Vicario y Echenique."
+doc_022,datos/raw/documentos/doc_022.jpg,manuscrito,https://commons.wikimedia.org/wiki/File:AR-ANH-EF-Secc.II-64.jpg (Public domain | PDM),"Suniti 12 va Agost u1840
+Mi repetabl hal yPadrino.
+tim embargo de hallaame bien enforme ton
+la direntixia a. he lontraido in mi confi.
+nacion de tbaneay, me he litmado en ente
+tupa
+Parbto in conplint de la onden
+ba, me sena permitid Eajar, a bmbamba,
+No me canvase in zecomemdan a te, In
+honrrades ul comandants tiabima-ste Jege
+el katallon bmeo-  hasin al. ewta
+inrlicacion, smo eumplin com lo prusticin,
+Sesea a t. mary buena Latnd en
+decidids aligads e inbariable dexvidon
+Ge1.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"Cmo Sr. D. Agustín Gamarra
+
+Tacna 12 de Agosto de 1820
+
+Mi respetable Sr. y Padrino.
+
+Sin embargo de hallarme bien enfermo con la disentería q.e he contraído en mi comisión de Huancayo, me he situado en este Pueblo en cumplimiento de la orden suprema. Si mi mal, como es probable, se agrava, me será permitido bajar á Cumbamba, á fin de reparar mi salud. Espero mi padre q.e no lo tendrá V. á mal.
+
+No me cansaré en recomendar á V. la honradez del Comandante Arbina. Este jefe q.e ha dado á V. tantas pruebas de lealtad, sin duda, es el más aparente para mandar el Batallón Cazadores. Al hacer á V. esta indicación, no cumpliría con la justicia y con la sincera adhesión q.e profeso á la persona de V.
+
+Deseo á V. muy buena salud con decidido afecto e invariable decisión.
+
+B. L. M. P.
+
+Ag.n Gamarra."
+doc_023,datos/raw/documentos/doc_023.jpg,manuscrito,https://commons.wikimedia.org/wiki/File:AR-ANH-EF-Secc.II-69.jpg (Public domain | PDM),"$30
+Sr PERSONA016
+Lambayeque
+Moi queride Ir Frefecto:
+El Ir PERSONA017,
+despues de conversar pconmigo, regresa a Mbotu-
+pe lugar de supesidencia para ocuarse de eusa
+suntos particulares.
+Recomiindolo mii especialmente a su
+dietingnida considevacion i a la de sns auto-
+pidades subaltermas.
+Aictuosamente linge
+PERSONA018",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,"Lima, Agosto 10 de 1897
+
+Sr. D. M. Rodríguez R.
+ Prefecto del Depto. de Lambayeque
+
+Mi querido Sr. Prefecto:
+
+El Sr. PERSONA017, después de conversar conmigo, regresa á Motupe lugar de su residencia para ocuparse de sus asuntos particulares.
+
+Recomiéndolo mui especialmente á su distinguida consideración i á la de sus autoridades subalternas.
+
+Afectuosamente suyo
+
+Piérola."
+doc_024,datos/raw/documentos/doc_024.jpg,manuscrito,https://commons.wikimedia.org/wiki/File:Carta_de_C%C3%A9sar_Vallejo_a_Jos%C3%A9_Mar%C3%ADa_Eguren.pdf (Public domain | Public domain | PDM),"Frigillo, 2 9 de kilis 917
+of. gri lavi Egun
+Bannneo.
+Hhonvscmente conmovis bé su aleut carth,
+eugos timins le agradyeo. de visas. Elle me ks
+Aeanimad nencion, n seti dias m gue me san
+tir tan anal; fees agri hay guimes sme alacan
+cone trt rudega...? lil graios, ses Egue.
+se;  gmtil. a y bonat one km kech ane
+eh bien; mil grais.
+En ates bias, alnt a Irisi cavión do U.,
+ewini a I reristh tenccini t a Gagagil
+algermos de suis versos; y dhis ginna gue goith.
+slli peruiti ateegal al pillicias l conte
+snd o in eitad carte, al relo soliit re
+me licinon de ella,- Ud. peroone: -Hkoy e avvis
+four sste mnion apor inm eimon al tn Afor
+men"" ein gur fui publicain.
+Hay mte fonint, por ou salt, y one
+reiter, hi U. on afutiss
+Siaisralle
+Carta de PERSONA019 a PERSONA020.",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,
+doc_025,datos/raw/documentos/doc_025.jpg,manuscrito,https://commons.wikimedia.org/wiki/File:Miguel_Grau_-_Brev.jpg (Public domain | Public domain | PD-1923),"ahomit Husesi Geruanse y Chilenas Su pode, y gue son las
+zhe figurah in la liatit
+adente. Illes losn
+upslo il Sapitan dh
+her iduolablent de
+Dijuns Lis
+Grapata D Setiast
+abyun egnnir lonsul
+Touud5 o ts hrnmsal.
+U Sageado debe
+she rbrdio dh sn gean
+da"" fue lano od nolo
+dt i adisifi
+Misgesns, y porme
+gudraea ya rictime
+hil antiaer a semit
+o s dSinteper.
+Isn tnebsrio snapo, in
+subed.
+fundantnt pul ists
+lfra y glasks te
+A ritisamsbale mis ten
+isute po Le touees
+ba banbelka oh Su
+tmimtas de lonctolin
+foe Oes ee l
+Patria
+lia, lupeo dis la oore
+ttikge i amntot e
+Pplarando Sincesa
+tnxla paes spihil
+shate f k sthenent
+menth ran infaueto
+u , o
+acoutimnto,y
+shike otgenihaela.
+losnondaain
+Lu ol lrmbet na
+su Otuilo, lurnplr
+al het  o iae
+con il ely tris.
+passde pe tebeyar
+te altle oh whaish
+un das guse d Ige
+I at pare Vol. inssti
+Lia da Sarml IaMat
+ue, i  la d
+male n
+Vigboraer
+Ai meutiarn in",PaddleOCR 3.7.0; PP-OCRv6 medium; lang=es; CPU; orientación=off,

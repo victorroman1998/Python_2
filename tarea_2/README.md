@@ -2,7 +2,7 @@
 
 **Tarea 2 individual · [Enunciado](https://github.com/d2cml-ai/Data-Science-Python/issues/190) · [Repositorio](https://github.com/victorroman1998/Python_2).**
 
-**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Faltan completar privacidad, evidencias de conversación y enlace público verificado.
+**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Los 47 registros tienen revisión humana de privacidad vigente. Faltan las evidencias de conversación y comprobar el contenido final de la aplicación pública.
 
 ## Pregunta y método
 
@@ -29,7 +29,7 @@ Los clips OpenSLR son montajes de locuciones auténticas y pueden incluir varias
 
 ## Resultados observados y limitaciones
 
-Las veinte referencias manuales ya fueron registradas por el estudiante. Los siguientes resultados usan esas referencias y las predicciones originales; **el estudiante confirmó sin cambios las dos entrevistas; la revisión de privacidad continúa pendiente**.
+Las veinte referencias manuales ya fueron registradas por el estudiante. Los siguientes resultados usan esas referencias y las predicciones originales; **el estudiante confirmó sin cambios las dos entrevistas y completó las 47 revisiones de privacidad**.
 
 | Modalidad | Modelo | Error agregado | Casos | Latencia total sin carga | RTF global |
 |---|---|---:|---:|---:|---:|
@@ -96,11 +96,13 @@ La muestra definitiva contiene 10 documentos, estratificados 3/3/4 y con diversi
 5. Auditar los 20 JSON seleccionados (10 documentos y 10 audios). Cada caso es correcto solo si todos los campos están sustentados y los ausentes son `null`. El porcentaje se calcula después de completar las veinte decisiones humanas.
 6. Autorizar un pequeño conjunto de ejemplos multimedia solo después de revisar la licencia y su contenido. El dashboard comprueba `datos/ejemplos/manifest.csv` y el hash del archivo. No muestra originales privados ni enlaces rotos.
 
+El `hash_entrada` del LLM identifica el texto local anterior a ocultar nombres; `postprocesamiento` registra el diccionario privado utilizado. Las autorías profesionales de las fuentes se conservan para cumplir las licencias.
+
 El LLM local puede producir borradores antes de revisar privacidad. El envío a Gemini u otro proveedor externo permanece bloqueado hasta la revisión. No publicar CSV, notebooks con contenido sensible ni ejemplos sin completar esa revisión.
 
 ## Publicación y entrega
 
-**Dashboard público: pendiente de despliegue.** Debe desplegarse en [Streamlit Community Cloud](https://share.streamlit.io) desde `victorroman1998/Python_2`, rama elegida y ruta `tarea_2/app.py`, y comprobar el enlace público.
+**Dashboard público: [abrir aplicación](https://python2-8gghwjxssgbplo5wveyz8q.streamlit.app/).** Desplegado; verificación del contenido final en curso. Debe desplegarse en [Streamlit Community Cloud](https://share.streamlit.io) desde `victorroman1998/Python_2`, rama elegida y ruta `tarea_2/app.py`, y comprobar el enlace público.
 
 Crear y documentar las tres issues del enunciado y cerrarlas solo cuando cada etapa esté terminada. Las bitácoras están abiertas en [Parte 1 #4](https://github.com/victorroman1998/Python_2/issues/4), [Parte 2 #5](https://github.com/victorroman1998/Python_2/issues/5) y [Parte 3 #6](https://github.com/victorroman1998/Python_2/issues/6). Mantenerlas abiertas hasta completar cada etapa. No se inventan commits de días anteriores.
 
