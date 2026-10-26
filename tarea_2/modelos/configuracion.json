@@ -1,0 +1,39 @@
+{
+  "fecha_fijacion": "2026-10-25",
+  "metrica_previa_consultada": false,
+  "ocr_base": {
+    "paquete": "paddleocr",
+    "version": "3.7.0",
+    "detector": "PP-OCRv6_medium_det",
+    "reconocedor": "PP-OCRv6_medium_rec",
+    "lang": "es",
+    "device": "cpu",
+    "enable_mkldnn": false,
+    "orientacion": false
+  },
+  "ocr_alterno": {
+    "modelo": "EasyOCR",
+    "version": "1.7.2",
+    "idiomas": [
+      "es",
+      "en"
+    ],
+    "gpu": false
+  },
+  "asr_base": {
+    "modelo": "faster-whisper small",
+    "version": "1.2.1",
+    "device": "cpu",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "vad_filter": true
+  },
+  "asr_alterno": {
+    "modelo": "Qwen/Qwen3-ASR-0.6B-hf",
+    "transformers": "5.16.0",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "VAD": "Silero, max_tramo=12 s"
+  },
+  "nota": "Comparación con muestra congelada antes de referencias; diferencias CPU/GPU deben declararse."
+}

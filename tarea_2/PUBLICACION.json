@@ -1,0 +1,255 @@
+{
+  "archivos": [
+    {
+      "archivo": ".gitattributes",
+      "bytes": 94,
+      "sha256": "979421707a1210a629fecb52687bdb0034d576500fbf67bc7a027ee337a8ee7f"
+    },
+    {
+      "archivo": ".gitignore",
+      "bytes": 455,
+      "sha256": "e94fb3a1064f0dd71734ab987f87745c613c1ab29bf968e8cd3ef525a7ac7719"
+    },
+    {
+      "archivo": "01_extraccion.ipynb",
+      "bytes": 305888,
+      "sha256": "a2a3ed58ae0cd954752a461fe9c0d1e482d0be6e7124521c32670025f00d3f31"
+    },
+    {
+      "archivo": "02_evaluacion.ipynb",
+      "bytes": 98954,
+      "sha256": "2dea89567f7f5d8a6be3db3fded16387f3d89ea724832a1173b8228eb5a35059"
+    },
+    {
+      "archivo": "agregar_entrevistas.py",
+      "bytes": 1960,
+      "sha256": "45f6840c54dd908f86d8d499f658852840703d8cf73c91fbab4432b34503411c"
+    },
+    {
+      "archivo": "anotar.py",
+      "bytes": 8691,
+      "sha256": "5a07fa6047f61109e9e8bd8383b11d61be32bc5a278d4e77cc0e486bc4196f28"
+    },
+    {
+      "archivo": "app.py",
+      "bytes": 9114,
+      "sha256": "1cb89d1ef254be6f9736632396da30cad1879fc0b7ffec12b42819427eacd8d3"
+    },
+    {
+      "archivo": "buscar_documentos.py",
+      "bytes": 488,
+      "sha256": "a417e8c046d62dd9ded4868cdcc5516971cc71f720f7f043abe9fea26a2e0bfb"
+    },
+    {
+      "archivo": "datos/auditoria_llm.csv",
+      "bytes": 16999,
+      "sha256": "0134bcf08c75512f3596ab3a68e36fc01f2864bbab20e351aa18e40e537c854e"
+    },
+    {
+      "archivo": "datos/descartes.csv",
+      "bytes": 35,
+      "sha256": "a5d77b727897a699e83a3f899a78f37f7da03de8f7772de83c9011f143746bbc"
+    },
+    {
+      "archivo": "datos/documentos.csv",
+      "bytes": 43517,
+      "sha256": "55216d4ec1f01be52f9f6341c47638bd73b298fa7331f95086da045f5e984898"
+    },
+    {
+      "archivo": "datos/ejemplos/clip_021_fragmento.mp3",
+      "bytes": 280197,
+      "sha256": "b8639cab6c1d0ce874288c03922505a006b67501b32e01154bd2a7588088c2cc"
+    },
+    {
+      "archivo": "datos/ejemplos/doc_002.jpg",
+      "bytes": 436511,
+      "sha256": "0ebf9f25f6fd26eff38751e749d2307f6fc8931f0060d9d8caec61992cee2a2c"
+    },
+    {
+      "archivo": "datos/ejemplos/manifest.csv",
+      "bytes": 715,
+      "sha256": "b91a93fbf0a1c48fe48abd2814bc42194c94a16b17f6b9d79e7d3e40b4b39377"
+    },
+    {
+      "archivo": "datos/extraccion_llm.csv",
+      "bytes": 34150,
+      "sha256": "c4da976e263a105462ffff16252c1544c6bc9fb91f811ddd8d031c3906aacdaa"
+    },
+    {
+      "archivo": "datos/fuentes.csv",
+      "bytes": 14455,
+      "sha256": "8faa5d9cae600992780bf786fab87fdf7d6226eb46157d3862442c13dae1597e"
+    },
+    {
+      "archivo": "datos/fuentes_audio.csv",
+      "bytes": 4616,
+      "sha256": "daeb1208c73f758d182ce050bdd131766e56c5c3ba00fc788b839dc2abc47a9a"
+    },
+    {
+      "archivo": "datos/graficos/eda_1.html",
+      "bytes": 8261,
+      "sha256": "ad5b036131dd5083fcebc762ae48047eba7a690552666fdd7e11963fc0a7296e"
+    },
+    {
+      "archivo": "datos/graficos/eda_1.png",
+      "bytes": 31044,
+      "sha256": "0dabfb7978571db501ba850dc1b56ee0bac6356cf6aabbe40db44713739fe025"
+    },
+    {
+      "archivo": "datos/graficos/eda_2.html",
+      "bytes": 8662,
+      "sha256": "3e6366b8a3589095edeac80796ce148abbc6835654959827ba4f046ab981fd93"
+    },
+    {
+      "archivo": "datos/graficos/eda_2.png",
+      "bytes": 68430,
+      "sha256": "7edf12730b46911ca4f883e6ba0dfea69bba8ba337ca6b07f6c82447d8f9c3ab"
+    },
+    {
+      "archivo": "datos/graficos/eda_3.html",
+      "bytes": 9247,
+      "sha256": "24190e85b2fb1511790230e09cbfe3b25b452487940d7a2a3d406e6c207fbf33"
+    },
+    {
+      "archivo": "datos/graficos/eda_3.png",
+      "bytes": 50759,
+      "sha256": "cda8d457cf3e230fa24c3307ca09a3e4c70f5e0e88341d0eb305c863b3564abe"
+    },
+    {
+      "archivo": "datos/muestra_referencias.csv",
+      "bytes": 24122,
+      "sha256": "565679700158cdfc7b2a9f31bc72ab27de9a685116499066f929931fdc252d89"
+    },
+    {
+      "archivo": "datos/resultados_modelos.csv",
+      "bytes": 53956,
+      "sha256": "9a50a173ea10f0a45ee44a755e5706d27a5376f633feb92575157dcba91a2705"
+    },
+    {
+      "archivo": "datos/resumen_auditoria.csv",
+      "bytes": 110,
+      "sha256": "add25193e5d3369e42403088c1720a6c05a9355d24179f4ab264e4465e3ba43b"
+    },
+    {
+      "archivo": "datos/resumen_modelos.csv",
+      "bytes": 496,
+      "sha256": "11663a9cf5684ab55ac79b2073f463516685a0f707f1662cc0253881d0892971"
+    },
+    {
+      "archivo": "datos/revision_privacidad.csv",
+      "bytes": 4070,
+      "sha256": "95f023ff1e7c248ab399e9080f898cb27726a0899a699949048082c803a9d183"
+    },
+    {
+      "archivo": "datos/seleccion_documentos.csv",
+      "bytes": 16960,
+      "sha256": "f02f096c126f8a468b3b70b1e0f99863a60e0092ac96563f57b8e4bbe22c56f5"
+    },
+    {
+      "archivo": "datos/seudonimizacion_resumen.csv",
+      "bytes": 130,
+      "sha256": "c10dc721cc819c027d98446ba944e7481714682d5c8893f6e55c981291eebe89"
+    },
+    {
+      "archivo": "datos/transcripciones.csv",
+      "bytes": 33438,
+      "sha256": "7b010c2b2bf8a7bd22d1e5ad9dba2e3c013a042cc9a672d4af1888abe5549d22"
+    },
+    {
+      "archivo": "entorno.py",
+      "bytes": 568,
+      "sha256": "de61292f1f7b2cd4fb8ba610cd583120be8444fd2cba9cf90dbca9febd7005f5"
+    },
+    {
+      "archivo": "ESTADO.md",
+      "bytes": 827,
+      "sha256": "537a5b0cffe82ef5888c970204e853362ca9402e7bae760e4f993593b278f7e8"
+    },
+    {
+      "archivo": "evaluacion.py",
+      "bytes": 16576,
+      "sha256": "209f7937fdacbf5dd59d96f2400db96e8e8a77a040c7e8588238c701bfbdf710"
+    },
+    {
+      "archivo": "evidencias_ia/README.txt",
+      "bytes": 261,
+      "sha256": "7291a0191d263418d3864a8351e3150f888bedafd5da73723f6addee2a0a0235"
+    },
+    {
+      "archivo": "generar_audio_openslr.py",
+      "bytes": 7645,
+      "sha256": "e55c05b5ce850a7dc0c04a8e9abccf09c647badc25a1e2085dcad2f93230a65b"
+    },
+    {
+      "archivo": "iniciar_casa.py",
+      "bytes": 2564,
+      "sha256": "89427108aad5213f996226ed81e70760ab1fb61873c7ac6b74c0fe310dd9bad5"
+    },
+    {
+      "archivo": "modelos/configuracion.json",
+      "bytes": 955,
+      "sha256": "072267bb730eebf2eb062a3feb85428a2aae6c9dcfa497c20720a4adf730a267"
+    },
+    {
+      "archivo": "modelos/llm.json",
+      "bytes": 535,
+      "sha256": "163119a1b96ac07f7abf66b150208b8aa12629f1c8c42d4dbb901755692450fe"
+    },
+    {
+      "archivo": "modelos/procedencia_curso.json",
+      "bytes": 416,
+      "sha256": "4bfd43ee8df374b89215adaaa89341e60b0b36d76175797b9f51d367b6ae25ae"
+    },
+    {
+      "archivo": "pipeline.py",
+      "bytes": 13931,
+      "sha256": "5193c79639a4b5b5de043b4e0e412ff71c56bb98b5aa9fb57f6d98996d9f2196"
+    },
+    {
+      "archivo": "preparar_publicacion.py",
+      "bytes": 4130,
+      "sha256": "1281cc342e2131ea94bf5d7d4441ffa53906be8622b5581341c5457c2152091b"
+    },
+    {
+      "archivo": "README.md",
+      "bytes": 13537,
+      "sha256": "bd0baf7f785de31b055f425b16f7aaef07f191377a3ded3ffac3e13170232ce6"
+    },
+    {
+      "archivo": "recuperar_documentos.py",
+      "bytes": 1608,
+      "sha256": "76d59ee23b10bb9ca550aabc3a6744d9c480c9edd93da6c1634d38816b5e61ec"
+    },
+    {
+      "archivo": "red.py",
+      "bytes": 1438,
+      "sha256": "da5cdd0334768c495a13bdad20cc2c68649e255fd7534080e666315cc5e16c66"
+    },
+    {
+      "archivo": "requirements-inferencia.txt",
+      "bytes": 721,
+      "sha256": "9a72c6db6481a7e6e3c3757a892945b69d40dda421fd9d8633407aea522dd93e"
+    },
+    {
+      "archivo": "requirements.txt",
+      "bytes": 124,
+      "sha256": "110ce4fa304d80fe111c9044536dfe9cbe105baefd961797fbf94943a7878b18"
+    },
+    {
+      "archivo": "seudonimizar.py",
+      "bytes": 5406,
+      "sha256": "5e8051c62108e81472223e4605755c3d4b1f6e148800476ef1bd476fc28da009"
+    },
+    {
+      "archivo": "validar_publicacion.py",
+      "bytes": 4659,
+      "sha256": "ee82d137499e21f7911ae24ea69ebf91880299e0c08e900d31e7941e3dad2a72"
+    },
+    {
+      "archivo": "verificar_entrega.py",
+      "bytes": 2381,
+      "sha256": "87e518bba9592e4a85e722f78eff503de5cd97bb82477592ed394e90f80f038f"
+    }
+  ],
+  "nota": "No incluye originales pesados, correspondencia privada ni modelos."
+}

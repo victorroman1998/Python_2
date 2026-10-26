@@ -1,0 +1,30 @@
+# Python 3.12. Inferencia local; no usar en Streamlit Cloud.
+pandas==2.3.3
+numpy==2.5.4
+scipy==1.16.3
+pillow==11.3.0
+pypdfium2==5.14.0
+paddleocr==3.7.0
+paddlepaddle==3.2.2
+paddlex==3.7.2
+opencv-contrib-python==4.10.0.84
+faster-whisper==1.2.1
+av==18.1.0
+jiwer==4.0.0
+transformers==5.16.0
+accelerate==1.10.1
+librosa==0.11.0
+soundfile==0.13.1
+pyannote-audio==4.0.7
+scikit-learn==1.7.2
+plotly==6.3.1
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.30.1
+streamlit==1.50.0
+beautifulsoup4==4.14.2
+scikit-image==0.25.2
+ninja==1.13.0
+imageio==2.37.0
+# Instalar torch/torchaudio/torchvision CUDA 12.8 desde el índice oficial PyTorch.
+# EasyOCR 1.7.2 se instala sin dependencias para reutilizar OpenCV contrib 4.10.0.84 de PaddleX.

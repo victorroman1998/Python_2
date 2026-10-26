@@ -1,0 +1,4 @@
+*.py text eol=lf
+*.ipynb text eol=lf
+datos/*.csv text eol=lf
+modelos/configuracion.json -text
