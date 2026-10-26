@@ -33,6 +33,12 @@ def multimedia(id_,modalidad):
     if hashlib.sha256(p.read_bytes()).hexdigest()!=x.iloc[0].sha256:return None
     return p
 
+def nota_multimedia(id_,modalidad):
+    m=leer('ejemplos/manifest.csv')
+    if m.empty or 'descripcion' not in m:return ''
+    z=m[(m.id==id_)&(m.modalidad==modalidad)]
+    return str(z.iloc[0].descripcion) if not z.empty else ''
+
 def por_modelo(df,modalidad,modelo,col_modelo,col_texto):
     if modelo=='Principal':return df.copy()
     r=P[(P.modalidad==modalidad)&(P.modelo==modelo)][['id','texto_predicho']]
@@ -92,7 +98,9 @@ with audios:
         ident=st.selectbox('Explorar audio',x.id.tolist());reg=x[x.id==ident].iloc[0];st.subheader('Transcripción y hablantes');st.text(reg.texto_asr)
         j=campos(ident,'audio');st.json(j) if j is not None else st.info('Extracción pendiente.')
         audio=multimedia(ident,'audio')
-        if audio:st.audio(str(audio),format='audio/wav')
+        if audio:
+            st.audio(str(audio),format={'.ogg':'audio/ogg','.mp3':'audio/mpeg'}.get(audio.suffix.lower(),'audio/wav'))
+            st.caption(nota_multimedia(reg.id,'audio'))
         else:st.caption('Sin copia pública de audio autorizada; se conserva el texto y los metadatos.')
         if reg.texto_referencia:
             with st.expander('Referencia manual'):st.text(reg.texto_referencia)
@@ -107,4 +115,4 @@ with evaluacion:
         for met in ['CER','WER']:
             z=R[R.metrica==met].copy();z['valor']=pd.to_numeric(z.valor)
             if not z.empty:st.plotly_chart(px.bar(z,x='modelo',y='valor',text='valor',title=f'{met}: menor error en las mismas 10 referencias'),use_container_width=True)
-    st.caption('CER/WER agregados por número de caracteres/palabras de referencia. Las marcas de hablante no se cuentan como palabras. La latencia excluye la carga del modelo; Qwen usa GPU y la línea base ASR usa CPU. La comparación no aísla el efecto del hardware.')
+    st.caption('CER/WER calculados en los originales antes de ocultar nombres y agregados por caracteres/palabras de referencia. Las marcas de hablante no se cuentan como palabras. La latencia excluye la carga del modelo; Qwen usa GPU y la línea base ASR usa CPU. La comparación no aísla el efecto del hardware.')

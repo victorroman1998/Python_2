@@ -2,7 +2,7 @@
 
 **Tarea 2 individual · [Enunciado](https://github.com/d2cml-ai/Data-Science-Python/issues/190) · [Repositorio](https://github.com/victorroman1998/Python_2).**
 
-**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Las 20 referencias manuales fueron completadas y hay CER/WER calculados; queda su comprobación final, la auditoría humana, revisión de privacidad, evidencias de conversación y enlace público verificado. El acuerdo LLM-humano continúa pendiente hasta completar la auditoría.
+**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Las 20 referencias manuales fueron completadas y confirmadas; CER/WER están calculados y la auditoría humana da 14/20 (70 %). Faltan completar privacidad, evidencias de conversación y enlace público verificado.
 
 ## Pregunta y método
 
@@ -29,7 +29,7 @@ Los clips OpenSLR son montajes de locuciones auténticas y pueden incluir varias
 
 ## Resultados observados y limitaciones
 
-Las veinte referencias manuales ya fueron registradas por el estudiante. Los siguientes resultados usan esas referencias y las predicciones originales; **la comprobación final de las dos entrevistas y la revisión de privacidad continúan pendientes**.
+Las veinte referencias manuales ya fueron registradas por el estudiante. Los siguientes resultados usan esas referencias y las predicciones originales; **el estudiante confirmó sin cambios las dos entrevistas; la revisión de privacidad continúa pendiente**.
 
 | Modalidad | Modelo | Error agregado | Casos | Latencia total sin carga | RTF global |
 |---|---|---:|---:|---:|---:|
@@ -43,9 +43,11 @@ Se elige la línea base de cada modalidad para el corpus principal: PaddleOCR re
 1. La longitud mediana del OCR fue de **1.552 caracteres en impresos**, frente a **761 en fotos** y **890 en manuscritos**, antes de ocultar nombres. Describe la cantidad de texto recuperada; no equivale a precisión.
 2. Las entrevistas naturales representan **14,06 % de la duración**. El resto procede de locuciones leídas de OpenSLR; el corpus no representa por igual todos los ambientes de grabación.
 3. El CER de PaddleOCR por tipo fue **13,39 % en impresos**, **10,33 % en fotos** y **40,10 % en manuscritos**. Dos de las tres fotos de evaluación contienen texto mecanografiado legible: ese resultado no significa que cualquier fotografía sea más fácil que un impreso. El manuscrito `doc_022` fue un caso difícil para ambos OCR.
-4. El WER de `clip_021` superó el 100 % por inserciones frente a su referencia. Esta tasa puede superar uno y no debe recortarse. Se solicitó al estudiante comprobar que las dos entrevistas estuvieran transcritas completas, sin abreviaturas ni resúmenes. Las tasas seguirán sujetas a esas correcciones humanas.
+4. El WER de `clip_021` superó el 100 % por inserciones frente a su referencia. Esta tasa puede superar uno y no debe recortarse. El estudiante volvió a escuchar y confirmó ambas referencias sin cambios. Se conserva esa decisión y se advierte que las diferencias de abreviación —por ejemplo, una sigla frente a un nombre de institución pronunciado completo— penalizan WER.
 
-La muestra de diez casos por modalidad es pequeña y varias páginas impresas proceden de un mismo volumen. El agrupamiento de voces no acredita identidad ni exactitud del número de personas sin escucha humana. Los manuscritos históricos, la tinta del reverso y los reflejos de vitrina limitan la extracción. Los fallos del LLM se documentarán con la auditoría humana de veinte casos, todavía en curso.
+La muestra de diez casos por modalidad es pequeña y varias páginas impresas proceden de un mismo volumen. El agrupamiento de voces no acredita identidad ni exactitud del número de personas sin escucha humana. Los manuscritos históricos, la tinta del reverso y los reflejos de vitrina limitan la extracción. La auditoría humana de veinte JSON tuvo **14 correctos y 6 incorrectos (70 %)**. En `doc_010`, el LLM cambió el día 20 por 22. En cinco clips afirmó un número de hablantes sin marcas que lo sustentaran. Las decisiones correctoras de esos seis casos y la revisión de `clip_021` se registraron por confirmación explícita del estudiante en conversación, con fecha y procedencia; las otras decisiones provienen de la aplicación local. No se corrigieron las respuestas del modelo para mejorar este resultado.
+
+La app pública utilizará solo dos medios autorizados: `doc_002.jpg`, una página sin nombres, y un MP3 de 46,55 segundos de `clip_021` (89,55–136,10 s), que omite la presentación con nombres. La licencia CC BY-SA 4.0 del audio se conserva y el recorte está indicado. Los demás originales autorizados se mantienen locales.
 
 ## Ejecución
 

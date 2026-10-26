@@ -1,5 +1,5 @@
-# Avance de código
+# Avance en revisión
 
-Los corpus reales ya se procesaron localmente (25 documentos y 22 clips, 38,57 minutos). Este avance conserva los CSV de texto vacíos y los notebooks sin salidas mientras se completan la comprobación final de referencias, auditoría y revisión de privacidad. Las veinte referencias manuales ya están registradas y resumen_modelos.csv contiene las tasas agregadas reales. Los textos revisados reemplazarán estos esquemas.
+25 documentos y 22 clips reales (38,57 minutos), veinte referencias manuales confirmadas y cuarenta predicciones. Los resúmenes CER/WER y el acuerdo humano (14/20) están disponibles. Se publican dos medios autorizados sin nombres.
 
-No representa la entrega final ni un despliegue público.
+Los CSV de texto conservan solo su esquema y los notebooks no tienen salidas mientras termina la revisión de privacidad. Faltan las evidencias auténticas y la URL pública verificada. No es la entrega final.
