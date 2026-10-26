@@ -43,16 +43,34 @@ def _validar_muestra(m):
         if hasattr(r,'sha256_archivo') and sha256(normalizar_ruta(r.archivo))!=r.sha256_archivo:raise ValueError('El archivo de test cambió: '+r.id)
 
 def incorporar_referencias():
-    m=leer_csv(MUESTRA);_validar_muestra(m)
+    # Evaluar originales locales; la copia pública se seudonimiza después.
+    original=DATOS/'_privado/muestra_manual_20_original.csv'
+    actual=leer_csv(MUESTRA)
+    m=leer_csv(original) if original.exists() else actual.copy()
+    _validar_muestra(m)
+    # El paso 1 cambia fecha_anotacion; una edición de privacidad no la cambia.
+    # Así se incorporan correcciones humanas nuevas sin evaluar textos ocultados.
+    cambios=False
+    for i,row in m.iterrows():
+        hit=actual[(actual.id==row['id'])&(actual.modalidad==row['modalidad'])]
+        if len(hit)==1 and hit.iloc[0].get('fecha_anotacion','')!=row.get('fecha_anotacion',''):
+            nuevo=hit.iloc[0]
+            if nuevo.get('origen_referencia','')!='manual_estudiante':raise ValueError('Corrección sin procedencia manual.')
+            m.loc[i]=nuevo.reindex(m.columns);cambios=True
+    if cambios and original.exists():
+        historial=original.parent/'historial_referencias';historial.mkdir(exist_ok=True)
+        (historial/(str(time.time_ns())+'.csv')).write_bytes(original.read_bytes())
     from seudonimizar import aplicar_texto
-    m['texto_referencia']=m.texto_referencia.map(aplicar_texto)
     if m.texto_referencia.str.strip().eq('').any():raise ValueError('Faltan referencias MANUALES. Completar anotar.py; no se calculan CER/WER.')
     if 'origen_referencia' not in m or not m.origen_referencia.eq('manual_estudiante').all():raise ValueError('Registrar procedencia manual de las 20 referencias.')
+    if cambios or not original.exists():guardar_csv(m,original)
     for clase,ruta in [('documento',DOC_CSV),('audio',AUDIO_CSV)]:
         df=leer_csv(ruta)
         for r in m[m.modalidad==clase].itertuples():
             if r.id not in set(df.id):raise ValueError('La muestra ya no pertenece al corpus: '+r.id)
-            df.loc[df.id==r.id,'texto_referencia']=r.texto_referencia
+            # Conservar las correcciones públicas de privacidad ya hechas.
+            if not df.loc[df.id==r.id,'texto_referencia'].iloc[0].strip():
+                df.loc[df.id==r.id,'texto_referencia']=aplicar_texto(r.texto_referencia)
         guardar_csv(df,ruta)
     return m
 
@@ -62,7 +80,7 @@ def normalizar(texto):
     texto=''.join(c if c.isalnum() or c.isspace() else ' ' for c in texto)
     return re.sub(r'\s+',' ',texto).strip()
 
-def metricas_pares(merito,refs,preds):
+def conteos_error(merito,refs,preds):
     from jiwer import process_characters,process_words
     if merito not in ['CER','WER']:raise ValueError('Métrica desconocida.')
     if not refs or len(refs)!=len(preds):raise ValueError('Referencias y predicciones deben ser pares completos no vacíos.')
@@ -71,6 +89,10 @@ def metricas_pares(merito,refs,preds):
         ref=normalizar(ref);pred=normalizar(pred)
         if not ref:raise ValueError('Referencia vacía tras normalizar.')
         r=motor(ref,pred);errores+=r.substitutions+r.insertions+r.deletions;denom+=r.hits+r.substitutions+r.deletions
+    return errores,denom
+
+def metricas_pares(merito,refs,preds):
+    errores,denom=conteos_error(merito,refs,preds)
     return errores/denom
 
 def _curso():
@@ -116,6 +138,9 @@ def generar_predicciones(modalidad):
     return prev[prev.modalidad==modalidad]
 
 def puntuar_predicciones(modalidad=None):
+    if not PRED.exists():
+        if MODELOS.exists():return consolidar_resultados()
+        raise ValueError('Recuperar las predicciones originales privadas para recalcular distancias.')
     m=incorporar_referencias();pred=leer_csv(PRED,PRED_COLS)
     if modalidad:pred=pred[pred.modalidad==modalidad]
     filas=[]
@@ -127,20 +152,24 @@ def puntuar_predicciones(modalidad=None):
             if r['sha256_archivo']!=ref.sha256_archivo:raise ValueError('Predicción de un archivo de test distinto.')
             if r['hash_configuracion']!=hashlib.sha256((BASE/'modelos/configuracion.json').read_bytes()).hexdigest():raise ValueError('La configuración cambió desde la inferencia.')
             from seudonimizar import aplicar_texto
-            r['texto_predicho']=aplicar_texto(r['texto_predicho'])
-            met='CER' if clase=='documento' else 'WER';r['cer']='';r['wer']='';r[met.lower()]=metricas_pares(met,[ref.texto_referencia],[r['texto_predicho']]);filas.append(r)
+            met='CER' if clase=='documento' else 'WER'
+            err,denom=conteos_error(met,[ref.texto_referencia],[r['texto_predicho']])
+            r['cer']='';r['wer']='';r[met.lower()]=err/denom
+            r['errores']=err;r['unidades_referencia']=denom
+            r['evaluacion_sobre']='originales locales; texto exportado seudonimizado'
+            r['texto_predicho']=aplicar_texto(r['texto_predicho']);filas.append(r)
     viejo=leer_csv(MODELOS,PRED_COLS+["cer","wer"])
     if modalidad and not viejo.empty:viejo=viejo[viejo.modalidad!=modalidad]
     else:viejo=pd.DataFrame()
     resultado=pd.concat([viejo,pd.DataFrame(filas)],ignore_index=True);guardar_csv(resultado,MODELOS);return consolidar_resultados()
 
 def consolidar_resultados():
-    m=incorporar_referencias();res=leer_csv(MODELOS);filas=[]
+    m=leer_csv(MUESTRA);res=leer_csv(MODELOS);filas=[]
     for (clase,modelo),g in res.groupby(['modalidad','modelo']):
         mm=m[m.modalidad==clase]
         if len(g)!=10 or set(g.id)!=set(mm.id):raise ValueError('No se admite evaluación parcial ni muestras diferentes.')
         refs=mm.set_index('id').loc[g.id,'texto_referencia'].tolist();met='CER' if clase=='documento' else 'WER';lat=pd.to_numeric(g.latencia_seg)
-        filas.append(dict(modalidad=clase,modelo=modelo,metrica=met,valor=metricas_pares(met,refs,g.texto_predicho.tolist()),n=10,latencia_total_seg=lat.sum(),rtf_medio=pd.to_numeric(g.rtf,errors='coerce').mean() if clase=='audio' else '',rtf_global=lat.sum()/pd.to_numeric(g.duracion_seg).sum() if clase=='audio' else '',dispositivo=g.dispositivo.iloc[0]))
+        filas.append(dict(modalidad=clase,modelo=modelo,metrica=met,valor=pd.to_numeric(g.errores).sum()/pd.to_numeric(g.unidades_referencia).sum(),n=10,latencia_total_seg=lat.sum(),rtf_medio=pd.to_numeric(g.rtf,errors='coerce').mean() if clase=='audio' else '',rtf_global=lat.sum()/pd.to_numeric(g.duracion_seg).sum() if clase=='audio' else '',dispositivo=g.dispositivo.iloc[0]))
     df=pd.DataFrame(filas);guardar_csv(df,RESUMEN);return df
 
 def evaluar_ocr():generar_predicciones('documento');return puntuar_predicciones('documento')

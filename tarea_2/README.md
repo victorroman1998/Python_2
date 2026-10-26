@@ -2,7 +2,7 @@
 
 **Tarea 2 individual · [Enunciado](https://github.com/d2cml-ai/Data-Science-Python/issues/190) · [Repositorio](https://github.com/victorroman1998/Python_2).**
 
-**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Faltan referencias transcritas por el estudiante, auditoría humana, revisión de privacidad, evidencias de conversación y enlace público verificado. CER, WER y acuerdo LLM-humano se mantienen pendientes cuando falta la evidencia humana correspondiente.
+**Estado: trabajo en revisión, todavía no es una entrega final.** Los corpus y las inferencias son reales. Las 20 referencias manuales fueron completadas y hay CER/WER calculados; queda su comprobación final, la auditoría humana, revisión de privacidad, evidencias de conversación y enlace público verificado. El acuerdo LLM-humano continúa pendiente hasta completar la auditoría.
 
 ## Pregunta y método
 
@@ -29,10 +29,23 @@ Los clips OpenSLR son montajes de locuciones auténticas y pueden incluir varias
 
 ## Resultados observados y limitaciones
 
-1. La longitud mediana del OCR fue de **1.552 caracteres en impresos**, frente a **761 en fotos** y **890 en manuscritos**. Describe la cantidad de texto recuperada; la precisión se determina con CER sobre referencias manuales.
-2. Las entrevistas naturales representan **14,06 % de la duración**. El resto procede de locuciones leídas de OpenSLR; por tanto, el corpus está dominado por condiciones de voz relativamente limpia y no representa por igual todas las situaciones de entrevista.
+Las veinte referencias manuales ya fueron registradas por el estudiante. Los siguientes resultados usan esas referencias y las predicciones originales; **la comprobación final de las dos entrevistas y la revisión de privacidad continúan pendientes**.
 
-Limitaciones técnicas: la muestra de diez casos por modalidad es pequeña y varias páginas impresas proceden de un mismo volumen. Además, Qwen3-ASR se ejecuta en GPU y Whisper `small` en CPU, por lo que la latencia observada combina diferencias de modelo y hardware. La diarización es un agrupamiento automático de voces: no acredita identidad ni exactitud del número de personas sin escucha humana. Los manuscritos históricos, tinta del reverso y reflejos de vitrina son casos difíciles que requieren análisis con las referencias.
+| Modalidad | Modelo | Error agregado | Casos | Latencia total sin carga | RTF global |
+|---|---|---:|---:|---:|---:|
+| OCR | PaddleOCR 3.7 / PP-OCRv6 | CER 21,18 % | 10 | 657,16 s | — |
+| OCR | EasyOCR 1.7.2 | CER 40,11 % | 10 | 394,29 s | — |
+| ASR | faster-whisper small, CPU/int8 | WER 40,95 % | 10 | 126,49 s | 0,113 |
+| ASR | Qwen3-ASR 0.6B, GPU | WER 44,30 % | 10 | 131,91 s | 0,118 |
+
+Se elige la línea base de cada modalidad para el corpus principal: PaddleOCR redujo el error a costa de más tiempo de CPU; Whisper small obtuvo menor WER y funcionó en CPU con RTF inferior a uno. EasyOCR fue más rápido, pero perdió precisión en esta muestra. La latencia ASR no aísla el efecto del hardware, porque Qwen se ejecutó en GPU. No se midió memoria máxima por proceso; la disponibilidad de una GPU de 8 GB no demuestra por sí sola consumo de ese tamaño.
+
+1. La longitud mediana del OCR fue de **1.552 caracteres en impresos**, frente a **761 en fotos** y **890 en manuscritos**, antes de ocultar nombres. Describe la cantidad de texto recuperada; no equivale a precisión.
+2. Las entrevistas naturales representan **14,06 % de la duración**. El resto procede de locuciones leídas de OpenSLR; el corpus no representa por igual todos los ambientes de grabación.
+3. El CER de PaddleOCR por tipo fue **13,39 % en impresos**, **10,33 % en fotos** y **40,10 % en manuscritos**. Dos de las tres fotos de evaluación contienen texto mecanografiado legible: ese resultado no significa que cualquier fotografía sea más fácil que un impreso. El manuscrito `doc_022` fue un caso difícil para ambos OCR.
+4. El WER de `clip_021` superó el 100 % por inserciones frente a su referencia. Esta tasa puede superar uno y no debe recortarse. Se solicitó al estudiante comprobar que las dos entrevistas estuvieran transcritas completas, sin abreviaturas ni resúmenes. Las tasas seguirán sujetas a esas correcciones humanas.
+
+La muestra de diez casos por modalidad es pequeña y varias páginas impresas proceden de un mismo volumen. El agrupamiento de voces no acredita identidad ni exactitud del número de personas sin escucha humana. Los manuscritos históricos, la tinta del reverso y los reflejos de vitrina limitan la extracción. Los fallos del LLM se documentarán con la auditoría humana de veinte casos, todavía en curso.
 
 ## Ejecución
 
@@ -76,7 +89,7 @@ La muestra definitiva contiene 10 documentos, estratificados 3/3/4 y con diversi
 
 1. En `anotar.py`, **transcribir personalmente** los veinte originales. No copiar las respuestas OCR/ASR ni las referencias OpenSLR. Si un original resulta ilegible, registrar el caso antes de reemplazarlo y volver a congelar la evaluación de manera documentada.
 2. Comparar PaddleOCR 3.7.0 con EasyOCR 1.7.2, y faster-whisper `small` CPU con Qwen3-ASR 0.6B GPU. La inferencia puede completarse antes de las referencias; sus borradores están en `datos/_privado/predicciones_modelos.csv`.
-3. Ejecutar `02_evaluacion.ipynb` para incorporar referencias y calcular CER/WER. La normalización conserva tildes, aplica NFC y minúsculas, sustituye puntuación por espacios y retira etiquetas artificiales de hablante. Se agregan errores y denominadores sobre todos los casos; no se promedian tasas individuales. Antes de puntuar se aplica el mismo diccionario literal de seudonimización a referencias y predicciones. Los originales se conservan privados y el informe público registra los reemplazos sin revelar la correspondencia.
+3. Ejecutar `02_evaluacion.ipynb` para incorporar referencias y calcular CER/WER. La normalización conserva tildes, aplica NFC y minúsculas, sustituye puntuación por espacios y retira etiquetas artificiales de hablante. Se agregan errores y denominadores sobre todos los casos; no se promedian tasas individuales. Las distancias se calculan sobre referencias y predicciones originales en el equipo local, antes de ocultar nombres, para que la seudonimización no mejore artificialmente el error. Solo después se seudonimizan los textos exportados. Se publican errores y denominadores por caso para reproducir la agregación; los originales y la correspondencia permanecen privados.
 4. Revisar privacidad de OCR, ASR, referencias, alternativas y JSON. Los patrones automáticos de DNI/correo/teléfono no sustituyen la revisión de nombres y direcciones. Los cambios invalidan las revisiones anteriores mediante hashes.
 5. Auditar los 20 JSON seleccionados (10 documentos y 10 audios). Cada caso es correcto solo si todos los campos están sustentados y los ausentes son `null`. El porcentaje se calcula después de completar las veinte decisiones humanas.
 6. Autorizar un pequeño conjunto de ejemplos multimedia solo después de revisar la licencia y su contenido. El dashboard comprueba `datos/ejemplos/manifest.csv` y el hash del archivo. No muestra originales privados ni enlaces rotos.
@@ -103,7 +116,7 @@ El comentario de entrega solo se completa cuando existan valores reales:
 ```text
 Tarea 2 – Individual
 Fuentes: Wikimedia Commons / Biblioteca Nacional del Perú / OpenSLR 73
-Estudiante: [nombre completo] (@victorroman1998)
+Identificación indicada por el estudiante: Tarea2-Python-Intermedio (@victorroman1998)
 Dashboard público (obligatorio): [enlace público verificado]
 Carpeta del trabajo: https://github.com/victorroman1998/Python_2/tree/main/tarea_2
 Resultados Test: WER: [real] | CER: [real] | Acuerdo LLM-Humano: [real]/20
