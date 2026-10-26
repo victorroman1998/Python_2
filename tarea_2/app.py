@@ -78,7 +78,9 @@ with docs:
     if not x.empty:
         ident=st.selectbox('Explorar documento',x.id.tolist());reg=x[x.id==ident].iloc[0]
         l,r=st.columns([1.3,1]);l.subheader('Texto OCR');l.text(reg.texto_ocr)
-        j=campos(ident,'documento');r.subheader('Campos del LLM');r.json(j) if j is not None else r.info('Extracción pendiente.')
+        j=campos(ident,'documento');r.subheader('Campos del LLM')
+        if j is not None:r.json(j)
+        else:r.info('Extracción pendiente.')
         if reg.texto_referencia:
             with st.expander('Referencia manual'):st.text(reg.texto_referencia)
         if not P.empty:st.dataframe(P[(P.id==ident)&(P.modalidad=='documento')][['modelo','cer','latencia_seg']],hide_index=True)
@@ -96,7 +98,9 @@ with audios:
     st.dataframe(x,hide_index=True,width='stretch');st.download_button('Descargar audios filtrados',descarga(x),'transcripciones_filtradas.csv','text/csv')
     if not x.empty:
         ident=st.selectbox('Explorar audio',x.id.tolist());reg=x[x.id==ident].iloc[0];st.subheader('Transcripción y hablantes');st.text(reg.texto_asr)
-        j=campos(ident,'audio');st.json(j) if j is not None else st.info('Extracción pendiente.')
+        j=campos(ident,'audio')
+        if j is not None:st.json(j)
+        else:st.info('Extracción pendiente.')
         audio=multimedia(ident,'audio')
         if audio:
             st.audio(str(audio),format={'.ogg':'audio/ogg','.mp3':'audio/mpeg'}.get(audio.suffix.lower(),'audio/wav'))

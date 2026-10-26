@@ -32,8 +32,8 @@
     },
     {
       "archivo": "app.py",
-      "bytes": 9082,
-      "sha256": "c30c0b0ea93953049a38d525423fb53347d7eaa610cada356fc3fe4e0c667624"
+      "bytes": 9114,
+      "sha256": "1cb89d1ef254be6f9736632396da30cad1879fc0b7ffec12b42819427eacd8d3"
     },
     {
       "archivo": "buscar_documentos.py",
