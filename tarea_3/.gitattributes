@@ -1,0 +1,10 @@
+# Conservar las huellas de los datos al clonar en Windows o Linux.
+data/indicadores_dashboard.csv -text whitespace=cr-at-eol
+data/peru_departamentos.geojson -text
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
