@@ -1,0 +1,17 @@
+{
+  "fuente": "INGEMMET, GEOCATMIN, capa Departamentos (0)",
+  "url": "https://geocatmin.ingemmet.gob.pe/arcgis/rest/services/SERV_CARTOGRAFIA_DEMARCACION_WGS84/MapServer/0",
+  "consulta": "https://geocatmin.ingemmet.gob.pe/arcgis/rest/services/SERV_CARTOGRAFIA_DEMARCACION_WGS84/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+  "fecha_acceso": "2026-11-01",
+  "crs": "EPSG:4326",
+  "sha256_descarga_original": "58d3826a56d93b218c8113653a4213a6ef3bb850c999d31d1801a3393ca434f2",
+  "sha256_geojson": "b2027269ac12ce0e1fa176a945723c8fb9b17e4507acf8727d4dcd23347e6eae",
+  "features_originales": 32,
+  "features_finales": 25,
+  "excluidos_CD_DEPA_99": 7,
+  "transformacion": "coverage_simplify, tolerancia 0.001 grados; límites compartidos conservados",
+  "shapely": "2.1.2",
+  "max_cambio_relativo_area": 0.00021375109982169072,
+  "partes_multipoligono_conservadas": true,
+  "nota": "Límites referenciales; Lima completa 15; Callao separado 07. Atribución: INGEMMET."
+}
