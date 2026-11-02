@@ -6,7 +6,7 @@ Reel vertical 1080 × 1920, seis escenas. Las imágenes proceden del dashboard p
 
 ## Escena 1
 
-**Narración:** En nuestro diplomado de ciencias de la salud de la Pontificia Universidad Católica del Perú, desarrollamos este dashboard. ¿Quiénes identifican correctamente el período fértil?
+**Narración:** Como parte de los proyectos del diplomado de ciencias de la salud de la Pontificia Universidad Católica del Perú, desarrollamos este dashboard. ¿Quiénes identifican correctamente el período fértil?
 
 **Visual:** Captura real de la cabecera del dashboard con la pregunta, la población y la fuente; se conserva el contexto de la aplicación.
 
