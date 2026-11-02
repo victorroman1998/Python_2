@@ -411,7 +411,7 @@ no son estimaciones oficiales del INEI ni resultados publicados en una revista.
                            file_name="indicadores_dashboard.csv", mime="text/csv")
     st.divider()
     st.caption("Fuente: INEI, ENDES. Análisis y visualizaciones: elaboración propia · Víctor Román · "
-               "Diplomado de ciencias de la salud, PUCP · Tarea 3. "
+               "Diplomado de Ciencia de Datos para la Gestión Pública, PUCP · Tarea 3. "
                "Implementación asistida por IA; responsabilidad y revisión del autor.")
 
 
