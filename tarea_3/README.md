@@ -1,15 +1,16 @@
 # ¿Quiénes identifican el período fértil en Perú?
 
-**Victor Roman-Lazarte · Tarea 3 · Diplomado de Ciencia de Datos con Python, Universidad del Pacífico.**
+**Victor Roman-Lazarte · Tarea 3 · Diplomado de ciencias de la salud, Pontificia Universidad Católica del Perú (PUCP).**
 
 Dashboard descriptivo de ENDES 2021–2025 desarrollado en Python, Streamlit, pandas y Plotly.
 [Enunciado y rúbrica](https://github.com/d2cml-ai/Data-Science-Python/issues/197) ·
 [Repositorio](https://github.com/victorroman1998/Python_2).
 
-**Estado al 1 de noviembre de 2026:** aplicación implementada para revisión en la rama
-`codex/tarea-3-endes-dashboard`. Despliegue público pendiente de inicio de sesión del autor en
-Streamlit Community Cloud; todavía no existe una URL pública verificada. LinkedIn y reel:
-pendientes de la siguiente fase; no se ha publicado ni comentado el Issue.
+**Estado al 1 de noviembre de 2026:** aplicación integrada en `main` mediante el
+[PR #8](https://github.com/victorroman1998/Python_2/pull/8) y publicada en Streamlit.
+**[Abrir el dashboard público](https://python2-fzpvrupsuyq3uwttqkzujx.streamlit.app/).**
+El reel y sus subtítulos están preparados. La publicación de LinkedIn y el comentario de entrega
+siguen pendientes; su enlace se añadirá después de publicar.
 
 ## Pregunta y cobertura
 
@@ -214,35 +215,50 @@ El script verifica la cobertura antes y después, guarda una única copia GeoJSO
 Para repetir exactamente la misma salida se debe conservar la descarga original cuyo SHA256
 figura en el manifiesto; el servicio puede actualizarse. La aplicación nunca lo consulta.
 
-## Despliegue en Streamlit Community Cloud
+## Dashboard público y despliegue
 
 La configuración es compatible con un archivo de entrada en subdirectorio y dependencias junto
 a él. No se modifican `tarea_1/`, `tarea_2/` ni la configuración compartida de la raíz.
 Referencias: [organización de archivos](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/file-organization)
 y [despliegue](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
 
-1. El autor debe iniciar sesión en [Streamlit Community Cloud](https://share.streamlit.io/)
-   y conectar su cuenta GitHub si aún no lo hizo. La sesión disponible para esta entrega
-   mostró la pantalla de inicio de sesión; no se creó una aplicación remota.
-2. Crear una aplicación desde `victorroman1998/Python_2`, rama
-   **`codex/tarea-3-endes-dashboard`**, archivo **`tarea_3/app.py`**.
-3. En configuración avanzada seleccionar **Python 3.12**. No añadir secrets.
-   Las dependencias se toman de `tarea_3/requirements.txt` y el tema local de
-   `tarea_3/.streamlit/config.toml`.
-4. Desplegar y comprobar la URL real en una ventana sin sesión: cuatro KPI,
-   cuatro gráficos, tres selectores y descarga del CSV. Probar 2021 y 2024, las cinco
-   dimensiones temporales, Loreto y Callao; confirmar que el mapa sigue mostrando 2025.
-   Revisar también una pantalla móvil y la consola del navegador.
-5. Registrar aquí el enlace público **solo después de verificarlo**. Para publicar desde
-   `main`, el autor puede cambiar la rama del despliegue después de revisar e integrar el PR.
-
-La publicación es el único criterio del dashboard de la rúbrica que permanece pendiente mientras
-no exista un enlace público comprobado. No se fusionan cambios automáticamente.
+La aplicación está disponible en
+**https://python2-fzpvrupsuyq3uwttqkzujx.streamlit.app/**.
+El código definitivo se encuentra en `main`, archivo de entrada `tarea_3/app.py`.
+Para reproducir el despliegue en [Streamlit Community Cloud](https://share.streamlit.io/),
+conectar `victorroman1998/Python_2`, seleccionar `main` y ese archivo de entrada,
+y usar Python 3.12. Las dependencias están en `tarea_3/requirements.txt` y el tema en
+`tarea_3/.streamlit/config.toml`. No se necesitan secrets ni microdatos.
 
 Validación de esta entrega: **14 pruebas aprobadas**, incluidas las 130 combinaciones de año y
 departamento. Revisión visual en navegador a 1280 × 720 y 390 × 844 píxeles: cuatro gráficos,
 etiquetas e IC legibles, mapa real y zoom de Callao; sin desbordamiento horizontal móvil ni
-errores en la consola revisada. La disponibilidad pública todavía no ha sido validada.
+errores en la consola revisada. El enlace público se comprobó durante la preparación audiovisual.
+
+## Reel y comunicación pública
+
+El reel vertical de seis escenas usa capturas reales del dashboard, narración generada con IA
+a partir de la voz autorizada del autor, música y subtítulos sincronizados. Incluye los tres
+hallazgos de 2025, sus unidades y las limitaciones de interpretación.
+
+- [Guion final de seis escenas](reel/guion_final_reel.md).
+- [Captura del gráfico de riqueza de 2025](reel/captura_1_riqueza_2025.jpg).
+- [Captura del mapa departamental de 2025](reel/captura_2_mapa_2025.jpg).
+- **LinkedIn y reel público:** publicación pendiente. Se incorporará aquí la URL real.
+
+![Gráfico de riqueza, ENDES 2025](reel/captura_1_riqueza_2025.jpg)
+
+![Mapa departamental, ENDES 2025](reel/captura_2_mapa_2025.jpg)
+
+Música: «Cylinder Five», Chris Zabriskie, álbum *Cylinders*,
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+[fuente del autor](https://chriszabriskie.com/cylinders/). Se utilizó un fragmento con fundidos
+y volumen reducido. Datos: INEI, ENDES; análisis y visualizaciones: elaboración propia.
+Cartografía: INGEMMET / GEOCATMIN, límites referenciales.
+
+La grabación de referencia, los audios de narración, el MP4 y los subtítulos se conservan en
+almacenamiento privado fuera del repositorio y de carpetas con enlaces anónimos.
+El acceso público al reel aprobado se ofrecerá mediante la publicación de LinkedIn.
 
 ## Archivos
 
@@ -256,10 +272,14 @@ tarea_3/
 ├── .gitignore
 ├── .gitattributes
 ├── .streamlit/config.toml
-└── data/
-    ├── indicadores_dashboard.csv
-    ├── peru_departamentos.geojson
-    └── cartografia_fuente.json
+├── data/
+│   ├── indicadores_dashboard.csv
+│   ├── peru_departamentos.geojson
+│   └── cartografia_fuente.json
+└── reel/
+    ├── guion_final_reel.md
+    ├── captura_1_riqueza_2025.jpg
+    └── captura_2_mapa_2025.jpg
 ```
 
 `.gitattributes` conserva los bytes del CSV y GeoJSON para que sus checksums no cambien
@@ -271,5 +291,7 @@ Work asistió en la preparación y auditoría previa del brief y los agregados. 
 el código de Streamlit/Plotly, validaciones, pruebas y documentación. No se generaron datos
 sintéticos, nuevos modelos ni nuevas estimaciones de encuesta. El autor conserva la
 responsabilidad de revisar las cifras, la interpretación, el funcionamiento y la publicación.
-El reel audiovisual y la comunicación en LinkedIn se producirán en la fase siguiente con los
-gráficos definitivos; no forman parte de esta implementación.
+La narración del reel se generó localmente con Qwen3-TTS 0.6B Base a partir de una referencia
+autorizada de voz propia. Whisper large-v3-turbo verificó las cifras y los tiempos de subtítulos.
+El video muestra «Voz generada con IA» y usa gráficos reales del dashboard. El guion y el texto
+de LinkedIn se prepararon con asistencia de IA y revisión del autor.
