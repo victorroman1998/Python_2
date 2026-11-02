@@ -1,6 +1,6 @@
 # ¿Quiénes identifican el período fértil en Perú?
 
-**Victor Roman-Lazarte · Tarea 3 · Diplomado de ciencias de la salud, Pontificia Universidad Católica del Perú (PUCP).**
+**Victor Roman-Lazarte · Tarea 3 · Diplomado de Ciencia de Datos para la Gestión Pública, Pontificia Universidad Católica del Perú (PUCP).**
 
 Dashboard descriptivo de ENDES 2021–2025 desarrollado en Python, Streamlit, pandas y Plotly.
 [Enunciado y rúbrica](https://github.com/d2cml-ai/Data-Science-Python/issues/197) ·
