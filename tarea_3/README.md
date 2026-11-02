@@ -9,7 +9,7 @@ Dashboard descriptivo de ENDES 2021–2025 desarrollado en Python, Streamlit, pa
 **Estado al 1 de noviembre de 2026:** aplicación integrada en `main` mediante el
 [PR #8](https://github.com/victorroman1998/Python_2/pull/8) y publicada en Streamlit.
 **[Abrir el dashboard público](https://python2-fzpvrupsuyq3uwttqkzujx.streamlit.app/).**
-El reel y sus subtítulos están preparados. La publicación de LinkedIn y el comentario de entrega
+El reel revisado de 54 segundos y sus subtítulos están preparados. La publicación de LinkedIn y el comentario de entrega
 siguen pendientes; su enlace se añadirá después de publicar.
 
 ## Pregunta y cobertura
