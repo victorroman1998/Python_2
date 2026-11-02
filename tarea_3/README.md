@@ -9,8 +9,8 @@ Dashboard descriptivo de ENDES 2021–2025 desarrollado en Python, Streamlit, pa
 **Estado al 1 de noviembre de 2026:** aplicación integrada en `main` mediante el
 [PR #8](https://github.com/victorroman1998/Python_2/pull/8) y publicada en Streamlit.
 **[Abrir el dashboard público](https://python2-fzpvrupsuyq3uwttqkzujx.streamlit.app/).**
-El reel revisado de 54 segundos y sus subtítulos están preparados. La publicación de LinkedIn y el comentario de entrega
-siguen pendientes; su enlace se añadirá después de publicar.
+El reel revisado de 54 segundos está publicado en [LinkedIn](https://www.linkedin.com/posts/victor-roman-lazarte-a9580817b_cienciadedatos-python-endes-ugcPost-7522834226056941568-PdP3/).
+El comentario de entrega en el Issue #197 está preparado y pendiente de envío.
 
 ## Pregunta y cobertura
 
@@ -244,7 +244,7 @@ hallazgos de 2025, sus unidades y las limitaciones de interpretación.
 - [Guion final de seis escenas](reel/guion_final_reel.md).
 - [Captura del gráfico de riqueza de 2025](reel/captura_1_riqueza_2025.jpg).
 - [Captura del mapa departamental de 2025](reel/captura_2_mapa_2025.jpg).
-- **LinkedIn y reel público:** publicación pendiente. Se incorporará aquí la URL real.
+- **[Publicación de LinkedIn y reel de 54 segundos](https://www.linkedin.com/posts/victor-roman-lazarte-a9580817b_cienciadedatos-python-endes-ugcPost-7522834226056941568-PdP3/).**
 
 ![Gráfico de riqueza, ENDES 2025](reel/captura_1_riqueza_2025.jpg)
 
@@ -258,7 +258,7 @@ Cartografía: INGEMMET / GEOCATMIN, límites referenciales.
 
 La grabación de referencia, los audios de narración, el MP4 y los subtítulos se conservan en
 almacenamiento privado fuera del repositorio y de carpetas con enlaces anónimos.
-El acceso público al reel aprobado se ofrecerá mediante la publicación de LinkedIn.
+El reel aprobado está disponible públicamente en la publicación de LinkedIn enlazada arriba.
 
 ## Archivos
 
