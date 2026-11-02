@@ -10,7 +10,7 @@ Dashboard descriptivo de ENDES 2021–2025 desarrollado en Python, Streamlit, pa
 [PR #8](https://github.com/victorroman1998/Python_2/pull/8) y publicada en Streamlit.
 **[Abrir el dashboard público](https://python2-fzpvrupsuyq3uwttqkzujx.streamlit.app/).**
 El reel revisado de 54 segundos está publicado en [LinkedIn](https://www.linkedin.com/posts/victor-roman-lazarte-a9580817b_cienciadedatos-python-endes-ugcPost-7522834226056941568-PdP3/).
-El comentario de entrega en el Issue #197 está preparado y pendiente de envío.
+**Entrega registrada:** [comentario en el Issue #197](https://github.com/d2cml-ai/Data-Science-Python/issues/197#issuecomment-6567190143), publicado el 1 de noviembre de 2026.
 
 ## Pregunta y cobertura
 
