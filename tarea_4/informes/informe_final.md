@@ -30,6 +30,8 @@ La inflación interanual de alimentos y bebidas pasó de **1,11 %** en enero de 
 | 2023 | 4,80 | 3,24 | 1,57 |
 | 2024 | 1,25 | 1,97 | -0,72 |
 
+La brecha se calcula con las tasas originales antes de redondear cada columna. Por ejemplo, en diciembre de 2020 la resta es 2,2366545 % menos 1,9732322 % = 0,2634223 pp, que se muestra como 0,26 pp.
+
 ![Inflación interanual de alimentos y bebidas e IPC general de Lima Metropolitana](../figuras/inflacion_lima_2020_2024.png)
 
 ### Pobreza por área y sexo
