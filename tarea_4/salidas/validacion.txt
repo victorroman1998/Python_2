@@ -1,0 +1,90 @@
+ENAHO 2024 | Validación
+Estado: APROBADO
+
+Personas: denominador = suma de facpob07 de residentes habituales del ámbito.
+Sumaria: denominador = suma de factor07 × mieperho de hogares del ámbito (personas representadas).
+Numerador: suma del mismo peso en hogares de pobreza monetaria 1 o 2.
+Referencias de validación: Issue #201 y CSV departamental de la Sesión 16.
+Entrada 966-Modulo34.zip SHA-256 5ee98dad87810d42d7e252401d8366feac2fbce151c7af986d9644a40952567c
+Entrada 966-Modulo02.zip SHA-256 f2a1627a09e3c849fe281de74512cc5e5c44ba39a8e65dd81251a9146360ce88
+Entrada pobreza_departamento_2024.csv SHA-256 59b66d00a14880fdbaf8c8925b37c39847c7ef16efc68f450ef5539c9dbaee8e
+APROBADO sumaria-2024.dta: 33691 filas leídas de 163 columnas.
+  Tipos Stata leídos: conglome=str, vivienda=str, hogar=str, ano=str, ubigeo=str, estrato=int8, dominio=int8, pobreza=int8, factor07=float32, mieperho=int8
+  pobreza: 1=pobre extremo, 2=pobre no extremo, 3=no pobre; nulos=0
+  estrato: 1=de 500 000 a más habitantes, 2=de 100 000 a 499 999 habitantes, 3=de 50 000 a 99 999 habitantes, 4=de 20 000 a 49 999 habitantes, 5=de 2 000 a 19 999 habitantes, 6=de 500 a 1 999 habitantes, 7=area de empadronamiento rural (aer) compuesto, 8=area de empadronamiento rural (aer) simple; nulos=0
+APROBADO enaho01-2024-200.dta: 117721 filas leídas de 40 columnas.
+  Tipos Stata leídos: conglome=str, vivienda=str, hogar=str, codperso=str, ano=str, ubigeo=str, estrato=int8, dominio=int8, p204=float64, p205=float64, p206=float64, p207=float64, facpob07=float32
+  p204: 1=si, 2=no; nulos=3966
+  p205: 1=si, 2=no; nulos=7879
+  p206: 1=si, 2=no; nulos=113808
+  p207: 1=hombre, 2=mujer; nulos=3966
+  estrato: 1=de 500 000 a mas habitantes, 2=de 100 000 a 499 999 habitantes, 3=de 50 000 a 99 999 habitantes, 4=de 20 000 a 49 999 habitantes, 5=de 2 000 a 19 999 habitantes, 6=de 500 a 1 999 habitantes, 7=area de empadronamiento rural (aer) compuesto, 8=area de empadronamiento rural (aer) simple; nulos=0
+APROBADO Módulo 02: llaves únicas y completas, año 2024, estrato y dominio válidos.
+APROBADO Módulo 34: llaves únicas y completas, año 2024, estrato y dominio válidos.
+Filtro de residencia: 117721 filas iniciales, 108664 residentes, 9057 excluidas.
+APROBADO unión m:1: 108664 filas antes y después, 0 sin hogar, 0 multiplicaciones, año y geografía concordantes.
+APROBADO personas: 25 ámbitos, Callao (07) y Lima (15) separados; códigos de pobreza válidos.
+APROBADO sumaria: 25 ámbitos, Callao (07) y Lima (15) separados; códigos de pobreza válidos.
+APROBADO ponderación: facpob07 en residentes, factor07 × mieperho en Sumaria; pesos finitos y positivos.
+APROBADO sexo en residentes: p207=1 hombre, p207=2 mujer.
+APROBADO hogares de Sumaria: 33691 (esperados: 33691)
+APROBADO filas de miembros: 117721 (esperadas: 117721)
+APROBADO residentes habituales: 108664 (esperados: 108664)
+APROBADO personas/nacional/PE Perú: 27.528733 % vs 27.6 %, Δ 0.071267 pp, tolerancia 0.10 pp
+APROBADO personas/area/R Rural: 39.441681 % vs 39.3 %, Δ 0.141681 pp, tolerancia 0.20 pp
+APROBADO personas/area/U Urbana: 24.735237 % vs 24.8 %, Δ 0.064763 pp, tolerancia 0.20 pp
+APROBADO personas/departamento/01 Amazonas: 26.080843 % vs 25.7 %, Δ 0.380843 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/02 Áncash: 22.881376 % vs 22.8 %, Δ 0.081376 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/03 Apurímac: 24.087954 % vs 24.0 %, Δ 0.087954 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/04 Arequipa: 15.767416 % vs 15.8 %, Δ 0.032584 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/05 Ayacucho: 33.039815 % vs 32.8 %, Δ 0.239815 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/06 Cajamarca: 44.994960 % vs 45.0 %, Δ 0.005040 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/07 Callao: 33.768344 % vs 33.9 %, Δ 0.131656 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/08 Cusco: 18.539295 % vs 18.5 %, Δ 0.039295 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/09 Huancavelica: 33.608165 % vs 33.4 %, Δ 0.208165 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/10 Huánuco: 39.472857 % vs 39.0 %, Δ 0.472857 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/11 Ica: 5.913942 % vs 6.0 %, Δ 0.086058 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/12 Junín: 18.610376 % vs 18.5 %, Δ 0.110376 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/13 La Libertad: 30.074528 % vs 30.2 %, Δ 0.125472 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/14 Lambayeque: 14.052568 % vs 14.0 %, Δ 0.052568 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/15 Lima: 26.888769 % vs 27.1 %, Δ 0.211231 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/16 Loreto: 42.605098 % vs 43.0 %, Δ 0.394902 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/17 Madre de Dios: 11.135909 % vs 11.1 %, Δ 0.035909 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/18 Moquegua: 10.878089 % vs 11.0 %, Δ 0.121911 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/19 Pasco: 39.281833 % vs 39.0 %, Δ 0.281833 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/20 Piura: 31.811817 % vs 31.9 %, Δ 0.088183 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/21 Puno: 40.417683 % vs 39.9 %, Δ 0.517683 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/22 San Martín: 21.993788 % vs 22.0 %, Δ 0.006212 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/23 Tacna: 23.883223 % vs 24.0 %, Δ 0.116777 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/24 Tumbes: 26.596785 % vs 26.9 %, Δ 0.303215 pp, tolerancia 0.60 pp
+APROBADO personas/departamento/25 Ucayali: 27.123141 % vs 27.1 %, Δ 0.023141 pp, tolerancia 0.60 pp
+APROBADO sumaria/nacional/PE Perú: 27.579468 % vs 27.6 %, Δ 0.020532 pp, tolerancia 0.05 pp
+APROBADO sumaria/area/R Rural: 39.302794 % vs 39.3 %, Δ 0.002794 pp, tolerancia 0.05 pp
+APROBADO sumaria/area/U Urbana: 24.806989 % vs 24.8 %, Δ 0.006989 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/01 Amazonas: 25.748803 % vs 25.7 %, Δ 0.048803 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/02 Áncash: 22.774565 % vs 22.8 %, Δ 0.025435 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/03 Apurímac: 23.958724 % vs 24.0 %, Δ 0.041276 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/04 Arequipa: 15.784371 % vs 15.8 %, Δ 0.015629 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/05 Ayacucho: 32.763276 % vs 32.8 %, Δ 0.036724 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/06 Cajamarca: 45.006897 % vs 45.0 %, Δ 0.006897 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/07 Callao: 33.859893 % vs 33.9 %, Δ 0.040107 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/08 Cusco: 18.541333 % vs 18.5 %, Δ 0.041333 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/09 Huancavelica: 33.403358 % vs 33.4 %, Δ 0.003358 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/10 Huánuco: 38.962598 % vs 39.0 %, Δ 0.037402 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/11 Ica: 6.014194 % vs 6.0 %, Δ 0.014194 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/12 Junín: 18.499405 % vs 18.5 %, Δ 0.000595 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/13 La Libertad: 30.190312 % vs 30.2 %, Δ 0.009688 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/14 Lambayeque: 14.040638 % vs 14.0 %, Δ 0.040638 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/15 Lima: 27.068943 % vs 27.1 %, Δ 0.031057 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/16 Loreto: 42.972578 % vs 43.0 %, Δ 0.027422 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/17 Madre de Dios: 11.147794 % vs 11.1 %, Δ 0.047794 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/18 Moquegua: 10.968161 % vs 11.0 %, Δ 0.031839 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/19 Pasco: 38.971985 % vs 39.0 %, Δ 0.028015 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/20 Piura: 31.860998 % vs 31.9 %, Δ 0.039002 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/21 Puno: 39.938079 % vs 39.9 %, Δ 0.038079 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/22 San Martín: 22.021475 % vs 22.0 %, Δ 0.021475 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/23 Tacna: 23.989037 % vs 24.0 %, Δ 0.010963 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/24 Tumbes: 26.901172 % vs 26.9 %, Δ 0.001172 pp, tolerancia 0.05 pp
+APROBADO sumaria/departamento/25 Ucayali: 27.070068 % vs 27.1 %, Δ 0.029932 pp, tolerancia 0.05 pp
+SHA-256 cb0b1608b7df8aef83688a755f814360e6e7bba2795dd6196dd40826ffd3ef98 personas_2024.parquet
+SHA-256 9657e38de055b156d76d388fd7c1b242e8b100b980e6984ab5830b6b5a6c621a indicadores.csv

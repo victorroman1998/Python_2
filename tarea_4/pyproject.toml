@@ -16,5 +16,5 @@ dependencies = [
 dev = ["pytest"]
 
 [tool.pytest.ini_options]
-pythonpath = ["mcp"]
-testpaths = ["mcp"]
+pythonpath = ["mcp", "."]
+testpaths = ["mcp", "tests"]

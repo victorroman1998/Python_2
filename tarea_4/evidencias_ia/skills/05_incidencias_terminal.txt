@@ -1,0 +1,18 @@
+Consulta inicial desde el entorno sin acceso de red
+Código de salida: 1
+fatal: unable to access 'https://github.com/victorroman1998/Python_2.git/': Could not resolve host: github.com
+curl: (6) Could not resolve host: api.github.com
+curl: (6) Could not resolve host: raw.githubusercontent.com
+curl: (6) Could not resolve host: proyectos.inei.gob.pe
+
+Primera ejecución de las pruebas ENAHO
+Código de salida: 0
+...........................                                              [100%]
+============================== warnings summary ===============================
+tests/test_enaho.py::test_consumidores_rechazan_archivo_distinto_del_lote_aprobado[personas_2024.parquet]
+tests/test_enaho.py::test_consumidores_rechazan_archivo_distinto_del_lote_aprobado[indicadores.csv]
+  [perfil local]\OneDrive\Documentos\ChatGPT\TAREA_4_DIPLOMADO\Python_2\tarea_4\enaho.py:335: Pandas4Warning: The 'float_precision' argument is deprecated. Use the default float precision instead.
+    return pd.read_csv(BytesIO(csv), dtype={"codigo": "string"}, float_precision="round_trip")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+27 passed, 2 warnings in 2.79s

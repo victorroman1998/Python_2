@@ -11,3 +11,4 @@ mcp/datos/
 salidas/*.parquet
 salidas/*.feather
 *.zip
+*.dta

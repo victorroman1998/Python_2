@@ -1,0 +1,12 @@
+uv run --locked --offline python .claude/skills/graficando-enaho/scripts/graficar.py --salidas datos/prueba_dependencia
+[Errno 2] No such file or directory: 'datos\\prueba_dependencia\\personas_2024.parquet' Ejecuta primero limpiando-enaho con uv run --locked python .claude/skills/limpiando-enaho/scripts/limpiar.py.
+Código de salida: 1
+uv run --locked --offline python .claude/skills/mapeando-enaho/scripts/mapear.py --salidas datos/prueba_dependencia
+[Errno 2] No such file or directory: 'datos\\prueba_dependencia\\personas_2024.parquet' Ejecuta primero limpiando-enaho con uv run --locked python .claude/skills/limpiando-enaho/scripts/limpiar.py.
+Código de salida: 1
+Validando YAML de limpiando-enaho
+Skill is valid!
+Validando YAML de graficando-enaho
+Skill is valid!
+Validando YAML de mapeando-enaho
+Skill is valid!
