@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.env.*
+datos/*
+!datos/README.md
+mcp/datos/
+salidas/*.parquet
+salidas/*.feather
+*.zip

@@ -1,0 +1,7 @@
+# Registro de conversaciones y ejecuciones de IA
+
+La rúbrica exige el historial **completo** de todas las conversaciones utilizadas, en orden cronológico. Al cerrar cada sesión de Work, Codex o Claude Code, exportar el chat completo a Markdown, TXT, JSON o HTML; si no hay exportación, capturar todas las pantallas legibles y numerarlas. Guardar por fase en `mcp/`, `skills/`, `integracion/` o `evaluacion/`. Incluir también las conversaciones de planificación e informe en la carpeta de fase que corresponda. Este README es un protocolo, **no sustituye las conversaciones**.
+
+Usar nombres como `2026-11-08_01_codex_planificacion.md` y un índice `indice.csv` con fecha/hora Perú, plataforma, archivo, fase, commit asociado, integridad (completa/parcial) y explicación de cualquier omisión. Mantener un archivo original privado antes de redactar. En la copia pública ocultar tokens, contraseñas, datos personales y contenido confidencial, señalando cada redacción sin borrar el resto del proceso. Revisar todos los enlaces y archivos antes de publicar.
+
+Para la ejecución integrada conservar el pedido inicial, el plan de Claude Code, nombres y argumentos de al menos dos llamadas MCP, nombres de al menos dos Skills, salidas, errores/correcciones y enlace al informe. Para la evaluación guardar las 20 sesiones independientes y su configuración. No reconstruir conversaciones a posteriori ni presentar un resumen como exportación completa. Si el volumen supera GitHub, enlazar desde el README final una carpeta pública accesible sin permisos.

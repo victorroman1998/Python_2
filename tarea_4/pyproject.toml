@@ -1,0 +1,20 @@
+[project]
+name = "tarea-4-agente-socioeconomico"
+version = "0.1.0"
+description = "Agente reproducible de investigación socioeconómica con BCRP y ENAHO 2024"
+requires-python = ">=3.11"
+dependencies = [
+  "fastmcp>=4,<5",
+  "httpx",
+  "pandas",
+  "pyarrow",
+  "geopandas",
+  "matplotlib",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["mcp"]
+testpaths = ["mcp"]
