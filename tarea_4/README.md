@@ -8,6 +8,8 @@
 
 ## Alcance y arquitectura
 
+El objetivo es responder preguntas verificables sobre precios y pobreza en el Perú con fuentes oficiales y procedimientos que otra persona pueda ejecutar. La Fase 4 mide la exactitud y la trazabilidad de las respuestas cuando el agente dispone del MCP y las Skills.
+
 El coordinador identifica las series en el catálogo del BCRP, consulta el servidor MCP, ejecuta las Skills de ENAHO y valida las salidas antes de generar el informe. El servidor obtiene y calcula series oficiales. Los scripts de las Skills procesan microdatos locales y generan tablas, gráficos y mapa.
 
 ```text
@@ -35,6 +37,8 @@ La bitácora local se crea en `evidencias_ia/integracion/ejecucion_local.jsonl`.
 ## Instalación y verificación de la Parte 1
 
 Trabajar **desde `tarea_4/`** con `uv` en el PATH, Python ≥3.11 y acceso HTTPS a BCRPData. El entorno se validó con Python 3.12.15 y las versiones fijadas en `uv.lock`.
+
+Las dependencias de ejecución son FastMCP, HTTPX, pandas, PyArrow, GeoPandas y Matplotlib. Pytest se instala con el grupo de desarrollo. Los enlaces de descarga del INEI, el contraste departamental y la geometría están en [datos/README.md](datos/README.md). Las observaciones de precios provienen de [BCRPData](https://estadisticas.bcrp.gob.pe/estadisticas/series/).
 
 ```bash
 cd tarea_4
@@ -96,6 +100,30 @@ La ejecución del 8 de noviembre de 2026 leyó 33 691 hogares y 117 721 registro
 | Rural | 39,4417 % | 39,3028 % | 39,3 % |
 
 El desvío nacional con `facpob07` fue 0,0713 pp frente al límite de 0,10 pp. Los 25 departamentos coincidieron con el CSV de referencia al redondear Sumaria a una décima. En el cálculo directo, el mayor desvío fue 0,5177 pp en Puno frente a la tolerancia de 0,60 pp. El [registro de ejecución](evidencias_ia/skills/03_ejecucion_enaho.txt) detalla las comprobaciones.
+
+## Evaluación experimental
+
+El [protocolo](evaluacion/README.md) compara las mismas diez preguntas en dos condiciones. A dispone de los datos originales y de herramientas generales. B dispone también del MCP BCRP y de las tres Skills ENAHO. Cada pregunta se envía en una sesión independiente. Los criterios y el SHA-256 del patrón se fijaron antes de lanzar el lote. Se requiere Codex CLI autenticado para repetir esta alternativa. La demostración nativa con Claude Code sigue pendiente.
+
+El lote con `gpt-6.1-sol` registró 20 sesiones. A acertó 10/10 con 81,12 s de media y B acertó 10/10 con 44,30 s de media. B registró 15 llamadas MCP y seis ejecuciones verificadas de `limpiando-enaho`. La diferencia de tiempo es descriptiva y corresponde a una sola repetición por pregunta y condición. [Comparación por pregunta](evaluacion/comparacion.md)
+
+Desde `tarea_4/` en PowerShell, prepara los insumos según [datos/README.md](datos/README.md) y verifica que `codex exec --help` incluya las opciones del protocolo. Los siguientes comandos reproducen el patrón y lanzan un lote nuevo en Windows con MXC. La carpeta temporal del lote queda separada del repositorio.
+
+```powershell
+uv sync --locked --python 3.12
+uv run --locked python evaluacion/referencias.py --bcrp datos/bcrp-evaluacion --descargar-bcrp --salida datos/preguntas-reconstruidas.csv
+Get-FileHash evaluacion/preguntas.csv,datos/preguntas-reconstruidas.csv -Algorithm SHA256
+$runtimeEvaluacion = Join-Path $env:TEMP "tarea4-fase4-runtime"
+$env:UV_PROJECT_ENVIRONMENT = $runtimeEvaluacion
+uv sync --locked --python 3.12
+Remove-Item Env:UV_PROJECT_ENVIRONMENT
+uv run --locked python evaluacion/ejecutar.py --bcrp datos/bcrp-evaluacion --runtime $runtimeEvaluacion --evidencias datos/nueva-evaluacion
+uv run --locked pytest -q
+```
+
+El ejecutor comprueba los SHA-256 del prerregistro y hace los controles de aislamiento y conexión antes de enviar preguntas. Si una fuente cambia de bytes, conserva el patrón histórico y utiliza los insumos con las huellas registradas para replicarlo. Las respuestas de un lote nuevo requieren una nueva extracción según los mismos criterios. Para reproducir el cálculo de métricas del lote publicado, ejecuta `uv run --locked python evaluacion/calificar.py --salida datos/resultados-reconstruidos.csv`.
+
+[Preguntas y referencias](evaluacion/preguntas.csv) · [Prerregistro](evaluacion/prerregistro.json) · [Resultados por ejecución](evaluacion/resultados.csv) · [Comparación y limitaciones](evaluacion/comparacion.md) · [Transcripciones y controles](evidencias_ia/evaluacion/)
 
 ## Evidencias y entrega
 

@@ -1,0 +1,402 @@
+{
+  "A-Q01": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "inflacion": [
+        "1,11",
+        "%"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (JSON, terminal)",
+    "skills": "",
+    "notas": "Leyó enero de 2020 en la serie interanual oficial."
+  },
+  "A-Q02": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "mes": [
+        "2023-02",
+        "AAAA-MM"
+      ],
+      "maximo": [
+        "13,16",
+        "%"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (JSON, terminal)",
+    "skills": "",
+    "notas": "Máximo y mes verificados sobre los 60 registros."
+  },
+  "A-Q03": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "alimentos": [
+        "1,25",
+        "%"
+      ],
+      "ipc": [
+        "1,97",
+        "%"
+      ],
+      "diferencia": [
+        "-0,72",
+        "pp"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM y PN01273PM (JSON, terminal)",
+    "skills": "",
+    "notas": "Ambas series y resta con signo verificadas."
+  },
+  "A-Q04": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "meses": [
+        "19",
+        "meses"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (JSON, terminal)",
+    "skills": "",
+    "notas": "Contó 19 meses por encima del umbral estricto."
+  },
+  "A-Q05": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "nacional": [
+        "27,53",
+        "%"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Python)",
+    "skills": "",
+    "notas": "Reconstruyó el universo de residentes y la tasa ponderada."
+  },
+  "A-Q06": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "rural": [
+        "39,44",
+        "%"
+      ],
+      "urbana": [
+        "24,74",
+        "%"
+      ],
+      "brecha": [
+        "14,71",
+        "pp"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Python)",
+    "skills": "",
+    "notas": "Recalculó ambas áreas y la diferencia desde las sumas ponderadas."
+  },
+  "A-Q07": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "mujeres": [
+        "27,6757",
+        "%"
+      ],
+      "hombres": [
+        "27,3706",
+        "%"
+      ],
+      "brecha": [
+        "0,3051",
+        "pp"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Python)",
+    "skills": "",
+    "notas": "Recalculó por sexo y verificó etiquetas, pesos y brecha."
+  },
+  "A-Q08": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "ambito_alto": [
+        "Cajamarca",
+        "nombre"
+      ],
+      "tasa_alta": [
+        "44,995",
+        "%"
+      ],
+      "ambito_bajo": [
+        "Ica",
+        "nombre"
+      ],
+      "tasa_baja": [
+        "5,914",
+        "%"
+      ],
+      "brecha": [
+        "39,081",
+        "pp"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Python)",
+    "skills": "",
+    "notas": "Ordenó 25 ámbitos por incidencia ponderada. Identificó los extremos 06 y 11."
+  },
+  "A-Q09": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "inflacion": [
+        "1,25",
+        "%"
+      ],
+      "pobreza_rural": [
+        "39,44",
+        "%"
+      ],
+      "fuentes": [
+        true,
+        "texto"
+      ],
+      "coberturas": [
+        true,
+        "texto"
+      ],
+      "interpretacion": [
+        true,
+        "texto"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (JSON, terminal); INEI ENAHO módulos 02 y 34 (Python)",
+    "skills": "",
+    "notas": "Calculó ambas cifras desde los insumos. Distinguió geografías, períodos y objeto de medición."
+  },
+  "A-Q10": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "mes": [
+        "2023-02",
+        "AAAA-MM"
+      ],
+      "maximo": [
+        "13,16",
+        "%"
+      ],
+      "brecha": [
+        "14,71",
+        "pp"
+      ],
+      "fuentes": [
+        true,
+        "texto"
+      ],
+      "coberturas": [
+        true,
+        "texto"
+      ],
+      "interpretacion": [
+        true,
+        "texto"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (JSON, Python); INEI ENAHO módulos 02 y 34 (Python)",
+    "skills": "",
+    "notas": "Calculó ambas cifras y explicó el desajuste de coberturas y la falta de identificación causal."
+  },
+  "B-Q01": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "inflacion": [
+        "1,11",
+        "%"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (MCP y JSON); PN39445PM (MCP, contraste)",
+    "skills": "",
+    "notas": "Consulta nativa y contraste con el índice base."
+  },
+  "B-Q02": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "mes": [
+        "2023-02",
+        "AAAA-MM"
+      ],
+      "maximo": [
+        "13,16",
+        "%"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (MCP y JSON)",
+    "skills": "",
+    "notas": "Resumen MCP contrastado con los 60 registros."
+  },
+  "B-Q03": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "alimentos": [
+        "1,25",
+        "%"
+      ],
+      "ipc": [
+        "1,97",
+        "%"
+      ],
+      "diferencia": [
+        "-0,72",
+        "pp"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM y PN01273PM (MCP y JSON)",
+    "skills": "",
+    "notas": "Dos consultas de serie y resta con signo."
+  },
+  "B-Q04": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "meses": [
+        "19",
+        "meses"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (MCP y JSON)",
+    "skills": "",
+    "notas": "Contó las tasas > 8 y confirmó el resultado con el JSON."
+  },
+  "B-Q05": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "nacional": [
+        "27,528733",
+        "%"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Skill)",
+    "skills": "limpiando-enaho: leída, ejecutada y validada",
+    "notas": "Reprodujo la tasa con los módulos unidos y el peso indicado."
+  },
+  "B-Q06": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "rural": [
+        "39,441681",
+        "%"
+      ],
+      "urbana": [
+        "24,735237",
+        "%"
+      ],
+      "brecha": [
+        "14,706445",
+        "pp"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Skill)",
+    "skills": "limpiando-enaho: leída, ejecutada y validada",
+    "notas": "Calculó ambas tasas y la brecha desde indicadores nuevos."
+  },
+  "B-Q07": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "mujeres": [
+        "27,6757",
+        "%"
+      ],
+      "hombres": [
+        "27,3706",
+        "%"
+      ],
+      "brecha": [
+        "0,3051",
+        "pp"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Skill)",
+    "skills": "limpiando-enaho: leída, ejecutada y validada",
+    "notas": "Separó sexos por p207 y verificó las sumas de pesos."
+  },
+  "B-Q08": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "ambito_alto": [
+        "Cajamarca",
+        "nombre"
+      ],
+      "tasa_alta": [
+        "44,995",
+        "%"
+      ],
+      "ambito_bajo": [
+        "Ica",
+        "nombre"
+      ],
+      "tasa_baja": [
+        "5,914",
+        "%"
+      ],
+      "brecha": [
+        "39,081",
+        "pp"
+      ]
+    },
+    "fuentes": "INEI ENAHO módulos 02 y 34 (Skill)",
+    "skills": "limpiando-enaho: leída, ejecutada y validada",
+    "notas": "Calculó los extremos sobre 25 ámbitos y separó Callao."
+  },
+  "B-Q09": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "inflacion": [
+        "1,25",
+        "%"
+      ],
+      "pobreza_rural": [
+        "39,44",
+        "%"
+      ],
+      "fuentes": [
+        true,
+        "texto"
+      ],
+      "coberturas": [
+        true,
+        "texto"
+      ],
+      "interpretacion": [
+        true,
+        "texto"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (MCP y JSON); INEI ENAHO módulos 02 y 34 (Skill)",
+    "skills": "limpiando-enaho: leída, ejecutada y validada",
+    "notas": "Usó ambas fuentes y distinguió coberturas. Corrigió la lectura de la línea de validación."
+  },
+  "B-Q10": {
+    "afirmacion_evaluable": true,
+    "extraido": {
+      "mes": [
+        "2023-02",
+        "AAAA-MM"
+      ],
+      "maximo": [
+        "13,16",
+        "%"
+      ],
+      "brecha": [
+        "14,706",
+        "pp"
+      ],
+      "fuentes": [
+        true,
+        "texto"
+      ],
+      "coberturas": [
+        true,
+        "texto"
+      ],
+      "interpretacion": [
+        true,
+        "texto"
+      ]
+    },
+    "fuentes": "BCRPData PN09822PM (MCP y JSON); INEI ENAHO módulos 02 y 34 (Skill)",
+    "skills": "limpiando-enaho: leída, ejecutada y validada",
+    "notas": "Consultó el pico y calculó la brecha. Explicó la falta de vínculo entre hogares y precios y de control de confusores."
+  }
+}

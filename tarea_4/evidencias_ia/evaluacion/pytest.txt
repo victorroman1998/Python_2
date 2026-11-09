@@ -1,0 +1,8 @@
+Fecha de inicio (Perú) 2026-11-08T23:05:54.9893352-05:00
+Comando: uv run --locked pytest -q
+............................................                             [100%]
+44 passed in 7.55s
+Código de salida: 0
+
+git diff --exit-code 8a1b9c02c626e9c2f3b2ff648459ca6b4f839a6f -- mcp .mcp.json .claude/skills enaho.py salidas informes figuras mapas scripts pyproject.toml uv.lock tests/test_enaho.py tests/test_integracion.py ../tarea_1 ../tarea_2 ../tarea_3
+Código de salida Git: 0

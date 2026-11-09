@@ -1,0 +1,277 @@
+id,categoria,condicion,sesion,modelo,inicio_peru,instruccion,respuesta,estado_ejecucion,segundos,codigo_salida,clasificacion,acierto,componentes_extraidos,componentes_cumplidos,fuentes_observadas,skills_observadas,herramientas_invocadas,errores,observaciones,transcripcion
+Q01,BCRP,A,01a1be76-2c68-77a0-b085-c272d2182ad5,gpt-6.1-sol,2026-11-08T22:59:37.903529-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuál fue la inflación interanual de alimentos y bebidas de Lima Metropolitana en enero de 2020?","La inflación interanual de alimentos y bebidas en Lima Metropolitana fue de **1,11 % en enero de 2020**. Es la variación del IPC de ese rubro respecto de enero de 2019. [BCRPData, serie PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)
+
+Para comprobarlo, busca `Ene.2020` en `periods` del archivo `datos/PN09822PM.json`. El valor de `values` es `1.11379477251542`, ya expresado en porcentaje. Redondéalo a los dos decimales que indica la serie. [Archivo local](datos/PN09822PM.json)
+
+El archivo contiene tasas interanuales de enero de 2020 a diciembre de 2024. Como solo contiene tasas, no pude recalcular el resultado a partir de los niveles del IPC de enero de 2019 y enero de 2020.",completada,29.979,0,correcta,1,"{""inflacion"": [""1,11"", ""%""]}","{""inflacion"": true}","BCRPData PN09822PM (JSON, terminal)",,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 4}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_3: terminal, salida 1""]",Leyó enero de 2020 en la serie interanual oficial.,../evidencias_ia/evaluacion/A-Q01.jsonl
+Q01,BCRP,B,01a1be75-12d3-7e31-8f0e-2feba614fa2e,gpt-6.1-sol,2026-11-08T22:58:25.782788-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuál fue la inflación interanual de alimentos y bebidas de Lima Metropolitana en enero de 2020?","La inflación interanual de alimentos y bebidas en Lima Metropolitana fue de **1,11 % en enero de 2020**, respecto de enero de 2019. La serie **PN09822PM** de BCRPData, con fuente original del INEI, registra **1,11379477251542 %**. El valor coincide con el del archivo local `datos/PN09822PM.json`, documentado en `datos/FUENTES.md`. [BCRPData, serie PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2020-1)
+
+Para comprobarlo, la serie **PN39445PM** muestra que el IPC de alimentos y bebidas pasó de **89,634836** puntos en enero de 2019 a **90,633184** puntos en enero de 2020, con base diciembre de 2021 = 100. Al dividir el índice de 2020 entre el de 2019, restar 1 y multiplicar por 100, se obtiene **1,1138 %**. [BCRPData, serie PN39445PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN39445PM/json/2019-1/2020-1)",completada,31.758,0,correcta,1,"{""inflacion"": [""1,11"", ""%""]}","{""inflacion"": true}","BCRPData PN09822PM (MCP y JSON); PN39445PM (MCP, contraste)",,"[{""herramienta"": ""MCP bcrp/buscar_series"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""MCP bcrp/resumen"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""MCP bcrp/serie"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 3}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_2: terminal, salida 1""]",Consulta nativa y contraste con el índice base.,../evidencias_ia/evaluacion/B-Q01.jsonl
+Q02,BCRP,A,01a1be74-8347-7c52-8186-77def728b436,gpt-6.1-sol,2026-11-08T22:57:49.061358-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿En qué mes se alcanzó el máximo de inflación interanual de alimentos y bebidas de Lima Metropolitana entre enero de 2020 y diciembre de 2024, y cuál fue ese valor?","El máximo de inflación interanual de alimentos y bebidas en Lima Metropolitana fue **13,16 % en febrero de 2023**. Es la variación del IPC de alimentos y bebidas respecto de febrero de 2022, redondeada a dos decimales. [BCRPData, serie PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)
+
+Para comprobarlo, tomé los valores de `periods[].values[0]` del archivo local, confirmé que había un dato numérico por cada mes entre enero de 2020 y diciembre de 2024 y calculé el máximo de las 60 tasas antes de redondear. El máximo fue único. Pude verificar todos los meses en la copia local. [PN09822PM.json](<SESION>/datos/PN09822PM.json)",completada,36.48,0,correcta,1,"{""mes"": [""2023-02"", ""AAAA-MM""], ""maximo"": [""13,16"", ""%""]}","{""mes"": true, ""maximo"": true}","BCRPData PN09822PM (JSON, terminal)",,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 3}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_2: terminal, salida 1""]",Máximo y mes verificados sobre los 60 registros.,../evidencias_ia/evaluacion/A-Q02.jsonl
+Q02,BCRP,B,01a1be73-ff87-7e42-b298-4d093a369935,gpt-6.1-sol,2026-11-08T22:57:15.282953-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿En qué mes se alcanzó el máximo de inflación interanual de alimentos y bebidas de Lima Metropolitana entre enero de 2020 y diciembre de 2024, y cuál fue ese valor?","El máximo se alcanzó en **febrero de 2023**, cuando el IPC de alimentos y bebidas de Lima Metropolitana subió **13,16 %** respecto de febrero de 2022.
+
+Para comprobarlo, tomé el máximo de las 60 tasas mensuales de variación a 12 meses de la serie **PN09822PM**, de enero de 2020 a diciembre de 2024, ambos inclusive. El cálculo sobre `datos/PN09822PM.json` coincidió con el resumen de BCRPData. El máximo fue único y no hubo meses faltantes. La fuente original es el INEI. [Serie oficial de BCRPData](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)",completada,33.707,0,correcta,1,"{""mes"": [""2023-02"", ""AAAA-MM""], ""maximo"": [""13,16"", ""%""]}","{""mes"": true, ""maximo"": true}",BCRPData PN09822PM (MCP y JSON),,"[{""herramienta"": ""MCP bcrp/buscar_series"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""MCP bcrp/resumen"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 2}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 2}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1""]",Resumen MCP contrastado con los 60 registros.,../evidencias_ia/evaluacion/B-Q02.jsonl
+Q03,BCRP,A,01a1be73-fecd-70a2-a1b6-5f495d93a333,gpt-6.1-sol,2026-11-08T22:57:15.082829-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuáles fueron las tasas de inflación interanual de alimentos y bebidas y del IPC general de Lima Metropolitana en diciembre de 2024, y cuál fue la diferencia alimentos menos IPC general en puntos porcentuales?","En **diciembre de 2024**, respecto de diciembre de 2023, la inflación interanual de Lima Metropolitana fue:
+
+| Indicador | Variación interanual | Fuente |
+|---|---:|---|
+| IPC de alimentos y bebidas | 1,25 % | [BCRPData, PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp) |
+| IPC general | 1,97 % | [BCRPData, PN01273PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01273PM/json/2020-1/2024-12/esp) |
+| **Diferencia (alimentos y bebidas menos IPC general)** | **−0,72 puntos porcentuales** | Cálculo con ambas series |
+
+Para reproducir el cálculo, busca diciembre de 2024 en los dos archivos JSON de `datos/`. Ambas series ya expresan la variación a 12 meses. Resta el valor del IPC general al de alimentos y bebidas antes de redondear el resultado a dos decimales. Los tres valores se verificaron con los insumos locales.",completada,30.091,0,correcta,1,"{""alimentos"": [""1,25"", ""%""], ""ipc"": [""1,97"", ""%""], ""diferencia"": [""-0,72"", ""pp""]}","{""alimentos"": true, ""ipc"": true, ""diferencia"": true}","BCRPData PN09822PM y PN01273PM (JSON, terminal)",,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 3}]",[],Ambas series y resta con signo verificadas.,../evidencias_ia/evaluacion/A-Q03.jsonl
+Q03,BCRP,B,01a1be74-7521-7da3-aa7b-d4a65a238689,gpt-6.1-sol,2026-11-08T22:57:45.420829-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuáles fueron las tasas de inflación interanual de alimentos y bebidas y del IPC general de Lima Metropolitana en diciembre de 2024, y cuál fue la diferencia alimentos menos IPC general en puntos porcentuales?","En Lima Metropolitana, entre diciembre de 2023 y diciembre de 2024, los precios de **alimentos y bebidas** subieron **1,25 %** y el **IPC general** subió **1,97 %**. La diferencia, calculada como alimentos y bebidas menos IPC general, fue de **−0,72 puntos porcentuales**.
+
+| Indicador | Variación interanual | Serie oficial |
+|---|---:|---|
+| IPC de alimentos y bebidas | 1,25 % | [BCRPData · PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2024-12/2024-12) |
+| IPC general | 1,97 % | [BCRPData · PN01273PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01273PM/json/2024-12/2024-12) |
+
+Para comprobarlo, consulta diciembre de 2024 en ambas series, que ya expresan la variación porcentual a 12 meses. Resta los valores antes de redondear (`1,24814760630121 − 1,96630270142824 = −0,71815509512703`) y redondea a dos decimales. Verifiqué ambas cifras en BCRPData, que identifica al INEI como fuente original, y en los archivos locales citados en [FUENTES.md](/<SESION>/datos/FUENTES.md).",completada,36.057,0,correcta,1,"{""alimentos"": [""1,25"", ""%""], ""ipc"": [""1,97"", ""%""], ""diferencia"": [""-0,72"", ""pp""]}","{""alimentos"": true, ""ipc"": true, ""diferencia"": true}",BCRPData PN09822PM y PN01273PM (MCP y JSON),,"[{""herramienta"": ""MCP bcrp/buscar_series"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 2}, {""herramienta"": ""MCP bcrp/serie"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 2}, {""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 3}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_2: terminal, salida 1""]",Dos consultas de serie y resta con signo.,../evidencias_ia/evaluacion/B-Q03.jsonl
+Q04,BCRP,A,01a1be75-8ad6-7250-ab26-427df3d4627a,gpt-6.1-sol,2026-11-08T22:58:56.506515-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuántos meses registraron inflación interanual de alimentos y bebidas de Lima Metropolitana estrictamente superior al 8 % entre enero de 2020 y diciembre de 2024?","**19 de los 60 meses** registraron una inflación interanual de alimentos y bebidas en Lima Metropolitana estrictamente superior al **8 %**, entre enero de 2020 y diciembre de 2024, inclusive.
+
+| Año | Meses con inflación interanual > 8 % |
+|---|---:|
+| 2020 | 0 |
+| 2021 | 0 |
+| 2022 | 10 |
+| 2023 | 9 |
+| 2024 | 0 |
+| **Total** | **19** |
+
+Para reproducir el conteo, lee `periods` en `datos/PN09822PM.json`, convierte cada `values[0]` a número decimal y cuenta los valores mayores que `8`. La serie **PN09822PM** de BCRPData ya expresa la variación del IPC de Alimentos y Bebidas de Lima Metropolitana en porcentaje respecto del mismo mes del año anterior. [Serie PN09822PM de BCRPData](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)
+
+Verifiqué que el archivo local contiene los 60 meses esperados, sin duplicados ni valores faltantes. Ningún valor fue exactamente 8 %.",completada,41.32,0,correcta,1,"{""meses"": [""19"", ""meses""]}","{""meses"": true}","BCRPData PN09822PM (JSON, terminal)",,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 5}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 2}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1""]",Contó 19 meses por encima del umbral estricto.,../evidencias_ia/evaluacion/A-Q04.jsonl
+Q04,BCRP,B,01a1be77-3f57-7b13-afbe-c2e27bba7d2b,gpt-6.1-sol,2026-11-08T23:00:48.281418-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuántos meses registraron inflación interanual de alimentos y bebidas de Lima Metropolitana estrictamente superior al 8 % entre enero de 2020 y diciembre de 2024?","**19 meses** registraron una inflación interanual de alimentos y bebidas en Lima Metropolitana estrictamente superior al **8 %** entre enero de 2020 y diciembre de 2024, ambos inclusive.
+
+Fueron 10 meses en 2022 y 9 en 2023, todos consecutivos entre marzo de 2022 y septiembre de 2023. En 2020, 2021 y 2024 hubo 0 meses por encima del umbral.
+
+Consulté la serie mensual **PN09822PM** de BCRPData, cuya fuente original es el INEI. La serie expresa la variación del IPC de alimentos y bebidas respecto al mismo mes del año anterior, en porcentaje. Verifiqué que los 60 meses tenían un valor y conté solo los que cumplían `valor > 8`. El conteo coincidió con el archivo local y no hubo datos faltantes. [Serie oficial](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp) · [Archivo local](/<SESION>/datos/PN09822PM.json)",completada,44.011,0,correcta,1,"{""meses"": [""19"", ""meses""]}","{""meses"": true}",BCRPData PN09822PM (MCP y JSON),,"[{""herramienta"": ""MCP bcrp/buscar_series"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""MCP bcrp/serie"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 2}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 2}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1""]",Contó las tasas > 8 y confirmó el resultado con el JSON.,../evidencias_ia/evaluacion/B-Q04.jsonl
+Q05,ENAHO,A,01a1be76-6dde-70c3-b9b0-755a5591ce06,gpt-6.1-sol,2026-11-08T22:59:54.628977-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuál fue la tasa nacional de pobreza monetaria de residentes habituales en ENAHO 2024, ponderada con facpob07?","En el Perú, la tasa nacional de pobreza monetaria de los residentes habituales fue **27,53 %** en la ENAHO de enero a diciembre de 2024, ponderada con `facpob07`. La suma de los pesos fue de **9 400 447,29 personas** en pobreza monetaria sobre **34 147 765,79 personas** residentes habituales.
+
+1. En `enaho01-2024-200.dta`, seleccioné a los miembros del hogar que no estaban ausentes por 30 días o más (`p204=1` y `p205=2`) y a los no miembros presentes por 30 días o más (`p204=2` y `p206=1`). [INEI, ENAHO 2024, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip)
+2. Vinculé a cada persona con su hogar en `sumaria-2024.dta`. Sumé `facpob07` para los códigos `pobreza=1` (pobre extremo) y `pobreza=2` (pobre no extremo), dividí esa suma entre la de los tres códigos válidos (`1`, `2` y `3`) y multipliqué por 100. [INEI, ENAHO 2024, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+Los **108 664** residentes habituales seleccionados se vincularon con un hogar y todos tenían un peso positivo y una clasificación de pobreza válida.",completada,88.845,0,correcta,1,"{""nacional"": [""27,53"", ""%""]}","{""nacional"": true}",INEI ENAHO módulos 02 y 34 (Python),,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 6}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 4}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1"", ""item_6: terminal, salida 1"", ""item_10: terminal, salida 1""]",Reconstruyó el universo de residentes y la tasa ponderada.,../evidencias_ia/evaluacion/A-Q05.jsonl
+Q05,ENAHO,B,01a1be76-a285-7d20-b552-6e0d3cebb5be,gpt-6.1-sol,2026-11-08T23:00:08.115401-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuál fue la tasa nacional de pobreza monetaria de residentes habituales en ENAHO 2024, ponderada con facpob07?","En Perú, la tasa nacional de pobreza monetaria de los residentes habituales en la **ENAHO 2024** fue **27,528733 %** (**27,53 %** redondeada a dos decimales), ponderada con `facpob07`. La suma de los factores fue de **9 400 447,29 personas expandidas en pobreza** sobre **34 147 765,79 personas expandidas en total**. [Indicadores calculados](/<SESION>/salidas/indicadores.csv)
+
+Para reproducir el cálculo, selecciona en el módulo 02 del INEI a los residentes habituales con `p204=1` y `p205=2`, o con `p204=2` y `p206=1`. Vincúlalos por hogar con Sumaria (módulo 34). Suma `facpob07` para quienes tienen `pobreza=1` o `2` —pobreza extrema y no extrema—, divide por la suma del mismo factor para todos los residentes habituales y multiplica por 100. [Fuentes del INEI](/<SESION>/datos/FUENTES.md)
+
+La validación de esta sesión fue **aprobada**. Los **108 664 residentes habituales** de la muestra se vincularon con Sumaria sin pérdidas ni duplicaciones. Pude verificar todos los datos necesarios para la tasa solicitada. [Informe de validación](/<SESION>/salidas/validacion.txt:24)",completada,39.885,0,correcta,1,"{""nacional"": [""27,528733"", ""%""]}","{""nacional"": true}",INEI ENAHO módulos 02 y 34 (Skill),"limpiando-enaho: leída, ejecutada y validada","[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 6}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 2}]","[""item_5: terminal, salida 1"", ""item_4: terminal, salida 1""]",Reprodujo la tasa con los módulos unidos y el peso indicado.,../evidencias_ia/evaluacion/B-Q05.jsonl
+Q06,ENAHO,A,01a1be77-c90a-7f03-bede-21cd3ed9f91b,gpt-6.1-sol,2026-11-08T23:01:23.541399-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuáles fueron las tasas de pobreza monetaria rural y urbana de residentes habituales en ENAHO 2024 ponderadas con facpob07, y cuál fue su diferencia absoluta en puntos porcentuales?","En el Perú, según la **ENAHO 2024**, la tasa de pobreza monetaria de los residentes habituales ponderada con `facpob07` fue **39,44 % en el área rural** y **24,74 % en el área urbana**. La diferencia absoluta fue de **14,71 puntos porcentuales**, calculada antes de redondear las tasas.
+
+| Área | Residentes en la muestra | Residentes ponderados | Residentes pobres ponderados | Tasa de pobreza |
+|---|---:|---:|---:|---:|
+| Rural | 36 071 | 6 486 385,00 | 2 558 339,29 | 39,44 % |
+| Urbana | 72 593 | 27 661 380,80 | 6 842 108,00 | 24,74 % |
+
+Para reproducir el cálculo:
+
+1. En el módulo 02, seleccioné a los miembros del hogar ausentes menos de 30 días (`p204=1` y `p205=2`) y a los no miembros presentes 30 días o más (`p204=2` y `p206=1`). Clasifiqué los estratos `1–5` como urbanos y `6–8` como rurales, siguiendo el diseño muestral de la ficha técnica. [INEI, ENAHO 2024, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip)
+2. Vinculé a cada residente con su hogar en `sumaria-2024.dta`. Conté como pobres a quienes tenían `pobreza=1` (pobre extremo) o `pobreza=2` (pobre no extremo). En cada área dividí la suma de `facpob07` de los residentes pobres entre la suma de `facpob07` de todos los residentes y multipliqué por 100. [INEI, ENAHO 2024, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+Verifiqué que los **108 664 residentes seleccionados** tenían un hogar vinculado, un estrato y una categoría de pobreza válidos y un peso positivo. Todos los insumos del cálculo se pudieron verificar en los archivos locales.",completada,126.423,0,correcta,1,"{""rural"": [""39,44"", ""%""], ""urbana"": [""24,74"", ""%""], ""brecha"": [""14,71"", ""pp""]}","{""rural"": true, ""urbana"": true, ""brecha"": true}",INEI ENAHO módulos 02 y 34 (Python),,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 12}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 2}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1""]",Recalculó ambas áreas y la diferencia desde las sumas ponderadas.,../evidencias_ia/evaluacion/A-Q06.jsonl
+Q06,ENAHO,B,01a1be75-02e4-71c2-8786-426b9aee2e95,gpt-6.1-sol,2026-11-08T22:58:21.712947-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuáles fueron las tasas de pobreza monetaria rural y urbana de residentes habituales en ENAHO 2024 ponderadas con facpob07, y cuál fue su diferencia absoluta en puntos porcentuales?","En el Perú, según la **ENAHO 2024**, la tasa de pobreza monetaria de los residentes habituales ponderada con `facpob07` fue de **39,441681 % en el área rural** y **24,735237 % en el área urbana**. La tasa rural superó a la urbana en **14,706445 puntos porcentuales**, calculados antes de redondear las tasas.
+
+Para reproducir el cálculo, se seleccionan los residentes habituales del módulo 02 con `p204`, `p205` y `p206` y se vinculan por hogar con la clasificación de pobreza del módulo 34 (Sumaria). Se agrupan los estratos 6 a 8 como rurales y 1 a 5 como urbanos. En cada área se divide la suma de `facpob07` de los residentes en pobreza monetaria (`pobreza` igual a 1 o 2) entre la suma de `facpob07` de todos los residentes habituales y se multiplica por 100.
+
+Las dos tasas y la brecha se verificaron en esta sesión con los microdatos del INEI. La validación aprobó la unión de los módulos y la ponderación. [Fuentes del INEI](datos/FUENTES.md) · [Indicadores calculados](salidas/indicadores.csv) · [Informe de validación](salidas/validacion.txt)",completada,39.467,0,correcta,1,"{""rural"": [""39,441681"", ""%""], ""urbana"": [""24,735237"", ""%""], ""brecha"": [""14,706445"", ""pp""]}","{""rural"": true, ""urbana"": true, ""brecha"": true}",INEI ENAHO módulos 02 y 34 (Skill),"limpiando-enaho: leída, ejecutada y validada","[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 8}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_2: terminal, salida 1""]",Calculó ambas tasas y la brecha desde indicadores nuevos.,../evidencias_ia/evaluacion/B-Q06.jsonl
+Q07,ENAHO,A,01a1be76-7673-7722-85fd-da0ce8c7087f,gpt-6.1-sol,2026-11-08T22:59:56.801563-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuáles fueron las tasas de pobreza monetaria de residentes habituales en ENAHO 2024 por sexo, ponderadas con facpob07, y cuál fue la diferencia mujeres menos hombres en puntos porcentuales?","En el Perú, según la ENAHO 2024, la tasa de pobreza monetaria de los residentes habituales fue **27,6757 % para las mujeres** y **27,3706 % para los hombres**. La diferencia **mujeres menos hombres fue de +0,3051 puntos porcentuales**, calculada antes de redondear.
+
+| Sexo | Residentes en la muestra | Residentes en pobreza, ponderados | Total de residentes, ponderado | Tasa de pobreza |
+|---|---:|---:|---:|---:|
+| Mujeres | 56 077 | 4 897 154,19 | 17 694 762,82 | 27,6757 % |
+| Hombres | 52 587 | 4 503 293,09 | 16 453 002,97 | 27,3706 % |
+
+Para reproducir el cálculo:
+
+1. En `enaho01-2024-200.dta`, seleccionar a los miembros del hogar que no estuvieron ausentes 30 días o más (`p204 = 1` y `p205 = 2`) y a los no miembros que estuvieron presentes 30 días o más (`p204 = 2` y `p206 = 1`). Usar `p207` para identificar hombres (`1`) y mujeres (`2`). [INEI, ENAHO 2024, módulo 02, ficha técnica y cuestionario](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip)
+2. Cruzar por hogar con `sumaria-2024.dta` y clasificar como pobre a quien vive en un hogar con `pobreza = 1` (pobre extremo) o `pobreza = 2` (pobre no extremo). Para cada sexo, dividir la suma de `facpob07` de los residentes en pobreza entre la suma de `facpob07` de todos los residentes y multiplicar por 100. [INEI, ENAHO 2024, módulo 34, Sumaria](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+Los 108 664 residentes seleccionados tuvieron un hogar asociado, un código válido de sexo y pobreza, y un peso positivo. Las tasas se verificaron con los microdatos de esta sesión. Quedó sin verificar su coincidencia con un tabulado oficial por sexo.",completada,125.135,0,correcta,1,"{""mujeres"": [""27,6757"", ""%""], ""hombres"": [""27,3706"", ""%""], ""brecha"": [""0,3051"", ""pp""]}","{""mujeres"": true, ""hombres"": true, ""brecha"": true}",INEI ENAHO módulos 02 y 34 (Python),,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 8}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 4}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1"", ""item_4: terminal, salida 1"", ""item_5: terminal, salida 1""]","Recalculó por sexo y verificó etiquetas, pesos y brecha.",../evidencias_ia/evaluacion/A-Q07.jsonl
+Q07,ENAHO,B,01a1be74-b869-7033-8d4f-3d497958c605,gpt-6.1-sol,2026-11-08T22:58:02.632756-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuáles fueron las tasas de pobreza monetaria de residentes habituales en ENAHO 2024 por sexo, ponderadas con facpob07, y cuál fue la diferencia mujeres menos hombres en puntos porcentuales?","En Perú, según la ENAHO 2024, la tasa de pobreza monetaria de los residentes habituales fue de **27,6757 % en mujeres** y **27,3706 % en hombres**, con el factor de expansión `facpob07`. La diferencia **mujeres menos hombres fue de +0,3051 puntos porcentuales**, calculada antes de redondear las tasas.
+
+| Sexo | Residentes en la muestra | Población expandida | Población pobre expandida | Tasa de pobreza |
+|---|---:|---:|---:|---:|
+| Hombres | 52 587 | 16 453 002,97 | 4 503 293,09 | 27,3706 % |
+| Mujeres | 56 077 | 17 694 762,82 | 4 897 154,19 | 27,6757 % |
+
+Para reproducir el cálculo, filtra el módulo 02 con `(p204=1 y p205=2) o (p204=2 y p206=1)` y vincula a cada residente con su hogar en el módulo 34 (Sumaria). Agrupa por `p207` (1 = hombre, 2 = mujer). Para cada sexo, divide la suma de `facpob07` de quienes viven en hogares con `pobreza` igual a 1 o 2 entre la suma de `facpob07` de todos los residentes del mismo sexo, y multiplica por 100. [INEI, ENAHO 2024, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) · [INEI, ENAHO 2024, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+La validación ejecutada en esta sesión quedó **APROBADA**. Los 108 664 residentes seleccionados se vincularon con su hogar sin duplicaciones, y las dos tasas se comprobaron a partir de las sumas ponderadas de la tabla.",completada,53.798,0,correcta,1,"{""mujeres"": [""27,6757"", ""%""], ""hombres"": [""27,3706"", ""%""], ""brecha"": [""0,3051"", ""pp""]}","{""mujeres"": true, ""hombres"": true, ""brecha"": true}",INEI ENAHO módulos 02 y 34 (Skill),"limpiando-enaho: leída, ejecutada y validada","[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 9}]",[],Separó sexos por p207 y verificó las sumas de pesos.,../evidencias_ia/evaluacion/B-Q07.jsonl
+Q08,ENAHO,A,01a1be77-ba34-7453-87c9-4f3eec30e210,gpt-6.1-sol,2026-11-08T23:01:19.721438-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Qué ámbitos departamentales presentaron las tasas puntuales más alta y más baja de pobreza monetaria entre residentes habituales en ENAHO 2024 con facpob07? Incluye ambas tasas y su diferencia en puntos porcentuales. Considera Callao separado de Lima.","En la **ENAHO de enero a diciembre de 2024**, **Cajamarca** registró la tasa puntual de pobreza monetaria más alta entre residentes habituales (**44,995 %**) e **Ica** la más baja (**5,914 %**). La diferencia fue de **39,081 puntos porcentuales**, calculada antes de redondear. La comparación abarcó 25 ámbitos departamentales, con Callao separado de Lima.
+
+Para reproducir el cálculo, seleccioné en `enaho01-2024-200.dta` a las personas con `p204 = 1` y `p205 = 2`, o con `p204 = 2` y `p206 = 1`. Vinculé a cada residente con la clasificación `pobreza` de su hogar en `sumaria-2024.dta`. Para cada ámbito, definido por los dos primeros dígitos de `ubigeo`, dividí la suma de `facpob07` de los residentes en pobreza extrema o no extrema (`pobreza = 1` o `2`) entre la suma de `facpob07` de todos los residentes y multipliqué por 100. [INEI, ENAHO 2024, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) · [INEI, ENAHO 2024, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+Los **108 664 residentes** seleccionados se vincularon con su hogar y tenían clasificación de pobreza y ponderador válido. No quedaron datos requeridos para el cálculo sin verificar.",completada,93.726,0,correcta,1,"{""ambito_alto"": [""Cajamarca"", ""nombre""], ""tasa_alta"": [""44,995"", ""%""], ""ambito_bajo"": [""Ica"", ""nombre""], ""tasa_baja"": [""5,914"", ""%""], ""brecha"": [""39,081"", ""pp""]}","{""ambito_alto"": true, ""tasa_alta"": true, ""ambito_bajo"": true, ""tasa_baja"": true, ""brecha"": true}",INEI ENAHO módulos 02 y 34 (Python),,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 8}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 4}]","[""item_2: terminal, salida 1"", ""item_5: terminal, salida 1"", ""item_7: terminal, salida 1"", ""item_11: terminal, salida 1""]",Ordenó 25 ámbitos por incidencia ponderada. Identificó los extremos 06 y 11.,../evidencias_ia/evaluacion/A-Q08.jsonl
+Q08,ENAHO,B,01a1be73-ffbb-7e01-a169-37dd7a134481,gpt-6.1-sol,2026-11-08T22:57:15.303958-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Qué ámbitos departamentales presentaron las tasas puntuales más alta y más baja de pobreza monetaria entre residentes habituales en ENAHO 2024 con facpob07? Incluye ambas tasas y su diferencia en puntos porcentuales. Considera Callao separado de Lima.","En la **ENAHO 2024**, **Cajamarca** registró la tasa puntual más alta de pobreza monetaria entre residentes habituales (**44,995 %**) e **Ica** la más baja (**5,914 %**). La diferencia fue de **39,081 puntos porcentuales**, calculada antes de redondear. La comparación abarcó 25 ámbitos departamentales, con Callao separado de Lima.
+
+Para reproducir el cálculo, se seleccionan los residentes habituales del módulo 02 con `p204`, `p205` y `p206`, y se les asigna la condición de pobreza de su hogar según el módulo 34. En cada ámbito, se divide la suma de `facpob07` de los residentes en pobreza extrema o no extrema (`pobreza` igual a 1 o 2) entre la suma de `facpob07` de todos los residentes habituales y se multiplica por 100. Los extremos se obtienen de las filas con `metodo=personas` y `grupo=departamento`. [Indicadores calculados](salidas/indicadores.csv) · [Validación aprobada](salidas/validacion.txt)
+
+Los valores solicitados se verificaron con los microdatos del INEI. [ENAHO 2024, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) · [ENAHO 2024, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)",completada,47.087,0,correcta,1,"{""ambito_alto"": [""Cajamarca"", ""nombre""], ""tasa_alta"": [""44,995"", ""%""], ""ambito_bajo"": [""Ica"", ""nombre""], ""tasa_baja"": [""5,914"", ""%""], ""brecha"": [""39,081"", ""pp""]}","{""ambito_alto"": true, ""tasa_alta"": true, ""ambito_bajo"": true, ""tasa_baja"": true, ""brecha"": true}",INEI ENAHO módulos 02 y 34 (Skill),"limpiando-enaho: leída, ejecutada y validada","[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 7}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_5: terminal, salida 1""]",Calculó los extremos sobre 25 ámbitos y separó Callao.,../evidencias_ia/evaluacion/B-Q08.jsonl
+Q09,mixta,A,01a1be74-e3a2-73b0-81ac-8b504af7eb4d,gpt-6.1-sol,2026-11-08T22:58:13.732293-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuál fue la inflación interanual de alimentos y bebidas de Lima Metropolitana en diciembre de 2024 y cuál fue la tasa de pobreza monetaria rural de residentes habituales de ENAHO 2024, con facpob07? Interpreta ambos indicadores considerando sus coberturas geográficas y temporales.","- **Inflación interanual de alimentos y bebidas en Lima Metropolitana: 1,25 % en diciembre de 2024.** El IPC de ese rubro subió 1,25 % respecto de diciembre de 2023. Para comprobarlo, en la serie mensual `PN09822PM` de BCRPData, busca `Dic.2024`. El valor de la variación a 12 meses es `1.24814760630121` %. La cobertura geográfica es Lima Metropolitana. [BCRPData, serie PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)
+- **Pobreza monetaria rural de residentes habituales: 39,44 % de las personas, según ENAHO 2024 con `facpob07`.** La estimación cubre el área rural del Perú y usa entrevistas de enero a diciembre de 2024. Equivale a unas 39 de cada 100 personas residentes habituales en hogares clasificados como pobres monetarios. [INEI, ENAHO 2024, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) · [INEI, ENAHO 2024, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+Para reproducir la tasa, une `enaho01-2024-200.dta` con `sumaria-2024.dta` por `conglome`, `vivienda` y `hogar`. Selecciona los estratos rurales 6 a 8 y aplica el filtro de residencia habitual `(p204=1 y p205=2) o (p204=2 y p206=1)`. Suma `facpob07` para las personas con `pobreza` igual a 1 o 2 y divide entre la suma del factor para toda la población seleccionada. El cálculo fue \(100 \times 2\,558\,339{,}29 / 6\,486\,385{,}00 = 39{,}44\ \%\). Los 36 071 registros de personas seleccionados se enlazaron con su hogar y tenían un peso positivo y una categoría de pobreza válida.
+
+El IPC compara precios entre dos diciembres en Lima Metropolitana. La tasa de pobreza mide la proporción de personas en pobreza monetaria en el Perú rural durante el año. Por esas diferencias de población, período y objeto de medición, las dos cifras por sí solas no permiten atribuir la pobreza rural al alza de precios en Lima.",completada,100.824,0,correcta,1,"{""inflacion"": [""1,25"", ""%""], ""pobreza_rural"": [""39,44"", ""%""], ""fuentes"": [true, ""texto""], ""coberturas"": [true, ""texto""], ""interpretacion"": [true, ""texto""]}","{""inflacion"": true, ""pobreza_rural"": true, ""fuentes"": true, ""coberturas"": true, ""interpretacion"": true}","BCRPData PN09822PM (JSON, terminal); INEI ENAHO módulos 02 y 34 (Python)",,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 8}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 3}]","[""item_2: terminal, salida 1"", ""item_3: terminal, salida 1"", ""item_9: terminal, salida 1""]","Calculó ambas cifras desde los insumos. Distinguió geografías, períodos y objeto de medición.",../evidencias_ia/evaluacion/A-Q09.jsonl
+Q09,mixta,B,01a1be73-ffbc-7730-91e8-19a8ce7f2184,gpt-6.1-sol,2026-11-08T22:57:15.282953-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿Cuál fue la inflación interanual de alimentos y bebidas de Lima Metropolitana en diciembre de 2024 y cuál fue la tasa de pobreza monetaria rural de residentes habituales de ENAHO 2024, con facpob07? Interpreta ambos indicadores considerando sus coberturas geográficas y temporales.","- **Inflación interanual de alimentos y bebidas en Lima Metropolitana: 1,25 % en diciembre de 2024.** El IPC de ese rubro fue 1,2481476063 % mayor que en diciembre de 2023. Consulté la observación de diciembre de 2024 en la serie mensual `PN09822PM` de BCRPData, cuya fuente original es el INEI, y confirmé que coincide con el archivo local. [BCRPData](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2024-12/2024-12) · [Insumo local](datos/PN09822PM.json)
+- **Pobreza monetaria rural de residentes habituales en el Perú: 39,44 % en ENAHO 2024.** Uní el módulo 02 de personas con el módulo 34 (Sumaria) por hogar. Seleccioné a los residentes habituales con `p204`, `p205` y `p206`, y el área rural con `estrato` de 6 a 8. Sumé `facpob07` para quienes tenían `pobreza` igual a 1 o 2 y dividí esa suma por la de todos los residentes habituales rurales. El cálculo fue \(100 \times 2\,558\,339{,}29 / 6\,486\,385{,}00 = 39{,}441681\ \%\), con ambas sumas expresadas en personas expandidas. La validación quedó aprobada. [Fuentes de ENAHO](datos/FUENTES.md) · [Validación de esta sesión](tmp/enaho-q09-479629e6663a42c6976ed99d9a31bd78/validacion.txt)
+
+El IPC mide cuánto cambiaron los precios de un rubro en Lima Metropolitana entre dos diciembres. La ENAHO estima qué proporción de la población rural de todo el Perú vivía en hogares cuyo gasto por persona estaba por debajo de la línea de pobreza, con datos recogidos a lo largo de 2024. Los porcentajes tienen bases geográficas y temporales distintas, por lo que su comparación directa no permite atribuir la pobreza rural a la inflación limeña.
+
+Ambas cifras solicitadas se verificaron en esta sesión.",completada,58.361,0,correcta,1,"{""inflacion"": [""1,25"", ""%""], ""pobreza_rural"": [""39,44"", ""%""], ""fuentes"": [true, ""texto""], ""coberturas"": [true, ""texto""], ""interpretacion"": [true, ""texto""]}","{""inflacion"": true, ""pobreza_rural"": true, ""fuentes"": true, ""coberturas"": true, ""interpretacion"": true}",BCRPData PN09822PM (MCP y JSON); INEI ENAHO módulos 02 y 34 (Skill),"limpiando-enaho: leída, ejecutada y validada","[{""herramienta"": ""MCP bcrp/buscar_series"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""MCP bcrp/serie"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 3}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 5}]","[""item_3: terminal, salida 1"", ""item_2: terminal, salida 1"", ""item_5: terminal, salida 1"", ""item_7: terminal, salida 1"", ""item_10: terminal, salida 1""]",Usó ambas fuentes y distinguió coberturas. Corrigió la lectura de la línea de validación.,../evidencias_ia/evaluacion/B-Q09.jsonl
+Q10,mixta,A,01a1be75-9d5e-7590-965e-610b6974bdfd,gpt-6.1-sol,2026-11-08T22:59:01.267152-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿En qué mes y con qué valor se alcanzó el máximo de inflación interanual de alimentos y bebidas de Lima Metropolitana entre enero de 2020 y diciembre de 2024, y cuál fue la brecha rural menos urbana en pobreza monetaria de residentes habituales de ENAHO 2024 con facpob07? Identifica las coberturas geográficas y temporales y explica por qué los resultados no permiten demostrar causalidad.","- **Inflación de alimentos y bebidas en Lima Metropolitana.** El máximo fue **13,16 % interanual en febrero de 2023**, respecto de febrero de 2022. El valor original es 13,1637473661575 %. Comparé las 60 variaciones mensuales a 12 meses entre enero de 2020 y diciembre de 2024. [BCRPData, serie PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)
+- **Pobreza monetaria en el Perú.** Entre los residentes habituales de viviendas particulares de la ENAHO de enero a diciembre de 2024, la tasa ponderada con `facpob07` fue **39,44 % rural** y **24,74 % urbana**. La brecha rural menos urbana fue **14,71 puntos porcentuales**, calculada antes de redondear las tasas. La cobertura comprende los 24 departamentos y la Provincia Constitucional del Callao. [INEI, módulo 02 y ficha técnica](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) · [INEI, Sumaria y metodología](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+**Cómo comprobar la brecha.** En el módulo 02, seleccioné a los miembros del hogar sin ausencia de 30 días o más (`p204=1` y `p205=2`) y a los no miembros presentes 30 días o más (`p204=2` y `p206=1`). Enlacé los 108 664 residentes seleccionados con `sumaria-2024.dta` por hogar y clasifiqué como pobres a quienes tenían `pobreza` igual a 1 o 2. Para cada área, dividí la suma de `facpob07` de los residentes pobres por la suma de `facpob07` de todos los residentes y multipliqué por 100. Usé los estratos 1–5 para urbana y 6–8 para rural, conforme a la metodología adjunta. Todos los residentes seleccionados enlazaron y tenían peso positivo y categoría de pobreza válida. El conteo obtenido con el filtro de residencia difirió de `mieperho` en 1 846 hogares. No pude verificar el motivo de esa diferencia en los insumos.
+
+**Por qué no demuestra causalidad.** El máximo corresponde a un índice mensual de Lima Metropolitana en 2023, mientras que la brecha compara dos poblaciones a escala nacional durante 2024. Los cálculos carecen de una medida de la exposición de cada hogar al alza de precios y de un grupo comparable que permita separar su efecto de factores como los ingresos y el empleo. Por eso, la brecha no puede atribuirse al máximo de inflación observado.",completada,138.376,0,correcta,1,"{""mes"": [""2023-02"", ""AAAA-MM""], ""maximo"": [""13,16"", ""%""], ""brecha"": [""14,71"", ""pp""], ""fuentes"": [true, ""texto""], ""coberturas"": [true, ""texto""], ""interpretacion"": [true, ""texto""]}","{""mes"": true, ""maximo"": true, ""brecha"": true, ""fuentes"": true, ""coberturas"": true, ""interpretacion"": true}","BCRPData PN09822PM (JSON, Python); INEI ENAHO módulos 02 y 34 (Python)",,"[{""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 15}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_3: terminal, salida 1""]",Calculó ambas cifras y explicó el desajuste de coberturas y la falta de identificación causal.,../evidencias_ia/evaluacion/A-Q10.jsonl
+Q10,mixta,B,01a1be75-8fdf-7dc0-b5c8-0388af6b2c3d,gpt-6.1-sol,2026-11-08T22:58:57.803633-05:00,"Responde en español a esta pregunta usando evidencia verificable.
+En datos/ están los insumos originales y FUENTES.md identifica su procedencia.
+Si tienes herramientas especializadas pertinentes, úsalas para consultar o calcular.
+Incluye valores, unidades, períodos, fuentes y un procedimiento breve que permita comprobarlos.
+Informa cualquier dato que no hayas podido verificar. Trabaja dentro del directorio actual.
+Usa solo resultados de esta sesión. Nunca imprimas filas individuales ni llaves muestrales.
+
+¿En qué mes y con qué valor se alcanzó el máximo de inflación interanual de alimentos y bebidas de Lima Metropolitana entre enero de 2020 y diciembre de 2024, y cuál fue la brecha rural menos urbana en pobreza monetaria de residentes habituales de ENAHO 2024 con facpob07? Identifica las coberturas geográficas y temporales y explica por qué los resultados no permiten demostrar causalidad.","- **Inflación interanual de alimentos y bebidas en Lima Metropolitana.** El máximo fue **13,16 % en febrero de 2023**, respecto de febrero de 2022. El resumen de BCRPData y el cálculo sobre el JSON local coincidieron al tomar el mayor valor de las 60 observaciones mensuales de enero de 2020 a diciembre de 2024, sin meses faltantes. [BCRPData, serie PN09822PM, fuente original INEI](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12/esp)
+- **Pobreza monetaria en el Perú, ENAHO 2024.** Entre los residentes habituales, la tasa ponderada con `facpob07` fue **39,442 % en el área rural** y **24,735 % en el área urbana**. La brecha rural menos urbana fue **14,706 puntos porcentuales**, calculada antes de redondear las tasas. [INEI, módulo 02](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) · [INEI, módulo 34](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip)
+
+Para reproducir la brecha, ejecuta `python -B .claude/skills/limpiando-enaho/scripts/limpiar.py --sin-descarga`. El script filtra a los residentes habituales del módulo 02, los vincula con la condición de pobreza de su hogar en el módulo 34 y, para cada área, divide la suma de `facpob07` de las personas en pobreza extrema o no extrema entre la suma de `facpob07` de todos los residentes. Multiplica cada cociente por 100 y resta la tasa urbana de la rural. La validación quedó aprobada y se verificaron ambas cifras solicitadas. [Validación](salidas/validacion.txt) · [Indicadores](salidas/indicadores.csv)
+
+**Por qué no permiten demostrar causalidad.** El IPC mide precios mensuales en Lima Metropolitana, mientras que la brecha compara la pobreza de la población rural y urbana de todo el Perú durante 2024. Los datos usados no vinculan la exposición de cada hogar al alza de precios con cambios en su pobreza. Tampoco permiten separar el efecto de los precios de otros factores, como el empleo y los ingresos, ni estimar qué habría ocurrido con la brecha sin esa alza.",completada,58.915,0,correcta,1,"{""mes"": [""2023-02"", ""AAAA-MM""], ""maximo"": [""13,16"", ""%""], ""brecha"": [""14,706"", ""pp""], ""fuentes"": [true, ""texto""], ""coberturas"": [true, ""texto""], ""interpretacion"": [true, ""texto""]}","{""mes"": true, ""maximo"": true, ""brecha"": true, ""fuentes"": true, ""coberturas"": true, ""interpretacion"": true}",BCRPData PN09822PM (MCP y JSON); INEI ENAHO módulos 02 y 34 (Skill),"limpiando-enaho: leída, ejecutada y validada","[{""herramienta"": ""MCP bcrp/buscar_series"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""MCP bcrp/resumen"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 1}, {""herramienta"": ""terminal"", ""estado"": ""completed"", ""fallo"": false, ""veces"": 10}, {""herramienta"": ""terminal"", ""estado"": ""failed"", ""fallo"": true, ""veces"": 1}]","[""item_3: terminal, salida 1""]",Consultó el pico y calculó la brecha. Explicó la falta de vínculo entre hogares y precios y de control de confusores.,../evidencias_ia/evaluacion/B-Q10.jsonl

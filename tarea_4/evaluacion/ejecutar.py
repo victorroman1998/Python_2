@@ -213,7 +213,7 @@ def main():
     version = subprocess.check_output([codex, "--version"], text=True).strip()
     print(version, flush=True)
 
-    def ejecutar(id_pregunta, modo, instruccion):
+    def ejecutar(id_pregunta, modo, instruccion, control_codigo=None):
         cwd = raiz / f"{modo}-{id_pregunta}"
         insumos = preparar(cwd, modo, args.bcrp, RAIZ / "datos")
         archivo = evidencias / f"{modo}-{id_pregunta}.jsonl"
@@ -221,6 +221,22 @@ def main():
         comando = invocacion(cwd, modo, runtime, base_python, codex, Path(uv), respuesta, control)
         reemplazos = [(cwd, "<SESION>"), (runtime, "<RUNTIME>"), (raiz, "<AISLAMIENTO>"),
                       (RAIZ.parents[1], "<PROYECTO>"), (base_python, "<PYTHON>"), (Path.home(), "<USUARIO>")]
+        if control_codigo:
+            opciones = [opcion for indice, argumento in enumerate(comando) if argumento == "-c"
+                        for opcion in comando[indice:indice + 2]]
+            prueba = [codex, "sandbox", "-P", "evaluation", "-C", str(cwd), *opciones,
+                      "--", str(python), "-c", control_codigo]
+            resultado = subprocess.run(prueba, capture_output=True, timeout=60, cwd=cwd,
+                                       encoding="utf-8", errors="replace")
+            prueba_archivo = evidencias / f"{modo}-aislamiento.json"
+            prueba_archivo.write_text(json.dumps(ocultar({
+                "argv": prueba, "codigo_salida": resultado.returncode, "stdout": resultado.stdout,
+                "stderr": resultado.stderr,
+            }, reemplazos), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            if (resultado.returncode or "PYTHON_OK" not in resultado.stdout
+                    or resultado.stdout.count("LECTURA_DENEGADA") != 3
+                    or "LECTURA_PERMITIDA" in resultado.stdout):
+                raise SystemExit(f"Control directo de aislamiento fallido en {modo}. Revisa {prueba_archivo.name}.")
         return sesion(id_pregunta, modo, instruccion, cwd, archivo, comando, reemplazos, insumos)
 
     control_codigo = ("from pathlib import Path; import pandas; "
@@ -230,20 +246,18 @@ def main():
                       " except PermissionError: print('LECTURA_DENEGADA')\n"
                       " else: print('LECTURA_PERMITIDA')\n")
     for modo in CONDICIONES:
-        instruccion = ("Prueba técnica, fuera de la evaluación. Ejecuta exactamente este código Python "
-                       "mediante una here-string de PowerShell conectada a python -. "
-                       "La prueba no muestra contenido privado.\n\n" + control_codigo)
+        instruccion = ('Prueba técnica, fuera de la evaluación. Ejecuta en la terminal '
+                       'python -c "import pandas; print(\'PYTHON_OK\')" desde la carpeta actual.')
         if modo == "B":
             instruccion += ("\nAdemás llama a la herramienta MCP bcrp serie para PN01273PM 2019-01 a 2019-01. "
                             "Abre los tres SKILL.md de .agents/skills/ y ejecuta, sin procesar datos, "
                             "uv run --locked python .claude/skills/limpiando-enaho/scripts/limpiar.py --help.")
-        eventos, cierre = ejecutar("control", modo, instruccion)
+        eventos, cierre = ejecutar("control", modo, instruccion, control_codigo)
         items = [e["item"] for e in eventos if e["type"] == "item.completed"]
         terminal = "\n".join(i["aggregated_output"] for i in items
                              if i["type"] == "command_execution" and i["exit_code"] == 0)
-        if (cierre["estado"] != "completada" or "PYTHON_OK" not in terminal
-                or terminal.count("LECTURA_DENEGADA") != 3 or "LECTURA_PERMITIDA" in terminal):
-            raise SystemExit(f"Control de aislamiento fallido en {modo}. Revisa su traza.")
+        if cierre["estado"] != "completada" or "PYTHON_OK" not in terminal:
+            raise SystemExit(f"Control de terminal fallido en {modo}. Revisa su traza.")
         if modo == "B" and not any(i["type"] == "mcp_tool_call" and i.get("server") == "bcrp"
                                    and i.get("status") == "completed" and not i.get("error")
                                    for i in items):
