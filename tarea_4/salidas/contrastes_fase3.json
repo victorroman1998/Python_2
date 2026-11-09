@@ -1,0 +1,53 @@
+{
+  "series_csv": {
+    "PN09822PM": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/csv/2020-1/2024-12",
+    "PN01273PM": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01273PM/csv/2020-1/2024-12"
+  },
+  "valores_bcrp_contrastados": 120,
+  "entradas_enaho": {
+    "966-Modulo02.zip": {
+      "url": "https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip",
+      "sha256": "f2a1627a09e3c849fe281de74512cc5e5c44ba39a8e65dd81251a9146360ce88"
+    },
+    "966-Modulo34.zip": {
+      "url": "https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip",
+      "sha256": "5ee98dad87810d42d7e252401d8366feac2fbce151c7af986d9644a40952567c"
+    }
+  },
+  "tasas_enaho_recalculadas": 58,
+  "controles": [
+    {
+      "tema": "BCRP",
+      "afirmacion": "La inflación interanual de alimentos y bebidas alcanzó su máximo de 13,16 % en febrero de 2023.",
+      "valor_informado": 13.16,
+      "valor_sin_redondear": 13.1637473661575,
+      "valor_independiente": 13.1637473661575,
+      "diferencia_frente_al_informe": 0.0037473661574995987,
+      "unidad": "%",
+      "procedimiento": "Máximo de 60 valores del CSV oficial. El mes comprobado fue 2023-02. [BCRPData PN09822PM](https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/csv/2020-1/2024-12).",
+      "estado": "APROBADO"
+    },
+    {
+      "tema": "Área ENAHO",
+      "afirmacion": "La pobreza rural fue 14,71 puntos porcentuales mayor que la urbana.",
+      "valor_informado": 14.71,
+      "valor_sin_redondear": 14.70644451224457,
+      "valor_independiente": 14.70644451224457,
+      "diferencia_frente_al_informe": -0.0035554877554311304,
+      "unidad": "pp",
+      "procedimiento": "Tasa de los residentes en estratos 6–8 menos tasa en estratos 1–5, ambas recalculadas desde los Stata.",
+      "estado": "APROBADO"
+    },
+    {
+      "tema": "Departamento ENAHO",
+      "afirmacion": "La incidencia estimada de pobreza monetaria en Cajamarca fue 44,99 %.",
+      "valor_informado": 44.99,
+      "valor_sin_redondear": 44.99495987017856,
+      "valor_independiente": 44.99495987017856,
+      "diferencia_frente_al_informe": 0.004959870178559811,
+      "unidad": "%",
+      "procedimiento": "Tasa recalculada desde los Stata para residentes con prefijo UBIGEO 06.",
+      "estado": "APROBADO"
+    }
+  ]
+}

@@ -12,3 +12,4 @@ salidas/*.parquet
 salidas/*.feather
 *.zip
 *.dta
+evidencias_ia/integracion/ejecucion_local.jsonl

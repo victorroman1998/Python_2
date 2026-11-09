@@ -1,0 +1,5 @@
+Comando desde tarea_4/: uv run --locked pytest -q --color=no
+Código de salida: 0
+
+........................................                                 [100%]
+40 passed in 6.64s

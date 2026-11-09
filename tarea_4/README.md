@@ -1,22 +1,36 @@
 # Tarea 4 · Agente de investigación socioeconómica
 
-**Estado.** Servidor MCP del BCRP y Skills de ENAHO 2024 verificados con fuentes oficiales. Las Skills se ejecutaron mediante `uv` desde Codex. La prueba conversacional en Claude Code requiere una sesión autenticada.
+**Estado.** Investigación integrada y verificada desde Codex. El servidor BCRP se invocó por MCP stdio con FastMCP y las tres Skills ENAHO se ejecutaron mediante `uv`. La demostración nativa de Claude Code queda pendiente de una sesión autenticada.
 
-**Pregunta inicial:** ¿Cómo evolucionó la inflación de alimentos entre 2020 y 2024 en el Perú, y qué diferencias territoriales y sociodemográficas presentaba la pobreza monetaria en 2024?
+**Pregunta.** ¿Cómo evolucionó la inflación de alimentos y bebidas en Lima Metropolitana entre 2020 y 2024, y qué diferencias por área de residencia, sexo y departamento presentó la pobreza monetaria en el Perú en 2024?
 
 [Enunciado y rúbrica](https://github.com/d2cml-ai/Data-Science-Python/issues/201) · [Sesión 04](https://github.com/d2cml-ai/Data-Science-Python/tree/main/sessions/04-mcp-claude-code/proyecto) · [Sesión 16](https://github.com/d2cml-ai/Data-Science-Python/tree/main/sessions/16-skills-enaho)
 
 ## Alcance y arquitectura
 
-Claude Code coordinará una misma investigación: identifica la serie de inflación de alimentos en el catálogo del BCRP, consulta el servidor MCP, ejecuta las Skills de ENAHO, comprueba las salidas y redacta el informe con trazabilidad. El servidor solo obtiene y calcula series oficiales; los scripts de las Skills procesan microdatos locales y generan tablas, gráficos y mapa. Ninguna cifra del informe debe provenir de memoria del modelo.
+El coordinador identifica las series en el catálogo del BCRP, consulta el servidor MCP, ejecuta las Skills de ENAHO y valida las salidas antes de generar el informe. El servidor obtiene y calcula series oficiales. Los scripts de las Skills procesan microdatos locales y generan tablas, gráficos y mapa.
 
 ```text
-Pregunta → Claude Code ┬→ MCP BCRP → series, resúmenes y comparaciones → salidas/figuras
-                      └→ Skills ENAHO → Parquet validado → indicadores/figuras/mapa
-             → verificación de cifras → informes/informe_final.md
+Pregunta → Plan ┬→ FastMCP por stdio → BCRP → series, resúmenes y comparación
+                └→ Skills ENAHO → lote validado → indicadores, gráficos y mapa
+         → contrastes independientes → informes/informe_final.md
 ```
 
-[PLAN_IMPLEMENTACION.md](PLAN_IMPLEMENTACION.md) contiene la matriz de 20 puntos, la estructura prevista, los responsables y las pruebas pendientes.
+[PLAN_IMPLEMENTACION.md](PLAN_IMPLEMENTACION.md) contiene la matriz de 20 puntos y la planificación general.
+
+## Ejecutar la investigación integrada
+
+Desde `tarea_4/` con HTTPS y `uv` disponible en el PATH.
+
+```bash
+uv sync --locked --python 3.12
+uv run --locked python scripts/investigar.py --desde-cero
+uv run --locked pytest -q
+```
+
+La ejecución comprueba los contratos, registra el plan, consulta el BCRP, ejecuta ENAHO y contrasta las cifras antes de publicar el informe y las figuras en el checkout. Si el lote ENAHO falta o falla su validación, activa la limpieza antes de los dos consumidores y se detiene si la limpieza falla. `--desde-cero` demuestra esa dependencia con un directorio de trabajo vacío, manteniendo disponible el lote existente. El coordinador conserva los archivos que coinciden byte por byte. `--sin-descarga` usa insumos ENAHO preparados en `datos/`. El MCP y la verificación del BCRP requieren acceso de red.
+
+La bitácora local se crea en `evidencias_ia/integracion/ejecucion_local.jsonl`. Para repetir el flujo conservando ese registro, indica una ruta nueva con `--bitacora`. [Informe](informes/informe_final.md) · [Verificación de cifras](informes/verificacion_cifras.md) · [Ejecución Codex](evidencias_ia/integracion/README.md) · [Guía para Claude Code](evidencias_ia/integracion/claude_code.md).
 
 ## Instalación y verificación de la Parte 1
 
@@ -82,10 +96,6 @@ La ejecución del 8 de noviembre de 2026 leyó 33 691 hogares y 117 721 registro
 | Rural | 39,4417 % | 39,3028 % | 39,3 % |
 
 El desvío nacional con `facpob07` fue 0,0713 pp frente al límite de 0,10 pp. Los 25 departamentos coincidieron con el CSV de referencia al redondear Sumaria a una décima. En el cálculo directo, el mayor desvío fue 0,5177 pp en Puno frente a la tolerancia de 0,60 pp. El [registro de ejecución](evidencias_ia/skills/03_ejecucion_enaho.txt) detalla las comprobaciones.
-
-### Relevo a la integración
-
-Las tres Skills y su dependencia se comprobaron por CLI desde Codex. En una sesión autenticada de Claude Code, verifica el enrutamiento con un pedido como «Elabora un mapa de pobreza monetaria departamental con ENAHO 2024» desde una copia sin Parquet y guarda la conversación real. La fase de integración debe vincular la ejecución de estas Skills con las herramientas MCP del BCRP para contestar la pregunta de investigación.
 
 ## Evidencias y entrega
 

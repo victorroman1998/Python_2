@@ -1,0 +1,1203 @@
+{
+  "buscar_nacional": {
+    "herramienta": "buscar_series",
+    "parametros": {
+      "texto": "ipc nacional",
+      "frecuencia": "Mensual",
+      "limite": 100
+    },
+    "respuesta": [
+      {
+        "codigo": "PN06476IM",
+        "nombre": "Liquidez internacional del BCRP - Liquidez Total - Suscripciones FMI, BIS y FLAR (millones US$)",
+        "categoria": "Banco Central de Reserva",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-2005",
+        "actualizada": "2026-10-23",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "BCRP"
+      }
+    ]
+  },
+  "buscar_alimentos": {
+    "herramienta": "buscar_series",
+    "parametros": {
+      "texto": "ipc alimentos bebidas 12 meses",
+      "frecuencia": "Mensual",
+      "limite": 100
+    },
+    "respuesta": [
+      {
+        "codigo": "PN09822PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09823PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC sin Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09824PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Subyacente Sin Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN01285PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC No Transables Sin Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      }
+    ]
+  },
+  "buscar_general": {
+    "herramienta": "buscar_series",
+    "parametros": {
+      "texto": "ipc lima metropolitana 12 meses",
+      "frecuencia": "Mensual",
+      "limite": 100
+    },
+    "respuesta": [
+      {
+        "codigo": "PN01273PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1950",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09821PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Importado",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1992",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN01279PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Subyacente",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN01281PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Transables",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN01283PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC No Transables",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09820PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC No Subyacente",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1992",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09819PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Alimentos y Energía",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1992",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09822PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN01277PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Sin Alimentos y Energía",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09823PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC sin Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN09824PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Subyacente Sin Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN01285PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC No Transables Sin Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN40410PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC rubros vinculados a tipo de cambio, IPM y cotizaciones",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-2001",
+        "actualizada": "2026-10-12",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      },
+      {
+        "codigo": "PN40411PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC rubros no vinculados a tipo de cambio, IPM y cotizaciones",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-2001",
+        "actualizada": "2026-10-12",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI"
+      }
+    ]
+  },
+  "serie_alimentos": {
+    "herramienta": "serie",
+    "parametros": {
+      "codigo": "PN09822PM",
+      "desde": "2020-01",
+      "hasta": "2024-12"
+    },
+    "respuesta": {
+      "codigo": "PN09822PM",
+      "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Alimentos y Bebidas",
+      "categoria": "Inflación",
+      "frecuencia": "Mensual",
+      "inicio": "Ene-1993",
+      "actualizada": "2026-10-08",
+      "unidad": "",
+      "escala": "",
+      "fuente_original": "INEI",
+      "desde": "2020-01",
+      "hasta": "2024-12",
+      "datos": [
+        {
+          "periodo": "2020-01",
+          "valor": 1.11379477251542
+        },
+        {
+          "periodo": "2020-02",
+          "valor": 1.34570081500376
+        },
+        {
+          "periodo": "2020-03",
+          "valor": 2.02990032906577
+        },
+        {
+          "periodo": "2020-04",
+          "valor": 1.70343638388034
+        },
+        {
+          "periodo": "2020-05",
+          "valor": 2.13324381260423
+        },
+        {
+          "periodo": "2020-06",
+          "valor": 1.59872965296908
+        },
+        {
+          "periodo": "2020-07",
+          "valor": 2.31567317416468
+        },
+        {
+          "periodo": "2020-08",
+          "valor": 1.73710368400852
+        },
+        {
+          "periodo": "2020-09",
+          "valor": 1.77561033065986
+        },
+        {
+          "periodo": "2020-10",
+          "valor": 1.92620079187293
+        },
+        {
+          "periodo": "2020-11",
+          "valor": 2.81055330414076
+        },
+        {
+          "periodo": "2020-12",
+          "valor": 2.23665451633161
+        },
+        {
+          "periodo": "2021-01",
+          "valor": 3.64788287268868
+        },
+        {
+          "periodo": "2021-02",
+          "valor": 2.70959131948349
+        },
+        {
+          "periodo": "2021-03",
+          "valor": 2.66251578541878
+        },
+        {
+          "periodo": "2021-04",
+          "valor": 1.9985367913519
+        },
+        {
+          "periodo": "2021-05",
+          "valor": 2.06308362661493
+        },
+        {
+          "periodo": "2021-06",
+          "valor": 3.66419920365215
+        },
+        {
+          "periodo": "2021-07",
+          "valor": 4.18220997743543
+        },
+        {
+          "periodo": "2021-08",
+          "valor": 6.10440427098344
+        },
+        {
+          "periodo": "2021-09",
+          "valor": 6.88018772603717
+        },
+        {
+          "periodo": "2021-10",
+          "valor": 7.53542087827755
+        },
+        {
+          "periodo": "2021-11",
+          "valor": 6.70131583536396
+        },
+        {
+          "periodo": "2021-12",
+          "valor": 7.97176823871967
+        },
+        {
+          "periodo": "2022-01",
+          "valor": 6.83230162077208
+        },
+        {
+          "periodo": "2022-02",
+          "valor": 7.89546259887422
+        },
+        {
+          "periodo": "2022-03",
+          "valor": 9.17078950619735
+        },
+        {
+          "periodo": "2022-04",
+          "valor": 11.7804465957388
+        },
+        {
+          "periodo": "2022-05",
+          "valor": 11.1287316901704
+        },
+        {
+          "periodo": "2022-06",
+          "valor": 11.9080767298275
+        },
+        {
+          "periodo": "2022-07",
+          "valor": 11.5900673925903
+        },
+        {
+          "periodo": "2022-08",
+          "valor": 11.4422741261867
+        },
+        {
+          "periodo": "2022-09",
+          "valor": 11.6804724042743
+        },
+        {
+          "periodo": "2022-10",
+          "valor": 11.2632921074978
+        },
+        {
+          "periodo": "2022-11",
+          "valor": 11.9728811285964
+        },
+        {
+          "periodo": "2022-12",
+          "valor": 12.643877921265
+        },
+        {
+          "periodo": "2023-01",
+          "valor": 12.9256889600543
+        },
+        {
+          "periodo": "2023-02",
+          "valor": 13.1637473661575
+        },
+        {
+          "periodo": "2023-03",
+          "valor": 12.8061336213215
+        },
+        {
+          "periodo": "2023-04",
+          "valor": 12.1468379891628
+        },
+        {
+          "periodo": "2023-05",
+          "valor": 13.0714123344784
+        },
+        {
+          "periodo": "2023-06",
+          "valor": 10.9230593290606
+        },
+        {
+          "periodo": "2023-07",
+          "valor": 10.3051288172192
+        },
+        {
+          "periodo": "2023-08",
+          "valor": 9.67624777652611
+        },
+        {
+          "periodo": "2023-09",
+          "valor": 8.29161843015259
+        },
+        {
+          "periodo": "2023-10",
+          "valor": 7.00903400839521
+        },
+        {
+          "periodo": "2023-11",
+          "valor": 5.60099489691372
+        },
+        {
+          "periodo": "2023-12",
+          "valor": 4.8043982437401
+        },
+        {
+          "periodo": "2024-01",
+          "valor": 4.27933752799688
+        },
+        {
+          "periodo": "2024-02",
+          "valor": 4.44315737185126
+        },
+        {
+          "periodo": "2024-03",
+          "valor": 3.67723283179711
+        },
+        {
+          "periodo": "2024-04",
+          "valor": 2.08692886687478
+        },
+        {
+          "periodo": "2024-05",
+          "valor": 0.835568688085272
+        },
+        {
+          "periodo": "2024-06",
+          "valor": 1.41604200888749
+        },
+        {
+          "periodo": "2024-07",
+          "valor": 1.01659016245958
+        },
+        {
+          "periodo": "2024-08",
+          "valor": 0.959975617550838
+        },
+        {
+          "periodo": "2024-09",
+          "valor": 0.687659922758327
+        },
+        {
+          "periodo": "2024-10",
+          "valor": 1.43412170210547
+        },
+        {
+          "periodo": "2024-11",
+          "valor": 2.09189873340245
+        },
+        {
+          "periodo": "2024-12",
+          "valor": 1.24814760630121
+        }
+      ],
+      "periodos_sin_dato": [],
+      "fuente": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12"
+    }
+  },
+  "resumen_alimentos": {
+    "herramienta": "resumen",
+    "parametros": {
+      "codigo": "PN09822PM",
+      "desde": "2020-01",
+      "hasta": "2024-12"
+    },
+    "respuesta": {
+      "codigo": "PN09822PM",
+      "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Alimentos y Bebidas",
+      "categoria": "Inflación",
+      "frecuencia": "Mensual",
+      "inicio": "Ene-1993",
+      "actualizada": "2026-10-08",
+      "unidad": "",
+      "escala": "",
+      "fuente_original": "INEI",
+      "desde": "2020-01",
+      "hasta": "2024-12",
+      "periodos_sin_dato": [],
+      "fuente": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12",
+      "n_observaciones": 60,
+      "primero": {
+        "periodo": "2020-01",
+        "valor": 1.11379477251542
+      },
+      "ultimo": {
+        "periodo": "2024-12",
+        "valor": 1.24814760630121
+      },
+      "cambio": 0.13435283378579,
+      "variacion_pct": 12.062620251158517,
+      "promedio": 5.884289245474794,
+      "maximo": {
+        "periodo": "2023-02",
+        "valor": 13.1637473661575
+      },
+      "minimo": {
+        "periodo": "2024-09",
+        "valor": 0.687659922758327
+      }
+    }
+  },
+  "serie_general": {
+    "herramienta": "serie",
+    "parametros": {
+      "codigo": "PN01273PM",
+      "desde": "2020-01",
+      "hasta": "2024-12"
+    },
+    "respuesta": {
+      "codigo": "PN01273PM",
+      "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC",
+      "categoria": "Inflación",
+      "frecuencia": "Mensual",
+      "inicio": "Ene-1950",
+      "actualizada": "2026-10-08",
+      "unidad": "",
+      "escala": "",
+      "fuente_original": "INEI",
+      "desde": "2020-01",
+      "hasta": "2024-12",
+      "datos": [
+        {
+          "periodo": "2020-01",
+          "valor": 1.88835605229068
+        },
+        {
+          "periodo": "2020-02",
+          "valor": 1.90403776113918
+        },
+        {
+          "periodo": "2020-03",
+          "valor": 1.82153296943842
+        },
+        {
+          "periodo": "2020-04",
+          "valor": 1.72448975655499
+        },
+        {
+          "periodo": "2020-05",
+          "valor": 1.7819197522911
+        },
+        {
+          "periodo": "2020-06",
+          "valor": 1.59873239164688
+        },
+        {
+          "periodo": "2020-07",
+          "valor": 1.8616957242678
+        },
+        {
+          "periodo": "2020-08",
+          "valor": 1.68739824186658
+        },
+        {
+          "periodo": "2020-09",
+          "valor": 1.81955390705632
+        },
+        {
+          "periodo": "2020-10",
+          "valor": 1.72400036113651
+        },
+        {
+          "periodo": "2020-11",
+          "valor": 2.14220969430481
+        },
+        {
+          "periodo": "2020-12",
+          "valor": 1.97323222946074
+        },
+        {
+          "periodo": "2021-01",
+          "valor": 2.67554538350913
+        },
+        {
+          "periodo": "2021-02",
+          "valor": 2.4013422122209
+        },
+        {
+          "periodo": "2021-03",
+          "valor": 2.59818523324116
+        },
+        {
+          "periodo": "2021-04",
+          "valor": 2.38369772363027
+        },
+        {
+          "periodo": "2021-05",
+          "valor": 2.44745902560864
+        },
+        {
+          "periodo": "2021-06",
+          "valor": 3.25460667105263
+        },
+        {
+          "periodo": "2021-07",
+          "valor": 3.81459906516264
+        },
+        {
+          "periodo": "2021-08",
+          "valor": 4.95280459648037
+        },
+        {
+          "periodo": "2021-09",
+          "valor": 5.22957455422953
+        },
+        {
+          "periodo": "2021-10",
+          "valor": 5.82600992647617
+        },
+        {
+          "periodo": "2021-11",
+          "valor": 5.65514784662318
+        },
+        {
+          "periodo": "2021-12",
+          "valor": 6.43038716340725
+        },
+        {
+          "periodo": "2022-01",
+          "valor": 5.68491659367423
+        },
+        {
+          "periodo": "2022-02",
+          "valor": 6.1470442223465
+        },
+        {
+          "periodo": "2022-03",
+          "valor": 6.82408900736014
+        },
+        {
+          "periodo": "2022-04",
+          "valor": 7.96465277256915
+        },
+        {
+          "periodo": "2022-05",
+          "valor": 8.09113893196794
+        },
+        {
+          "periodo": "2022-06",
+          "valor": 8.81263294388897
+        },
+        {
+          "periodo": "2022-07",
+          "valor": 8.74083491516008
+        },
+        {
+          "periodo": "2022-08",
+          "valor": 8.39798830340194
+        },
+        {
+          "periodo": "2022-09",
+          "valor": 8.52985253634929
+        },
+        {
+          "periodo": "2022-10",
+          "valor": 8.27519462737062
+        },
+        {
+          "periodo": "2022-11",
+          "valor": 8.44722980234022
+        },
+        {
+          "periodo": "2022-12",
+          "valor": 8.45916200000001
+        },
+        {
+          "periodo": "2023-01",
+          "valor": 8.66426700097408
+        },
+        {
+          "periodo": "2023-02",
+          "valor": 8.64592356025242
+        },
+        {
+          "periodo": "2023-03",
+          "valor": 8.40057400933134
+        },
+        {
+          "periodo": "2023-04",
+          "valor": 7.9650458305066
+        },
+        {
+          "periodo": "2023-05",
+          "valor": 7.89388564823743
+        },
+        {
+          "periodo": "2023-06",
+          "valor": 6.46149699198863
+        },
+        {
+          "periodo": "2023-07",
+          "valor": 5.88160145590039
+        },
+        {
+          "periodo": "2023-08",
+          "valor": 5.57614720330122
+        },
+        {
+          "periodo": "2023-09",
+          "valor": 5.04454594794186
+        },
+        {
+          "periodo": "2023-10",
+          "valor": 4.34308132283159
+        },
+        {
+          "periodo": "2023-11",
+          "valor": 3.63647512169549
+        },
+        {
+          "periodo": "2023-12",
+          "valor": 3.23738256432406
+        },
+        {
+          "periodo": "2024-01",
+          "valor": 3.02392174826855
+        },
+        {
+          "periodo": "2024-02",
+          "valor": 3.29406696032184
+        },
+        {
+          "periodo": "2024-03",
+          "valor": 3.04504592593905
+        },
+        {
+          "periodo": "2024-04",
+          "valor": 2.42207617792805
+        },
+        {
+          "periodo": "2024-05",
+          "valor": 2.00493835958688
+        },
+        {
+          "periodo": "2024-06",
+          "valor": 2.28538225698791
+        },
+        {
+          "periodo": "2024-07",
+          "valor": 2.1276637869709
+        },
+        {
+          "periodo": "2024-08",
+          "valor": 2.03409700303861
+        },
+        {
+          "periodo": "2024-09",
+          "valor": 1.77501053596859
+        },
+        {
+          "periodo": "2024-10",
+          "valor": 2.00918040984485
+        },
+        {
+          "periodo": "2024-11",
+          "valor": 2.27199072148831
+        },
+        {
+          "periodo": "2024-12",
+          "valor": 1.96630270142824
+        }
+      ],
+      "periodos_sin_dato": [],
+      "fuente": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01273PM/json/2020-1/2024-12"
+    }
+  },
+  "resumen_general": {
+    "herramienta": "resumen",
+    "parametros": {
+      "codigo": "PN01273PM",
+      "desde": "2020-01",
+      "hasta": "2024-12"
+    },
+    "respuesta": {
+      "codigo": "PN01273PM",
+      "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC",
+      "categoria": "Inflación",
+      "frecuencia": "Mensual",
+      "inicio": "Ene-1950",
+      "actualizada": "2026-10-08",
+      "unidad": "",
+      "escala": "",
+      "fuente_original": "INEI",
+      "desde": "2020-01",
+      "hasta": "2024-12",
+      "periodos_sin_dato": [],
+      "fuente": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01273PM/json/2020-1/2024-12",
+      "n_observaciones": 60,
+      "primero": {
+        "periodo": "2020-01",
+        "valor": 1.88835605229068
+      },
+      "ultimo": {
+        "periodo": "2024-12",
+        "valor": 1.96630270142824
+      },
+      "cambio": 0.07794664913756,
+      "variacion_pct": 4.1277517046113426,
+      "promedio": 4.466355969076364,
+      "maximo": {
+        "periodo": "2022-06",
+        "valor": 8.81263294388897
+      },
+      "minimo": {
+        "periodo": "2020-06",
+        "valor": 1.59873239164688
+      }
+    }
+  },
+  "comparacion": {
+    "herramienta": "comparar_series",
+    "parametros": {
+      "codigo_a": "PN09822PM",
+      "codigo_b": "PN01273PM",
+      "desde": "2020-01",
+      "hasta": "2024-12"
+    },
+    "respuesta": {
+      "serie_a": {
+        "codigo": "PN09822PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC Alimentos y Bebidas",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1993",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI",
+        "fuente": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN09822PM/json/2020-1/2024-12"
+      },
+      "serie_b": {
+        "codigo": "PN01273PM",
+        "nombre": "Índice de precios Lima Metropolitana (var% 12 meses) - IPC",
+        "categoria": "Inflación",
+        "frecuencia": "Mensual",
+        "inicio": "Ene-1950",
+        "actualizada": "2026-10-08",
+        "unidad": "",
+        "escala": "",
+        "fuente_original": "INEI",
+        "fuente": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01273PM/json/2020-1/2024-12"
+      },
+      "frecuencia": "Mensual",
+      "desde": "2020-01",
+      "hasta": "2024-12",
+      "n_pares": 60,
+      "datos": [
+        {
+          "periodo": "2020-01",
+          "valor_a": 1.11379477251542,
+          "valor_b": 1.88835605229068
+        },
+        {
+          "periodo": "2020-02",
+          "valor_a": 1.34570081500376,
+          "valor_b": 1.90403776113918
+        },
+        {
+          "periodo": "2020-03",
+          "valor_a": 2.02990032906577,
+          "valor_b": 1.82153296943842
+        },
+        {
+          "periodo": "2020-04",
+          "valor_a": 1.70343638388034,
+          "valor_b": 1.72448975655499
+        },
+        {
+          "periodo": "2020-05",
+          "valor_a": 2.13324381260423,
+          "valor_b": 1.7819197522911
+        },
+        {
+          "periodo": "2020-06",
+          "valor_a": 1.59872965296908,
+          "valor_b": 1.59873239164688
+        },
+        {
+          "periodo": "2020-07",
+          "valor_a": 2.31567317416468,
+          "valor_b": 1.8616957242678
+        },
+        {
+          "periodo": "2020-08",
+          "valor_a": 1.73710368400852,
+          "valor_b": 1.68739824186658
+        },
+        {
+          "periodo": "2020-09",
+          "valor_a": 1.77561033065986,
+          "valor_b": 1.81955390705632
+        },
+        {
+          "periodo": "2020-10",
+          "valor_a": 1.92620079187293,
+          "valor_b": 1.72400036113651
+        },
+        {
+          "periodo": "2020-11",
+          "valor_a": 2.81055330414076,
+          "valor_b": 2.14220969430481
+        },
+        {
+          "periodo": "2020-12",
+          "valor_a": 2.23665451633161,
+          "valor_b": 1.97323222946074
+        },
+        {
+          "periodo": "2021-01",
+          "valor_a": 3.64788287268868,
+          "valor_b": 2.67554538350913
+        },
+        {
+          "periodo": "2021-02",
+          "valor_a": 2.70959131948349,
+          "valor_b": 2.4013422122209
+        },
+        {
+          "periodo": "2021-03",
+          "valor_a": 2.66251578541878,
+          "valor_b": 2.59818523324116
+        },
+        {
+          "periodo": "2021-04",
+          "valor_a": 1.9985367913519,
+          "valor_b": 2.38369772363027
+        },
+        {
+          "periodo": "2021-05",
+          "valor_a": 2.06308362661493,
+          "valor_b": 2.44745902560864
+        },
+        {
+          "periodo": "2021-06",
+          "valor_a": 3.66419920365215,
+          "valor_b": 3.25460667105263
+        },
+        {
+          "periodo": "2021-07",
+          "valor_a": 4.18220997743543,
+          "valor_b": 3.81459906516264
+        },
+        {
+          "periodo": "2021-08",
+          "valor_a": 6.10440427098344,
+          "valor_b": 4.95280459648037
+        },
+        {
+          "periodo": "2021-09",
+          "valor_a": 6.88018772603717,
+          "valor_b": 5.22957455422953
+        },
+        {
+          "periodo": "2021-10",
+          "valor_a": 7.53542087827755,
+          "valor_b": 5.82600992647617
+        },
+        {
+          "periodo": "2021-11",
+          "valor_a": 6.70131583536396,
+          "valor_b": 5.65514784662318
+        },
+        {
+          "periodo": "2021-12",
+          "valor_a": 7.97176823871967,
+          "valor_b": 6.43038716340725
+        },
+        {
+          "periodo": "2022-01",
+          "valor_a": 6.83230162077208,
+          "valor_b": 5.68491659367423
+        },
+        {
+          "periodo": "2022-02",
+          "valor_a": 7.89546259887422,
+          "valor_b": 6.1470442223465
+        },
+        {
+          "periodo": "2022-03",
+          "valor_a": 9.17078950619735,
+          "valor_b": 6.82408900736014
+        },
+        {
+          "periodo": "2022-04",
+          "valor_a": 11.7804465957388,
+          "valor_b": 7.96465277256915
+        },
+        {
+          "periodo": "2022-05",
+          "valor_a": 11.1287316901704,
+          "valor_b": 8.09113893196794
+        },
+        {
+          "periodo": "2022-06",
+          "valor_a": 11.9080767298275,
+          "valor_b": 8.81263294388897
+        },
+        {
+          "periodo": "2022-07",
+          "valor_a": 11.5900673925903,
+          "valor_b": 8.74083491516008
+        },
+        {
+          "periodo": "2022-08",
+          "valor_a": 11.4422741261867,
+          "valor_b": 8.39798830340194
+        },
+        {
+          "periodo": "2022-09",
+          "valor_a": 11.6804724042743,
+          "valor_b": 8.52985253634929
+        },
+        {
+          "periodo": "2022-10",
+          "valor_a": 11.2632921074978,
+          "valor_b": 8.27519462737062
+        },
+        {
+          "periodo": "2022-11",
+          "valor_a": 11.9728811285964,
+          "valor_b": 8.44722980234022
+        },
+        {
+          "periodo": "2022-12",
+          "valor_a": 12.643877921265,
+          "valor_b": 8.45916200000001
+        },
+        {
+          "periodo": "2023-01",
+          "valor_a": 12.9256889600543,
+          "valor_b": 8.66426700097408
+        },
+        {
+          "periodo": "2023-02",
+          "valor_a": 13.1637473661575,
+          "valor_b": 8.64592356025242
+        },
+        {
+          "periodo": "2023-03",
+          "valor_a": 12.8061336213215,
+          "valor_b": 8.40057400933134
+        },
+        {
+          "periodo": "2023-04",
+          "valor_a": 12.1468379891628,
+          "valor_b": 7.9650458305066
+        },
+        {
+          "periodo": "2023-05",
+          "valor_a": 13.0714123344784,
+          "valor_b": 7.89388564823743
+        },
+        {
+          "periodo": "2023-06",
+          "valor_a": 10.9230593290606,
+          "valor_b": 6.46149699198863
+        },
+        {
+          "periodo": "2023-07",
+          "valor_a": 10.3051288172192,
+          "valor_b": 5.88160145590039
+        },
+        {
+          "periodo": "2023-08",
+          "valor_a": 9.67624777652611,
+          "valor_b": 5.57614720330122
+        },
+        {
+          "periodo": "2023-09",
+          "valor_a": 8.29161843015259,
+          "valor_b": 5.04454594794186
+        },
+        {
+          "periodo": "2023-10",
+          "valor_a": 7.00903400839521,
+          "valor_b": 4.34308132283159
+        },
+        {
+          "periodo": "2023-11",
+          "valor_a": 5.60099489691372,
+          "valor_b": 3.63647512169549
+        },
+        {
+          "periodo": "2023-12",
+          "valor_a": 4.8043982437401,
+          "valor_b": 3.23738256432406
+        },
+        {
+          "periodo": "2024-01",
+          "valor_a": 4.27933752799688,
+          "valor_b": 3.02392174826855
+        },
+        {
+          "periodo": "2024-02",
+          "valor_a": 4.44315737185126,
+          "valor_b": 3.29406696032184
+        },
+        {
+          "periodo": "2024-03",
+          "valor_a": 3.67723283179711,
+          "valor_b": 3.04504592593905
+        },
+        {
+          "periodo": "2024-04",
+          "valor_a": 2.08692886687478,
+          "valor_b": 2.42207617792805
+        },
+        {
+          "periodo": "2024-05",
+          "valor_a": 0.835568688085272,
+          "valor_b": 2.00493835958688
+        },
+        {
+          "periodo": "2024-06",
+          "valor_a": 1.41604200888749,
+          "valor_b": 2.28538225698791
+        },
+        {
+          "periodo": "2024-07",
+          "valor_a": 1.01659016245958,
+          "valor_b": 2.1276637869709
+        },
+        {
+          "periodo": "2024-08",
+          "valor_a": 0.959975617550838,
+          "valor_b": 2.03409700303861
+        },
+        {
+          "periodo": "2024-09",
+          "valor_a": 0.687659922758327,
+          "valor_b": 1.77501053596859
+        },
+        {
+          "periodo": "2024-10",
+          "valor_a": 1.43412170210547,
+          "valor_b": 2.00918040984485
+        },
+        {
+          "periodo": "2024-11",
+          "valor_a": 2.09189873340245,
+          "valor_b": 2.27199072148831
+        },
+        {
+          "periodo": "2024-12",
+          "valor_a": 1.24814760630121,
+          "valor_b": 1.96630270142824
+        }
+      ],
+      "faltantes": {
+        "PN09822PM": [],
+        "PN01273PM": []
+      },
+      "correlacion_pearson": 0.9806690273655638
+    }
+  }
+}
